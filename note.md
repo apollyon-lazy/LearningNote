@@ -48,10 +48,10 @@ git add 文件名 &emsp; 添加文件到 git 版本控制系统中
 git add .  &emsp; 添加当前目录下所有文件  
 git commmit -m "提交说明" &emsp; 提交版本说明  
 
-> git init 命令会在当前目录创建一个 .git 的文件夹，文件夹中会保存每个 git 版本变化和记录！ 
-> git status 命令显示哪些更改是被放到暂存区（staged）将会提交的,以避免错误提交！
+> git init 命令会在当前目录创建一个 .git 的文件夹，文件夹中会保存每个 git 版本变化和记录！  
+> git status 命令显示哪些更改是被放到暂存区（staged）将会提交的,以避免错误提交！  
 > git add 命令把修改文件放入暂存区！
-> git commit 命令将把暂存区修改保存为一个版本！  
+> git commit 命令将把暂存区修改保存为一个版本！    
 > git commmit -m "fix(test):change content"  
 > 这是一个规范提交说明的例子，这里fix是修改，括号里test是文件名，冒号后面跟修改内容。  
 
