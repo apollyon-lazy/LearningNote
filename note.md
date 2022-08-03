@@ -5,73 +5,83 @@
 - markdown preview enhance(预览增强)
 #### 快捷键
 
-<kbd>ctrl</kbd> + <kbd>C</kbd> 复制
-<kbd>ctrl</kbd> + <kbd>V</kbd> 粘贴
-<kbd>ctrl</kbd> + <kbd>Z</kbd> 撤销
-<kbd>ctrl</kbd> + <kbd>X</kbd> 剪切
-<kbd>ctrl</kbd> + <kbd>A</kbd> 全选
-<kbd>ctrl</kbd> + <kbd>F</kbd> 查找
-<kbd>ctrl</kbd> + <kbd>H</kbd> 替换
-> 查找和替换下的enter意义是不一样的！
+<kbd>ctrl</kbd> + <kbd>C</kbd> 复制  
+<kbd>ctrl</kbd> + <kbd>V</kbd> 粘贴  
+<kbd>ctrl</kbd> + <kbd>Z</kbd> 撤销  
+<kbd>ctrl</kbd> + <kbd>X</kbd> 剪切  
+<kbd>ctrl</kbd> + <kbd>A</kbd> 全选  
+<kbd>ctrl</kbd> + <kbd>F</kbd> 查找  
+<kbd>ctrl</kbd> + <kbd>H</kbd> 替换  
+> 查找和替换下的enter意义是不一样的！  
 
-<kbd>shift</kbd> + right 向右选中一个光标单位
-<kbd>shift</kbd> + left 向左选中一个光标单位
-<kbd>ctrl</kbd> + Home 光标回到文档开头
-<kbd>ctrl</kbd> + End 光标回到文档末尾
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + Home 选中光标以前所有单位
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + End 选中光标以后所有单位
+<kbd>shift</kbd> + <kbd>right</kbd> 向右选中一个光标单位  
+<kbd>shift</kbd> + <kbd>left</kbd> 向左选中一个光标单位  
+<kbd>ctrl</kbd> + <kbd>Home</kbd> 光标回到文档开头  
+<kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾  
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>Home</kbd> 选中光标以前所有单位  
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>End</kbd> 选中光标以后所有单位  
 
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + ` 创建终端
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
 
-<kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + E 搜狗输入法下中文模式切换英文检索
+<kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口  
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>E</kbd> 搜狗输入法下中文模式切换英文检索  
 
-> 熟悉快捷键是快速编写文档的重要技巧！
-> 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！
+> 熟悉快捷键是快速编写文档的重要技巧！  
+> 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！  
 
 #### 终端命令
-pwd（print work directory） 显示当前终端所在目录
-ls（list file） 显示当前目录下的所有文件
-cd 路径(change dictionary) 切换目录
-> ..表示上一级目录。
-> . 表示当前目录。
+pwd（print work directory） 显示当前终端所在目录  
+ls（list file） 显示当前目录下的所有文件  
+cd 路径(change dictionary) 切换目录  
+> ..表示上一级目录。  
+> . 表示当前目录。  
  
 #### 源代码管理
 
-git version  
-git config --global user.name "用户名" &emsp; 配置用户名
-git config --global user.email "邮箱名" &emsp; 配置邮箱名
-git init &emsp; 初始化
-> git init 命令会在当前目录创建一个 .git 的文件夹，文件夹中会保存每个 git 版本变化和记录！
+git version  查看版本
+git config --global user.name "用户名" &emsp; 配置用户名  
+git config --global user.email "邮箱名" &emsp; 配置邮箱名  
 
-git add 文件名 &emsp; 添加文件到 git 版本控制系统中
-git add .  &emsp; 添加当前目录下所有文件
-> git add 命令只能把文件暂存，git commit后才会提交！
+git init &emsp; 初始化  
+git add 文件名 &emsp; 添加文件到 git 版本控制系统中  
+git add .  &emsp; 添加当前目录下所有文件  
+git commmit -m "提交说明" &emsp; 提交版本说明  
 
-git commmit -m "提交说明"
-> git commmit -m "fix(test):change content"
-> 这是一个规范提交说明的例子，这里fix是修改，括号里test是文件名，冒号后面跟修改内容。
+> git init 命令会在当前目录创建一个 .git 的文件夹，文件夹中会保存每个 git 版本变化和记录！  
+> git add 命令只能把文件暂存，git commit后才会提交！  
+> git commmit -m "fix(test):change content"  
+> 这是一个规范提交说明的例子，这里fix是修改，括号里test是文件名，冒号后面跟修改内容。  
 
-git log  &emsp; 查看提交信息
-git reset --hard 提交编号 &emsp; 回退到之前的版本
-git branch 分支名 &emsp; 创建分支
-git branch -a &emsp; 查看所有分支
-git branch &emsp; 查看本地分支
-git checkout 分支名 &emsp; 切换分支
-git merge 分支名 &emsp; 用分支给主分支合并
-git branch -M 分支名 &emsp;  创建一个分支并切换为主分支
-git branch -d 分支名 &emsp;  删除本地分支
-git remote add 仓库源名 仓库链接 &emsp;  设置远端链接
-git remote rm 仓库源名 &ensp; 删除远端链接
-git push -u 仓库源名 分支名 &emsp; 上传
-git clone 仓库地址 . &emsp; 在目录下克隆远程端的所有文件
-> 通过克隆建立库和本地的关系：先在 github 上创建一个仓库，再在本地空文件夹目录下使用 git clone 命令克隆这个仓库, 将跳过 git init 初始化命令生成 .git 文件夹
+git log  &emsp; 查看提交信息  
+git reset --hard 提交编号 &emsp; 回退到之前的版本  
+git branch 分支名 &emsp; 创建分支  
+git branch &emsp; 查看本地分支  
+git branch -a &emsp; 查看所有分支  
+git checkout 分支名 &emsp; 切换分支  
+git checkout -b 分支名 &emsp; 创建并切换到一个新分支  
+git merge 分支名 &emsp; 合并分支到当前分支  
+git branch -m 分支名 &emsp;  修改当前分支名  
+git branch -d 分支名 &emsp;  删除本地分支  
 
-git checkout -b 分支名 &emsp; 创建一个分支并切换到该分支
-git remove -v &emsp; 查看仓库链接
-git fetch upstream &emsp; 获取上游代码更新本地
-git merge upstream/main &emsp; 合并上游和本地分支
+> 如果是想保存代码书写到了某个节点，使用 git add 和 git commit 提交版本！  
+> 如果是想回退到曾经的某个代码版本，使用 git reset --hard 命令！  
+> 如果是想书写并比对不同版本的代码，使用 git branch 创建本地分支！  
+> 如果是想把最终敲定版本上传到远端，使用 git push 提交到远端分支！  
+> 上传版本一定要走的四个命令 git add、git commit、git pull、git push  
 
-> vscode新增一个文件显示绿色，修改一个文件显示橙色！
-> 全角：是指一个全角字符占用两个标准字符（或两个半角字符）的位置。
-> 半角：是指一个字符占用一个标准的字符位置。半角占一个字节。
+git remote add 远端名 仓库链接 &emsp;  设置远端链接  
+git remote rm 远端名 &emsp; 删除远端链接  
+git pull &emsp; 拉取远端代码  
+git push &emsp; 上传同名远端分支  
+git push HEAD:分支名 &emsp; 上传远端分支  
+git clone 仓库链接 . &emsp; 在目录下克隆远端的所有文件  
+git remove -v &emsp; 查看仓库链接  
+git fetch 远端名 &emsp; 获取远端代码更新本地  
+
+> 通过克隆建立库和本地的关系：先在 github 上创建一个仓库，再在本地空文件夹目录下使用 git clone 命令克隆这个仓库, 将跳过 git init 初始化命令生成 .git 文件夹，跳过 git remote 设置远端链接。  
+
+> 如果远端代码版本新于本地代码，使用 git fetch 先和本地新分支做一个合并，与本地主分支对比后，用 git merge 把两个分支合并！  
+
+> vscode新增一个文件显示绿色，修改一个文件显示橙色！  
+> 全角：是指一个全角字符占用两个标准字符（或两个半角字符）的位置。  
+> 半角：是指一个字符占用一个标准的字符位置。半角占一个字节。  
