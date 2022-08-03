@@ -43,12 +43,15 @@ git config --global user.name "用户名" &emsp; 配置用户名
 git config --global user.email "邮箱名" &emsp; 配置邮箱名  
 
 git init &emsp; 初始化  
+git status &emsp; 更新状态  
 git add 文件名 &emsp; 添加文件到 git 版本控制系统中  
 git add .  &emsp; 添加当前目录下所有文件  
 git commmit -m "提交说明" &emsp; 提交版本说明  
 
-> git init 命令会在当前目录创建一个 .git 的文件夹，文件夹中会保存每个 git 版本变化和记录！  
-> git add 命令只能把文件暂存，git commit后才会提交！  
+> git init 命令会在当前目录创建一个 .git 的文件夹，文件夹中会保存每个 git 版本变化和记录！ 
+> git status 命令显示哪些更改是被放到暂存区（staged）将会提交的,以避免错误提交！
+> git add 命令把修改文件放入暂存区！
+> git commit 命令将把暂存区修改保存为一个版本！  
 > git commmit -m "fix(test):change content"  
 > 这是一个规范提交说明的例子，这里fix是修改，括号里test是文件名，冒号后面跟修改内容。  
 
@@ -67,7 +70,7 @@ git branch -d 分支名 &emsp;  删除本地分支
 > 如果是想回退到曾经的某个代码版本，使用 git reset --hard 命令！  
 > 如果是想书写并比对不同版本的代码，使用 git branch 创建本地分支！  
 > 如果是想把最终敲定版本上传到远端，使用 git push 提交到远端分支！  
-> 上传版本一定要走的四个命令 git add、git commit、git pull、git push  
+> 上传版本前需要 stage the change, 上传版本时要走的四个命令 git add、git commit、git pull、git push  
 
 git remote add 远端名 仓库链接 &emsp;  设置远端链接  
 git remote rm 远端名 &emsp; 删除远端链接  
@@ -91,3 +94,4 @@ git fetch 远端名 &emsp; 获取远端代码更新本地
 - [ ] vscode文件变更会有符号提示，符号提示的具体内容是？
 - [ ] vscode把 git 命令做了集成按钮，按钮意义是？ 
 - [ ] git log 中的 log 是什么时候完成了更新？
+- [ ] 
