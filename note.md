@@ -95,3 +95,4 @@ git fetch 远端名 &emsp; 获取远端代码更新本地
 - [ ] vscode把 git 命令做了集成按钮，按钮意义是？ 
 - [ ] git log 中的 log 是什么时候完成了更新？
 - [ ] vscode 中的 markdown 预览会识别 enter 换行？
+- [ ] git 命令的查询网址链接？
