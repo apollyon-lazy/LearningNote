@@ -70,7 +70,7 @@ git branch -d 分支名 &emsp;  删除本地分支
 > 如果是想回退到曾经的某个代码版本，使用 git reset --hard 命令！  
 > 如果是想书写并比对不同版本的代码，使用 git branch 创建本地分支！  
 > 如果是想把最终敲定版本上传到远端，使用 git push 提交到远端分支！  
-> 上传版本前需要 stage the change, 上传版本时要走的四个命令 git add、git commit、git pull、git push  
+> 上传版本时要走的五个命令 git status、git add、git commit、git pull、git push  
 
 git remote add 远端名 仓库链接 &emsp;  设置远端链接  
 git remote rm 远端名 &emsp; 删除远端链接  
@@ -94,4 +94,4 @@ git fetch 远端名 &emsp; 获取远端代码更新本地
 - [ ] vscode文件变更会有符号提示，符号提示的具体内容是？
 - [ ] vscode把 git 命令做了集成按钮，按钮意义是？ 
 - [ ] git log 中的 log 是什么时候完成了更新？
-- [ ] 
+- [ ] vscode 中的 markdown 预览会识别 enter 换行？
