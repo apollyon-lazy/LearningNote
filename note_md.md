@@ -20,9 +20,11 @@
 <kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾  
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>Home</kbd> 选中光标以前所有单位  
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>End</kbd> 选中光标以后所有单位  
+<kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能  
+<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
+
 
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
-
 <kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口  
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>E</kbd> 搜狗输入法下中文模式切换英文检索  
 

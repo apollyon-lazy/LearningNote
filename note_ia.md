@@ -1,3 +1,5 @@
+# 毕业设计心路历程
+---
 ### 一
 #### Brainstorming
 - 寻找区间分析编程工具
@@ -78,3 +80,17 @@
 > **任务安排**  
 即便是安排多任务同时进行 也要给每个任务留出获得进展的时间(不要中途放弃)  
 > **论文排版**  
+
+### 七
+#### Brainstorming
+
+| Library | Version | Data | Websites | Influences |
+| :--- | :--- | :--- | :--- |:--- |
+| Pyinterval | 1.20 | 2017-3 | https://github.com/taschini/pyinterval | have 70 stars in github |
+| portion | 2.1.6 | 2021-4 | https://github.com/AlexandreDecan/portion | have 340 stars in github |
+| INTLAB | v_12 | 2020-3 | https://www.tuhh.de/ti3/rump/intlab/ | have keys on Wiki |
+| Julia | still update | still update| https://julialang.org/ |a high-compution code |
+
+- 由于区间运算还不完善，很多大小语言项目都涉及部分，使用最多的INTLAB目前只能购买使用，纠结做区间运算的工具意义是不大的！
+
+
