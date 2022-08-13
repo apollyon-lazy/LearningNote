@@ -91,6 +91,6 @@
 | INTLAB | v_12 | 2020-3 | https://www.tuhh.de/ti3/rump/intlab/ | have keys on Wiki |
 | Julia | still update | still update| https://julialang.org/ |a high-compution code |
 
-- 由于区间运算还不完善，很多大小语言项目都涉及部分，使用最多的INTLAB目前只能购买使用，纠结做区间运算的工具意义是不大的！
+> 由于区间运算还不完善，很多大小语言项目都涉及部分，使用最多的INTLAB目前只能购买使用，纠结做区间运算的工具意义是不大的！
 
 

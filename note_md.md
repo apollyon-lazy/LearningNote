@@ -3,7 +3,7 @@
 #### 扩展包
 - Markdown all in one(配置环境)
 - markdown preview enhance(预览增强)
-#### 快捷键
+#### 常用快捷键
 
 <kbd>ctrl</kbd> + <kbd>C</kbd> 复制  
 <kbd>ctrl</kbd> + <kbd>V</kbd> 粘贴  
@@ -12,7 +12,9 @@
 <kbd>ctrl</kbd> + <kbd>A</kbd> 全选  
 <kbd>ctrl</kbd> + <kbd>F</kbd> 查找  
 <kbd>ctrl</kbd> + <kbd>H</kbd> 替换  
-> 查找和替换下的enter意义是不一样的！  
+> VScode中查找和替换下的enter意义是不一样的！  
+
+#### 文档快捷键
 
 <kbd>shift</kbd> + <kbd>right</kbd> 向右选中一个光标单位  
 <kbd>shift</kbd> + <kbd>left</kbd> 向左选中一个光标单位  
@@ -20,16 +22,39 @@
 <kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾  
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>Home</kbd> 选中光标以前所有单位  
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>End</kbd> 选中光标以后所有单位  
-<kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能  
-<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>C/V</kbd> 格式刷  
+<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>D</kbd> 添加字符底纹  
+<kbd>ctrl</kbd> + <kbd>B</kbd> 字体加粗  
+<kbd>ctrl</kbd> + <kbd>I</kbd> 字体倾斜  
+<kbd>ctrl</kbd> + <kbd>U</kbd> 字体下划线  
+<kbd>ctrl</kbd> + <kbd>=</kbd> 字体下标  
+<kbd>ctrl</kbd> + <kbd>+</kbd> 字体上标  
 
+#### 桌面快捷键
+
+<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
+<kbd>Win</kbd> + <kbd>space</kbd> 切换输入法
+<kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面  
+<kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能 
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>E</kbd> 搜狗输入法下中文模式切换英文检索  
+> Win10系统下win+space无法切入输入法可以尝试重启电脑！
+
+#### Vscode快捷键
 
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
 <kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口  
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>E</kbd> 搜狗输入法下中文模式切换英文检索  
+
 
 > 熟悉快捷键是快速编写文档的重要技巧！  
-> 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！  
+> 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！ 
+
+#### Juypter快捷键
+
+<kbd>ctrl</kbd> + <kbd>Enter</kbd> 运行并在当前代码块  
+<kbd>shift</kbd> + <kbd>Enter</kbd> 运行并到下一代码块  
+<kbd>Mouse L</kbd> + <kbd>M</kbd> 选中代码块切换到Markdown模式  
+<kbd>Mouse L</kbd> + <kbd>Y</kbd>   选中代码块到代码格式  
+<kbd>Mouse L</kbd> + <kbd>D</kbd> <kbd>D</kbd> 删除选中代码块  
 
 #### 终端命令
 pwd（print work directory） 显示当前终端所在目录  
