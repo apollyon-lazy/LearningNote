@@ -1,4 +1,5 @@
-# 从零开始的vscode+markdown笔记
+## 从零开始的vscode+markdown笔记
+## 常用快捷键 和 命令
 ---
 #### 扩展包
 - Markdown all in one(配置环境)
@@ -63,7 +64,7 @@ cd 路径(change dictionary) 切换目录
 > ..表示上一级目录。  
 > . 表示当前目录。  
  
-#### 源代码管理
+#### 源代码管理(git命令)
 
 git version  查看版本
 git config --global user.name "用户名" &emsp; 配置用户名  
@@ -123,3 +124,4 @@ git fetch 远端名 &emsp; 获取远端代码更新本地
 - [ ] git log 中的 log 是什么时候完成了更新？
 - [ ] vscode 中的 markdown 预览会识别 enter 换行？
 - [ ] git 命令的查询网址链接？
+- [x] 更新于 2022-8-15 16:09
