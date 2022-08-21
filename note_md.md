@@ -44,7 +44,8 @@
 #### Vscode快捷键
 
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
-<kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口  
+<kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
+<kbd>shift</kbd> + <kbd>alt</kbd> 光标多选    
 
 
 > 熟悉快捷键是快速编写文档的重要技巧！  
