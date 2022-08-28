@@ -2,7 +2,6 @@
 - Python中用方括号\[ \]来表示列表，并用逗号，来分隔其中的元素
 - 数据类型为 list 有序可变序列
 - listname = [element1 , element2 , element3 , ... ,elementn]
-#### 创建列表
 #### 列表内置函数
 listname.append(obj) 在列表的末尾追加obj一个单元素
 listname.extend(obj) 在列表的末尾追加obj中所有元素  
