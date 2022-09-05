@@ -14,7 +14,7 @@
    - 对于 n 个状态变量、 r 个输入、m 个输出的动态系统、状态空间表达式的一般形式为：  
    $\dot x = Ax + Bu$  
    $y = Cx + Du$  
-   $\mu$是输入，$x$ 是状态变量，$y$ 是输出  
+   $\mu$是输入，x是状态变量，y是输出  
    $A \in R^{nxn}$，表征了系统内部状态的联系，被称为**系统矩阵**  
    $B \in R^{nxr}$，表征了输入对状态的作用，称为**控制矩阵**  
    $C \in R^{mxn}$，表征了输出与状态变量的关系，称为**输出矩阵**  
@@ -52,16 +52,16 @@
    $\dot x = Ax,x(0)=x_0, \quad t \geq 0$ 
    的解，即系统的零输入响应 $x_{0u}(t)$ 为：  
    $x_{0u}(t) = e^{At}x_0,t \geq 0$，  
-   式中， $e^{At}$ 为系统矩阵A的矩阵指数函数：
+   式中， $e^{At}$ 为系统矩阵A的矩阵指数函数：  
    $e^{At} \triangleq I + At + \frac{1}{2!}A^2t^2 + ... = \sum_{k=0}^\infty \frac{1}{k!}A^kt^k $
    - **凯拉-哈迷尔顿定理**  
    设 $A \in R^{nxn}$，其特征多项式为  
    $D(\lambda) = |\lambda I - A| = \lambda^n + a_{n-1}\lambda^{n-1} + ... + a_1\lambda + a_0 = 0$，  
    则矩阵A必满足其特征多项式，即  
    $A^n + a_{n-1}A^{n-1} + ... + a_1A + a_0I = 0$
-   - **线性定常系统非齐次状态方程**
+   - **线性定常系统非齐次状态方程**  
    给定初始状态为零的线性定常系统
-   $\dot x = Ax + Bu,x(0)=x_0, \quad t \geq 0$
+   $\dot x = Ax + Bu,x(0)=x_0, \quad t \geq 0$  
    其中，x为n维状态向量，u为r维输入向量，A和B分别为nxn和nxr常阵  
    那么系统的零状态响应可表示为：
    $x_{0u}(t) = \int_{0}^t e^{A(t-\tau)Bu(\tau)}x_0, \quad t \geq 0$  
@@ -71,23 +71,23 @@
    - $x(t) = \Phi(t,t_0)x(t_0) + \int_{t_0}^t \Phi(t- \tau)B(\tau)u(\tau)d\tau, \quad t \in [t_0,t_\alpha]$
 #### 线性控制和系统的能控性和能观性
 1. 能控、完全能控、不完全能控、线性定常系统的能控性的判别
-   - Gram（格拉姆）矩阵判据
-   线性定常系统：$\dot x = Ax + Bu,x(0) = x_0, \quad t \geq 0$  
+   - Gram（格拉姆）矩阵判据  
+   线性定常系统： $\dot x = Ax + Bu,x(0) = x_0, \quad t \geq 0$  
    是完全能控的充分必要条件为  
-   存在时刻$t_1 > 0$使如下定义的Gram矩阵  
+   存在时刻 $t_1 > 0$使如下定义的Gram矩阵  
    $W_c[0,t_1]=\int_0^{t_1}(e^{-At}B)(e^{-At}B)^Tdt$ 为非奇异
-   - 秩判据
+   - 秩判据  
    线性定常系统完全能控的充要条件是  
    矩阵 $M=[B\ AB\ ...\ A^{n-1}B]$ 的秩 $rankM = n$  
    其中，n为系统矩阵A的维数
-   - PBH判据
+   - PBH判据  
    线性定常系统完全能控的充要条件是  
-   对系统矩阵的所有特征值$\lambda_i(i=1,2,...n)$:均成立：  
+   对系统矩阵的所有特征值 $\lambda_i(i=1,2,...n)$:均成立：  
    $rank[\lambda_iI-A,B]=n, \quad i=1,2,...,n$
-   - 规范型判据
+   - 规范型判据  
    线性定常系统完全能控的充要条件为：  
-     1. 当系统矩阵A的特征值为两两互异时，系统状态方程经线性变换导出的对角规范型：  
-      $$
+     1. 当系统矩阵A的特征值为两两互异时，系统状态方程经线性变换导出的对角规范型：    
+      $
       \dot{\bar x} =
       \begin{bmatrix}
       \lambda_1 &  & &  \\
@@ -101,10 +101,10 @@
       \vdots \\ 
       \bar B_n \\
       \end{bmatrix} u 
-      $$  
+      $  
       式中，$\bar B_i \neq 0,i=1,2,...,n$,即控制矩阵中不包含元素全为零的行
-     2. 当系统矩阵A的特征值存在重根时，系统状态方程经线性变换导出的约当标准型：  
-      $$
+     2. 当系统矩阵A的特征值存在重根时，系统状态方程经线性变换导出的约当标准型：    
+      $
       \dot{\tilde x} =
       \begin{bmatrix}
       J_1 &   & &  \\
@@ -120,11 +120,11 @@
       \vdots \\ 
       \tilde B_n \\
       \end{bmatrix} u 
-      $$  
-      设特征根$\lambda_i$的代数重数为$\sigma_i$。几何重数为$\alpha_i$，$\lambda_i$对应的第k个约当子块的维数为$r_{ik}$  
-         - 若 $\sigma_i = 1$，则$\lambda_i$对应的输入矩阵$\tilde B_i$不全为0；
-         - 若 $\sigma_i > 1,\alpha_i = 1$，则$\lambda_i$对应的输入矩阵$\tilde B_i$的最后一行不全为0；
-         - 若 $\alpha_i > 1$，则$\lambda_i$对应的每一个约当子块最后一行对应的输入矩阵行组成的矩阵 $\begin{bmatrix}
+      $    
+      设特征根 $\lambda_i$的代数重数为 $\sigma_i$。几何重数为 $\alpha_i$，$\lambda_i$对应的第k个约当子块的维数为 $r_{ik}$  
+         - 若 $\sigma_i = 1$，则 $\lambda_i$对应的输入矩阵 $\tilde B_i$不全为0；
+         - 若 $\sigma_i > 1,\alpha_i = 1$，则 $\lambda_i$对应的输入矩阵$\tilde B_i$的最后一行不全为0；
+         - 若 $\alpha_i > 1$，则 $\lambda_i$对应的每一个约当子块最后一行对应的输入矩阵行组成的矩阵 $\begin{bmatrix}
          \bar b_{r_{i1}} \\ 
          \bar b_{r_{i2}} \\ 
          \vdots \\ 
