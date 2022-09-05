@@ -178,7 +178,19 @@
       \end{bmatrix}$
 5. 线性定常系统的能控性分解、能观性分解
 #### 李雅普诺夫定理
-
+$
+T_{C 1}=\left[\begin{array}{llll}
+e_{1} & e_{2} & \cdots & e_{n}
+\end{array}\right]=\left[\begin{array}{llll}
+A^{n-1} b & A^{n-2} b & \cdots & b
+\end{array}\right]\left[\begin{array}{ccccc}
+1 & & & \\
+a_{n-1} & 1 & & & \\
+\vdots & \vdots & \ddots & & \\
+a_{2} & a_{3} & & \ddots & \\
+a_{1} & a_{2} & \cdots & a_{n-1} & 1
+\end{array}\right]
+$
 #### 思考
 - [ ] 线性代数、矩阵论、现代控制理论的内容晦涩，结合题目示例理解会更加透彻
 - [x] 2020-9-4 22:30
