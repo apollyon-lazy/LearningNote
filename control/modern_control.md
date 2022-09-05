@@ -19,7 +19,7 @@
    $B \in R^{nxr}$，表征了输入对状态的作用，称为**控制矩阵**  
    $C \in R^{mxn}$，表征了输出与状态变量的关系，称为**输出矩阵**  
    $C \in R^{mxr}$，表征了输出与输入的关系，称为**直接传输矩阵**  
-2. 状态空间表达式的建立：**方框图法**、**机理法**、**实现问题**的建模方法
+2. 状态空间表达式的建立：**方框图法**、**机理法**、**实现问题**及其建模方法
    - 实现问题存在的条件是 m <= n  
    m 是传递函数分子的阶数，n 是传递函数分母的阶数
    当 m < n 时，输入输出之间不存在比例关系，直接传输矩阵 $D = 0$  
@@ -74,7 +74,7 @@
    - Gram（格拉姆）矩阵判据
    线性定常系统：$\dot x = Ax + Bu,x(0) = x_0, \quad t \geq 0$  
    是完全能控的充分必要条件为  
-   存在时刻$t_1 > 0$使如下定义的GRAM矩阵  
+   存在时刻$t_1 > 0$使如下定义的Gram矩阵  
    $W_c[0,t_1]=\int_0^{t_1}(e^{-At}B)(e^{-At}B)^Tdt$ 为非奇异
    - 秩判据
    线性定常系统完全能控的充要条件是  
@@ -87,9 +87,10 @@
    - 规范型判据
    线性定常系统完全能控的充要条件为：  
      1. 当系统矩阵A的特征值为两两互异时，系统状态方程经线性变换导出的对角规范型：  
-      $\dot{\bar x} =
+      $$
+      \dot{\bar x} =
       \begin{bmatrix}
-      \lambda_1 &   & &  \\
+      \lambda_1 &  & &  \\
       & \lambda_2 &  & \\
       &   & \ddots & \\
       &   &  & \lambda_n
@@ -100,10 +101,11 @@
       \vdots \\ 
       \bar B_n \\
       \end{bmatrix} u 
-      $  
+      $$  
       式中，$\bar B_i \neq 0,i=1,2,...,n$,即控制矩阵中不包含元素全为零的行
      2. 当系统矩阵A的特征值存在重根时，系统状态方程经线性变换导出的约当标准型：  
-      $\dot{\tilde x} =
+      $$
+      \dot{\tilde x} =
       \begin{bmatrix}
       J_1 &   & &  \\
       & \ddots &  & \\
@@ -118,11 +120,16 @@
       \vdots \\ 
       \tilde B_n \\
       \end{bmatrix} u 
-      $  
+      $$  
       设特征根$\lambda_i$的代数重数为$\sigma_i$。几何重数为$\alpha_i$，$\lambda_i$对应的第k个约当子块的维数为$r_{ik}$  
-         - 若$\sigma_i = 1$，则$\lambda_i$对应的输入矩阵$\tilde B_i$不全为0；
-         - 若$\sigma_i > 1,\alpha_i = 1$，则$\lambda_i$对应的输入矩阵$\tilde B_i$的最后一行不全为0；
-         - 若$alpha_i > 1$，则$\lambda_i$对应的每一个约当子块最后一行对应的输入矩阵行组成的矩阵$\begin{bmatrix}\bar b_{r_{i1}} \\ \bar b_{r_{i2}} \\ \vdots \\ \bar b_{r_{i\alpha_i}} \\ \end{bmatrix}$均为行线性无关。
+         - 若 $\sigma_i = 1$，则$\lambda_i$对应的输入矩阵$\tilde B_i$不全为0；
+         - 若 $\sigma_i > 1,\alpha_i = 1$，则$\lambda_i$对应的输入矩阵$\tilde B_i$的最后一行不全为0；
+         - 若 $\alpha_i > 1$，则$\lambda_i$对应的每一个约当子块最后一行对应的输入矩阵行组成的矩阵 $\begin{bmatrix}
+         \bar b_{r_{i1}} \\ 
+         \bar b_{r_{i2}} \\ 
+         \vdots \\ 
+         \bar b_{r_{i\alpha_i}} \\
+         \end{bmatrix}$ 均为行线性无关。
 2. 能观、完全能观、不完全能观、线性定常系统的能观性的判别
    - Gram（格拉姆）判据
    - 秩判据
@@ -131,7 +138,55 @@
 3. 线性时变系统的能控性和能观性的判别
    - Gram（格拉姆）判据
    - 秩判据
-4. 对偶原理
+4. 线性时变对偶系统、线性定常对偶系统、线性时变系统对偶原理、线性定常系统对偶原理
+5. 能控标准I型、能控标准II型、能观标准I型、能观标准II型
+   - 能控性与能观性的不变性 
+   在任意非奇异线性变换下，线性定常系统  
+   $\dot x = Ax + Bu \\y = Cx$
+   的能控性和能观性不变
+   - 能控标准I型变换   
+   对于完全能控的单输入单输出线性定常系统，存在线性非奇异变换$x = T_{C1}\bar x$，其中：    
+   $$
+   T_{C1} = 
+   \begin{bmatrix} 
+   e_1 & e_2 & \cdots & e_n
+   \end{bmatrix} =
+   \begin{bmatrix}
+   A^{n-1}b & A^{n-2}b & \cdots & b
+   \end{bmatrix}
+   \begin{bmatrix}
+   1 & & & & \\
+   a_{n-1} & 1 & & & \\
+   \vdots & \vdots & \ddots & &\\
+   a_2 & a_3 & & \ddots  &\\
+   a_1 & a_2 & \cdots & a_{n-1} & 1\\
+   \end{bmatrix}
+   $$  
+   $a_i(i=0,1,...,n-1)$为系统特征多项式 $|\lambda I-A|= \lambda^n + a_{n-1}\lambda^{n-1} + ... + a_1\lambda +a_0 = 0$的系数。  
+   能够使状态空间表达式化成如下形式的能控标准型（I型）：  
+   $\dot {\bar x} = \bar A \bar x + \bar b \bar u$
+   $\bar y = \bar C \bar x$  
+   其中：  
+   $$
+   \bar A = T_{C1}^{-1}AT_{C1} = 
+      \begin{bmatrix}
+      0 & 1 & \cdots 0 \\
+      \vdots & \vdots & \ddots & \vdots \\
+      0 & 0 & \cdots & 1 \\
+      -a_0 & -a_1 & \cdots & -a_{n-1} \\ 
+      \end{bmatrix}
+   \quad \bar b = T_{C1}^{-1}b =
+      \begin{bmatrix}
+      0 \\ \vdots \\ 0 \\ 1 \\
+      \end{bmatrix}
+      \quad \bar C = CT_{C1} = 
+      \begin{bmatrix}
+      \beta _0 & \beta _1 & \cdots & \beta _{n-1} 
+      \end{bmatrix}
+   $$
+6. 线性定常系统的能控性分解、能观性分解
+#### 李雅普诺夫定理
+
 #### 思考
 - [ ] 线性代数、矩阵论、现代控制理论的内容晦涩，结合题目示例理解会更加透彻
 - [x] 2020-9-4 22:30
