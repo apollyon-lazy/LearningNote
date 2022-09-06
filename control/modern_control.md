@@ -86,11 +86,15 @@
    $rank[\lambda_iI-A,B]=n, \quad i=1,2,...,n$
    - 规范型判据  
    线性定常系统完全能控的充要条件为：  
-     1. 当系统矩阵A的特征值为两两互异时，系统状态方程经线性变换导出的对角规范型：      
+     1. 当系统矩阵A的特征值为两两互异时，系统状态方程经线性变换导出的对角规范型：
+           
       <img src="./images/control_1.png" width="60%">   
+
       式中， $\bar B_i \neq 0,i=1,2,...,n$ ,即控制矩阵中不包含元素全为零的行
-     1. 当系统矩阵A的特征值存在重根时，系统状态方程经线性变换导出的约当标准型：      
-      <img src="./images/control_2.png" width="60%">        
+     3. 当系统矩阵A的特征值存在重根时，系统状态方程经线性变换导出的约当标准型： 
+          
+      <img src="./images/control_2.png" width="60%">  
+
       设特征根 $\lambda_i$的代数重数为 $\sigma_i$。几何重数为 $\alpha_i$，$\lambda_i$对应的第k个约当子块的维数为 $r_{ik}$  
          - 若 $\sigma_i = 1$，则 $\lambda_i$对应的输入矩阵 $\tilde B_i$不全为0；
          - 若 $\sigma_i > 1,\alpha_i = 1$，则 $\lambda_i$对应的输入矩阵$\tilde B_i$的最后一行不全为0；
@@ -110,13 +114,17 @@
    $\dot x = Ax + Bu \\y = Cx$
    的能控性和能观性不变
    - 能控标准I型变换   
-   对于完全能控的单输入单输出线性定常系统，存在线性非奇异变换$x = T_{C1}\bar x$，其中：    
-   <img src="./images/control_3.png" width="100%">
+   对于完全能控的单输入单输出线性定常系统，存在线性非奇异变换$x = T_{C1}\bar x$，其中：  
+
+   <img src="./images/control_3.png" width="100%">  
+
    $a_i(i=0,1,...,n-1)$ 为系统特征多项式 $|\lambda I-A|= \lambda^n + a_{n-1}\lambda^{n-1} + ... + a_1\lambda +a_0 = 0$的系数。  
    能够使状态空间表达式化成如下形式的能控标准型（I型）：  
    $\dot {\bar x} = \bar A \bar x + \bar b \bar u$
    $\bar y = \bar C \bar x$  
-   <img src="./images/control_4.jpg" width="100%">
+
+   <img src="./images/control_4.jpg" width="100%">  
+   
 6. 线性定常系统的能控性分解、能观性分解
 #### 李雅普诺夫定理
 
