@@ -117,7 +117,7 @@
    的能控性和能观性不变
    - **能控标准I型**变换   
    对于完全能控的单输入单输出线性定常系统，存在线性非奇异变换 $x = T_{C1}\bar x$，其中：  
-   <img src="./images/control_3.png" width="60%">  
+   <img src="./images/control_3.png" width="60%">    
    $a_i(i=0,1,...,n-1)$ 为系统特征多项式 $|\lambda I-A|= \lambda^n + a_{n-1}\lambda^{n-1} + ... + a_1\lambda +a_0 = 0$的系数。  
    能够使状态空间表达式化成如下形式的能控标准型（I型）：  
    $\dot {\bar x} = \bar A \bar x + \bar b \bar u  \ \bar y = \bar C \bar x$  
