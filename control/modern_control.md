@@ -86,11 +86,11 @@
    $rank[\lambda_iI-A,B]=n, \quad i=1,2,...,n$
    - 规范型判据  
    线性定常系统完全能控的充要条件为：  
-     1. 当系统矩阵A的特征值为两两互异时，系统状态方程经线性变换导出的对角规范型：    
-      <img src="./images/control_1.png" width="60%"> 
-      式中，$\bar B_i \neq 0,i=1,2,...,n$,即控制矩阵中不包含元素全为零的行
-     1. 当系统矩阵A的特征值存在重根时，系统状态方程经线性变换导出的约当标准型：    
-      <img src="./images/control_2.png" width="60%">     
+     1. 当系统矩阵A的特征值为两两互异时，系统状态方程经线性变换导出的对角规范型：      
+      <img src="./images/control_1.png" width="60%">   
+      式中， $\bar B_i \neq 0,i=1,2,...,n$ ,即控制矩阵中不包含元素全为零的行
+     1. 当系统矩阵A的特征值存在重根时，系统状态方程经线性变换导出的约当标准型：      
+      <img src="./images/control_2.png" width="60%">        
       设特征根 $\lambda_i$的代数重数为 $\sigma_i$。几何重数为 $\alpha_i$，$\lambda_i$对应的第k个约当子块的维数为 $r_{ik}$  
          - 若 $\sigma_i = 1$，则 $\lambda_i$对应的输入矩阵 $\tilde B_i$不全为0；
          - 若 $\sigma_i > 1,\alpha_i = 1$，则 $\lambda_i$对应的输入矩阵$\tilde B_i$的最后一行不全为0；
