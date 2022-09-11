@@ -36,4 +36,17 @@ https://github.com/Vay-keen/Machine-learning-learning-notes.git
    - 偏差-方差分解(bias-variance decompodition)、偏差-方差窘境(bias-variance dilemma)
    <img src="./images/ML2_2.jpg" width="80%">
 #### 线性模型
-1. 
+1. 线性回归
+   - 线性回归(linear regression)、多元线性回归(multivariate linear regression)、正则化(regularization)、对数线性回归(log-linear regression)、广义线性模型(generalized linear model)、联系函数(link function)
+2. 对数几率回归
+   - 单位阶跃函数(unit-step function)、对数几率函数(logistic function)、Sigmoid函数
+   `概率论与数理统计：最小二乘法(least square method)、参数估计(parameter estimation)、极大似然估计(maximum likeihood method)`
+   `线性代数：满秩矩阵(full-rank matrix)、正定矩阵(positive definite matrix)`
+   `数值优化、凸优化、最优化理论：梯度下降法(gradient descent method)、牛顿法(Newton method)`
+3. 线性判别分析
+   - 线性判别分析(linear discriminant analysis LDA)、类内散度矩阵(within-class scatter matrix)、类间散度矩阵(between-class scatter matrix)、广义瑞利商(generalized Rayleigh quotient)
+4. 多分类学习
+   - 拆分策略：“一对一”(One vs. One OvO)、“一对其余”(One vs. Rest OvR)、“多对多”(Many vs. Many MvM)、“纠错输出码”(error correcting outputs codes ECOC)
+5. 类别不平衡问题
+   - 类别不平衡(class-imbalance)、“再缩放”：“欠采样”(undersampling)、“过采样”(oversampling)、“阈值移动”(threshold-moving)
+#### 决策树
