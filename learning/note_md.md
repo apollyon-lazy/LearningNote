@@ -37,7 +37,8 @@
 <kbd>Win</kbd> + <kbd>space</kbd> 切换输入法
 <kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面 
 <kbd>Alt</kbd> + <kbd>F4</kbd> 关闭窗口 
-<kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能 
+<kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能
+<kbd>F2</kbd> 快捷重命名
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>E</kbd> 搜狗输入法下中文模式切换英文检索  
 > Win10系统下win+space因为快捷键冲突无法切换输入法，可以尝试使用ctrl+shift！
 
