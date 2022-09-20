@@ -1,0 +1,20 @@
+#### FAQs
+- [x] juypter文件转换为markdown文件
+  - 安装 nbconvert pandoc 库 
+- [x] vscode 环境的配置
+  - juypter     
+    - Juypter
+    - Juypter Keymap
+    - Jupyter Notebook Renderers
+  - python      
+    - Python
+    - Pylance
+  - markdown    
+    - Markdown all in one(配置环境)
+    - markdown preview enhance(预览增强)
+- [x] github 图片显示问题
+  - DNS污染
+- [x] vscode和MATLAB实现代码注释对齐
+  - 没有特别好的代码注释对齐插件或方法
+- [x] 尝试使用 git 忽略文件或者文件夹的上传
+  - 在根目录下创建 .gitignore 文件  
