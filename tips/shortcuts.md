@@ -83,6 +83,7 @@ git add .  &emsp; 添加当前目录下所有文件
 git commmit -m "提交说明" &emsp; 提交版本说明  
 git log  &emsp; 查看提交到本地的版本信息  
 git reset --hard 提交编号 &emsp; 回退到某一版本并删除后续版本  
+
 `代码上传远端五个必要命令 git status/git add/git commit/git pull/git push` 
 `git init 命令会在当前目录创建一个 .git 的文件夹，文件夹中会保存每个 git 版本变化和记录！`   
 `git status 命令显示哪些更改是被放到暂存区（staged）将会提交的,以避免错误提交！`  
@@ -115,14 +116,20 @@ git clone 仓库链接 . &emsp; 在目录下克隆远端的所有文件
 git remove -v &emsp; 查看仓库链接  
 git fetch 远端名 &emsp; 获取远端代码更新本地  
 
-**通过克隆建立库和本地的关系**：先在 github 上创建一个仓库，再在本地空文件夹目录下使用 git clone 命令克隆这个仓库, 将跳过 git init 初始化命令生成 .git 文件夹，跳过 git remote 设置远端链接。  
+**通过克隆建立库和本地的关系**  
+先在 github 上创建一个仓库，再在本地空文件夹目录下使用 git clone 命令克隆这个仓库, 将跳过 git init 初始化命令生成 .git 文件夹，跳过 git remote 设置远端链接。  
 
-**远端代码与本地代码发生冲突**，可以 git branch 创建一个本地空分支，将远端代码用 git pull 拉取并合并到空分支当中！
-> 使用 git fetch 先和本地新分支做一个合并，与本地主分支对比后，用 git merge 把两个分支合并！  
+**远端代码与本地代码发生冲突**  
+可以 git branch 创建一个本地空分支，将远端代码用 git pull 拉取并合并到空分支当中！或者使用 git fetch 先把远端分支拉取下来，与本地主分支对比后，用 git merge 把两个分支部分合并！  
+ 
+**忽略管理**  
+在工作目录下找到 .gitignore 文件（没有就创建），用记事本打开后输入以下代码。
+`/<foldername1>` 仅仅忽略项目根目录下名字为 foldername1 的文件 
+`<foldername2>` 忽略文件名为 foldername2 的文件和以 foldername2 为名的目录 
+`<foldername3>/` 忽略文件名为 foldername3 目录下所有文件，但如果当前目录有文件名为 foldername3 ，该文件不会被忽略
+`* .[a]` 忽略所有以 .a 为扩展名结尾的文件
 
-> vscode新增一个文件显示绿色，修改一个文件显示橙色！  
-> 全角：是指一个全角字符占用两个标准字符（或两个半角字符）的位置。  
-> 半角：是指一个字符占用一个标准的字符位置。半角占一个字节。  
+
 
 #### 待解决问题
 - [x] vscode 中的 markdown 预览会识别 enter 换行
