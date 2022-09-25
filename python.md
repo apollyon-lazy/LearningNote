@@ -1,6 +1,6 @@
 #### 列表 
 - Python中用方括号\[ \]来表示列表，并用逗号，来分隔其中的元素
-- 数据类型为 list 有序可变序列
+- 数据类型为 list **有序可变**序列
 - listname = [element1 , element2 , element3 , ... ,elementn]
 - **列表内置函数**
 listname.append(obj) 在列表的末尾追加obj一个单元素
@@ -11,16 +11,16 @@ listname.remove(obj) 删除列表对象
 
 
 #### 元组 
-Python中通常是用小括号( )来表示元组(非必须) 只要将各元素用逗号,隔开就会视为元组    
-数据类型为 **tuple** **有序不可变序列**    
-tuplename = (element1, element2, ..., elementn)    
+- Python中通常是用小括号( )来表示元组(非必须) 只要将各元素用逗号,隔开就会视为元组    
+- 数据类型为 tuple **有序不可变**序列    
+- tuplename = (element1, element2, ..., elementn)    
 
 #### 字典
-Python中键(key)和值(value)用冒号:隔开 相邻元素用逗号,隔开 所有元素放在大括号{ }中    
-数据类型为 **dict** **无序可变序列**     
-dictname = {'key'(键):'value1'(值), 'key2':'value2', ..., 'keyn':valuen}  
-
-dict.item() 返回可遍历的(键, 值)元组列表
+- Python中键(key)和值(value)用冒号:隔开 相邻元素用逗号,隔开 所有元素放在大括号{ }中    
+- 数据类型为 dict **无序可变**序列     
+- dictname = {'key'(键):'value1'(值), 'key2':'value2', ..., 'keyn':valuen}  
+- **字典内置函数**
+    dict.item() 返回可遍历的(键, 值)元组列表
 
 
 
@@ -33,7 +33,7 @@ dict.item() 返回可遍历的(键, 值)元组列表
 | isinstance() | isinstance(object, classinfo) | 判断一个对象是否属于已知类型|
 | iter() | | 产生迭代器| list_iterator Object |
 | next() | | 返回迭代器的下一个项目 | 
-| range()| range(start=0, stop, step=1) |生成序列 |
+| range()| range(start=0, stop, step=1) |生成序列|
 | set()  | |创建一个无序不重复的元素集 |
 | sorted()| sorted(iterable, reverse=False) | 对所有可迭代的对象进行排序操作|
 | type() | | 返回对象的类型|
@@ -42,6 +42,7 @@ dict.item() 返回可遍历的(键, 值)元组列表
 - type()不会认为子类是一种父类类型，不考虑继承关系
 - list_iterator Object最后一个元素是StopIteration 
 - isinstance()会认为子类是一种父类类型，考虑继承关系
+- range 只适用于生成整型序列
 
 #### 导入
 from 模块名 import 成员名 as 别名 &emsp; 从模块中导入成员名起个别名  

@@ -13,36 +13,46 @@
 
 #### 文档快捷键
 
-<kbd>shift</kbd> + <kbd>right</kbd> 向右选中一个光标单位  
-<kbd>shift</kbd> + <kbd>left</kbd> 向左选中一个光标单位  
 <kbd>ctrl</kbd> + <kbd>Home</kbd> 光标回到文档开头  
-<kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾  
+<kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾 
+<kbd>ctrl</kbd> + <kbd>Left</kbd> 光标回到本行开头  
+<kbd>ctrl</kbd> + <kbd>Right</kbd> 光标回到本行末尾 
+
+<kbd>shift</kbd> + <kbd>left</kbd> 向左选中一个光标单位
+<kbd>shift</kbd> + <kbd>right</kbd> 向右选中一个光标单位   
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>Home</kbd> 选中光标以前所有单位  
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>End</kbd> 选中光标以后所有单位  
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>C/V</kbd> 格式刷  
-<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>D</kbd> 添加字符底纹(需设置)  
+
+  
 <kbd>ctrl</kbd> + <kbd>B</kbd> 字体加粗  
 <kbd>ctrl</kbd> + <kbd>I</kbd> 字体倾斜  
 <kbd>ctrl</kbd> + <kbd>U</kbd> 字体下划线  
 <kbd>ctrl</kbd> + <kbd>=</kbd> 字体下标  
 <kbd>ctrl</kbd> + <kbd>+</kbd> 字体上标  
+<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>D</kbd> 添加字符底纹(需设置)
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>C/V</kbd> 格式刷  
 
 #### 桌面快捷键
 
-<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
+<kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面
+<kbd>Win</kbd> + <kbd>L</kbd> 快速锁定电脑
+<kbd>Win</kbd> + <kbd>E</kbd> 快速打开文件资源管理器 
 <kbd>Win</kbd> + <kbd>space</kbd> 切换输入法
-<kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面 
-<kbd>Alt</kbd> + <kbd>F4</kbd> 关闭窗口 
+<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
+
 <kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能
+<kbd>Alt</kbd> + <kbd>F4</kbd> 关闭窗口 
 <kbd>F2</kbd> 快捷重命名
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>E</kbd> 搜狗输入法下中文模式切换英文检索  
+
 > Win10系统下win+space因为快捷键冲突无法切换输入法，可以尝试使用ctrl+shift！
 
 #### Vscode快捷键
 
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
 <kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
-<kbd>shift</kbd> + <kbd>alt</kbd> 光标多选    
+<kbd>ctrl</kbd> + <kbd>L</kbd> 选中当前行
+<kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件 安装vscode插件地址 
+<kbd>alt</kbd> + <kbd>MouseL</kbd> 插入多个光标    
 
 
 > 熟悉快捷键是快速编写文档的重要技巧！  
@@ -52,11 +62,15 @@
 
 <kbd>ctrl</kbd> + <kbd>Enter</kbd> 运行并在当前代码块  
 <kbd>shift</kbd> + <kbd>Enter</kbd> 运行并到下一代码块  
-<kbd>Mouse L</kbd> + <kbd>M</kbd> 选中代码块切换到Markdown模式  
-<kbd>Mouse L</kbd> + <kbd>Y</kbd>   选中代码块到代码格式  
-<kbd>Mouse L</kbd> + <kbd>D</kbd> <kbd>D</kbd> 删除选中代码块 
-<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>A</kbd> 多行注释  
-<kbd>ctrl</kbd> + <kbd>/</kbd> 单行注释  
+<kbd>alt</kbd> + <kbd>Enter</kbd> 运行并在下方插入代码块  
+
+<kbd>M</kbd> 转入markdown编辑模式   
+<kbd>Y</kbd>   转入代码编辑模式    
+<kbd>D</kbd> <kbd>D</kbd> 删除选中代码块  
+
+<kbd>ctrl</kbd> + <kbd>/</kbd> 单行注释   
+<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>A</kbd> 多行注释    
+ 
 
 
 #### Markdown快捷键
