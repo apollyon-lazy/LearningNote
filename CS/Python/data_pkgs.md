@@ -1,8 +1,19 @@
-### 数据三剑客(Numpy、Pandas、matplotlib)的一些用法
+### 数据三剑客(Numpy、Pandas、matplotlib)
 #### Numpy
-np.asarrary() 转换输入为array类型<br>
+| Funcation | Description |
+| :--- | :--- |
+| np.array() | 创建一个ndarry |
+| np.empty() | 创建指定类型的空数组 |
+| np.arange() | 创建数值范围并返回 ndarry 对象 |
+| np.asarrary() | 转换类型为 ndrray 数组 |
+| np.dot() | 两个数组的点积 |
+| np.vdot() | 两个向量的点积 |
+| np.inner() | 两个向量的内积 |
+| np.matual() | 两个向量的矩阵积 |
+
+
 #### Pandas
-<img src="./images/dataframe.jpg" width="60%" align="left"><br>
+<img src="./images/dataframe.jpg" width="80%" align="left"><br>
 
 | Funcation | Description |
 | :--- | :--- |

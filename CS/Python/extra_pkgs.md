@@ -1,13 +1,13 @@
-#### 1、seaborn包中的一些用法
+#### 1、seaborn
 | Function | Syntax | Description | Return |
 | :--- | :--- | :--- | :--- |
 | sns.set_theme() | | 设置matplotlib和seaborn绘图风格 |
 | sns.countplot() | sns.countplot(x,y,order,orient) |用条形图展示每个分类的观察值数 返回Axes对象 |
-#### 2、Pillow包中的一些用法
+#### 2、Pillow
 | Function | Syntax | Description | Return |
 | :--- | :--- | :--- | :--- |
 |Image.open()| | 打开并识别文件类型 | Image对象 |
-#### 3、torchvision的一些用法
+#### 3、torchvision
 - torchvision 支持 PIL image 和 Tensor image 这里使用PIL库处理图片    
 A Tensor Image is a tensor with (C, H, W) shape, where C is a number of channels, H and W are image height and width.    
 A batch of Tensor Images is a tensor of (B, C, H, W) shape, where B is a number of images in the batch.
@@ -15,7 +15,7 @@ A batch of Tensor Images is a tensor of (B, C, H, W) shape, where B is a number 
 | Function | Syntax | Description | Return |
 | :--- | :--- | :--- | :--- |
 | transforms.Compose(transforms) || 组合一系列图像变换但不支持torchscript    
-#### 4、wandb的使用
+#### 4、wandb
 - wandb login 登录wandb<br>
 - wandb login --relogin 重新登录wandb<br>
 

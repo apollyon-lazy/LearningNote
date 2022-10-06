@@ -11,7 +11,7 @@
 <kbd>ctrl</kbd> + <kbd>H</kbd> 替换  
 > VScode中查找和替换下的enter意义是不一样的！  
 
-#### 文档快捷键
+#### word快捷键
 
 <kbd>ctrl</kbd> + <kbd>Home</kbd> 光标回到文档开头  
 <kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾 
@@ -31,6 +31,12 @@
 <kbd>ctrl</kbd> + <kbd>+</kbd> 字体上标  
 <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>D</kbd> 添加字符底纹(需设置)
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>C/V</kbd> 格式刷  
+
+#### excel 快捷键
+<kbd>shift</kbd> + <kbd>tab</kbd> 向左移动一个单元格
+<kbd>tab</kbd> 向右移动一个单元格
+<kbd>enter</kbd> 向下移动一个单元格
+<kbd>Fn</kbd> + <kbd>F2</kbd> 编辑单元格
 
 #### 桌面快捷键
 
@@ -64,6 +70,8 @@
 <kbd>shift</kbd> + <kbd>Enter</kbd> 运行并到下一代码块  
 <kbd>alt</kbd> + <kbd>Enter</kbd> 运行并在下方插入代码块  
 
+<kbd>A</kbd> 在上方插入单元格 
+<kbd>B</kbd> 在下方插入单元格 
 <kbd>M</kbd> 转入markdown编辑模式   
 <kbd>Y</kbd>   转入代码编辑模式    
 <kbd>D</kbd> <kbd>D</kbd> 删除选中代码块  
