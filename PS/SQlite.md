@@ -1,4 +1,5 @@
-一个数据库(.db)文件中可以有很多个表  
+一个连接中可以有多个数据库
+一个数据库可以有多个表  
 每个表又有不同的字段  
 根据字段可以为表添加记录
 ### SQlite下载
@@ -6,18 +7,25 @@
 安装后把安装目录添加到系统环境变量Path下  
 在命令提示符下输入 sqlite3 后打开环境  
 ### SQlite关键词
-CREATE DROP  
-INSERT UPDATE DELETE SELECT
-WHERE AND/OR 
-LIKE(_%)/GLOB(*?)
-LIMIT/OFFSET 
-ORDER BY(ASC/DESC)
-
+CREATE  
+DROP    
+INSERT  
+UPDATE  
+DELETE  
+SELECT  
+WHERE  
+AND/OR   
+LIKE(_%)、GLOB(*?)  
+LIMIT(OFFSET)   
+ORDER BY(ASC/DESC)  
+GROUP BY(SUM)  
+HAVING(COUNT)  
+DISTINCT  
 ### SQlite管理
 控制命令符下打开 sqlite3 环境；
 navicat for SQlite 中可视化；
 VScode 中使用高级API
-### 几个常用的.命令
+### 常用的.命令
 .open(打开或创建) 
 .quit(退出sqlite3环境) 
 .dump(导出.db文件为.sql文件)
@@ -61,3 +69,5 @@ WHERE [condition];
 DELETE FROM table_name
 WHERE [condition];
 ```
+### 批量记录导入导出
+navicut for SQlite 可以直接读取 excel

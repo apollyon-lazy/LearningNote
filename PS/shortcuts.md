@@ -29,7 +29,7 @@
 `dir /b` 查看当前路径下所有文件和文件夹
 `cd` 打开文件夹(打开盘符直接输入盘符名即可)
 
-#### word快捷键
+#### word 快捷键
 
 <kbd>ctrl</kbd> + <kbd>Home</kbd> 光标回到文档开头  
 <kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾 
@@ -56,7 +56,7 @@
 <kbd>enter</kbd> 向下移动一个单元格
 <kbd>Fn</kbd> + <kbd>F2</kbd> 编辑单元格
 
-#### Vscode快捷键
+#### Vscode 快捷键
 
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
 <kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
@@ -72,7 +72,7 @@
 > 熟悉快捷键是快速编写文档的重要技巧！  
 > 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！ 
 
-#### Juypter快捷键
+#### Juypter 快捷键
 
 <kbd>ctrl</kbd> + <kbd>Enter</kbd> 运行并在当前代码块  
 <kbd>shift</kbd> + <kbd>Enter</kbd> 运行并到下一代码块  
@@ -89,7 +89,7 @@
  
 
 
-#### Markdown快捷键
+#### Markdown 快捷键
 <kbd>ctrl</kbd> + <kbd>B</kbd> 字体加粗
 <kbd>ctrl</kbd> + <kbd>I</kbd> 字体倾斜
  
