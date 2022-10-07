@@ -16,7 +16,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
 `conda --version` 查看 conda 版本
 `python -- version` 查看 anaconda 中基础 python 版本
 `conda` `conda list` `conda info` 可用于检查安装是否正确
-<img src="./images/p1.jpg" width="80%"> 
+<img src="./images/anaconda_1.jpg" width="80%"> 
 
 4. 接下来是源配置(使用命令添加源或者直接修改)
 `conda config --show` 显示 conda 的所有配置信息
@@ -56,7 +56,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
   `c.NotebookApp.notebook_dir = 'X:\XXX...`
   然后打开 jupyter 快捷方式的属性
   删掉目标中的 %USERPROFILE% 并在后面添加上刚才设置好的默认工作路径
-  <img src="./images/p2.jpg" width="80%"> 
+  <img src="./images/anaconda_2.jpg" width="80%"> 
 
 
 6. 修改虚拟环境保存路径

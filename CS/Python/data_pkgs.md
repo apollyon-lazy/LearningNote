@@ -34,3 +34,6 @@
 | pd.read_csv() | 读取.csv文件为 dataframe |
 | pd.to_datatime(values,format='...') | 把values按照format处理成Timestamp类 |
 | pd.get_dummies(dummy_na=True) | 对非数字类型(可设置包含NaN)进行独热编码 |
+
+#### Matplotlib
+<img src="./images/matplotlib.png" width="80%" align="left"><br>

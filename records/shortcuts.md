@@ -11,6 +11,24 @@
 <kbd>ctrl</kbd> + <kbd>H</kbd> 替换  
 > VScode中查找和替换下的enter意义是不一样的！  
 
+#### 桌面快捷键
+
+<kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面
+<kbd>Win</kbd> + <kbd>L</kbd> 快速锁定电脑
+<kbd>Win</kbd> + <kbd>E</kbd> 快速打开文件资源管理器 
+<kbd>Win</kbd> + <kbd>space</kbd> 切换输入法
+<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
+
+<kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能
+<kbd>Alt</kbd> + <kbd>F4</kbd> 关闭窗口 
+<kbd>F2</kbd> 快捷重命名
+
+> Win10系统下win+space因为快捷键冲突无法切换输入法，可以尝试使用ctrl+shift！
+
+#### 控制命令符(cmd)命令
+`dir /b` 查看当前路径下所有文件和文件夹
+`cd` 打开文件夹(打开盘符直接输入盘符名即可)
+
 #### word快捷键
 
 <kbd>ctrl</kbd> + <kbd>Home</kbd> 光标回到文档开头  
@@ -38,20 +56,6 @@
 <kbd>enter</kbd> 向下移动一个单元格
 <kbd>Fn</kbd> + <kbd>F2</kbd> 编辑单元格
 
-#### 桌面快捷键
-
-<kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面
-<kbd>Win</kbd> + <kbd>L</kbd> 快速锁定电脑
-<kbd>Win</kbd> + <kbd>E</kbd> 快速打开文件资源管理器 
-<kbd>Win</kbd> + <kbd>space</kbd> 切换输入法
-<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
-
-<kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能
-<kbd>Alt</kbd> + <kbd>F4</kbd> 关闭窗口 
-<kbd>F2</kbd> 快捷重命名
-
-> Win10系统下win+space因为快捷键冲突无法切换输入法，可以尝试使用ctrl+shift！
-
 #### Vscode快捷键
 
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
@@ -60,11 +64,15 @@
 <kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件 安装vscode插件地址 
 <kbd>alt</kbd> + <kbd>MouseL</kbd> 插入多个光标    
 
+`pwd` 显示当前终端所在目录  （print work directory）
+`ls` 显示当前目录下的所有文件 （list file） 
+`cd` 路径切换目录 (change dictionary)  
 
+> .. 表示上一级目录; .  表示当前目录。  
 > 熟悉快捷键是快速编写文档的重要技巧！  
 > 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！ 
 
-#### Juypter(Python)快捷键
+#### Juypter快捷键
 
 <kbd>ctrl</kbd> + <kbd>Enter</kbd> 运行并在当前代码块  
 <kbd>shift</kbd> + <kbd>Enter</kbd> 运行并到下一代码块  
@@ -84,13 +92,6 @@
 #### Markdown快捷键
 <kbd>ctrl</kbd> + <kbd>B</kbd> 字体加粗
 <kbd>ctrl</kbd> + <kbd>I</kbd> 字体倾斜
-
-#### 终端命令
-pwd 显示当前终端所在目录  （print work directory）
-ls 显示当前目录下的所有文件 （list file） 
-cd 路径切换目录 (change dictionary)   
-> .. 表示上一级目录。  
-> .  表示当前目录。  
  
 #### 源代码管理(git命令)
 

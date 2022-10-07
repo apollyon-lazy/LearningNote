@@ -2,7 +2,8 @@
 ---
 #### 文献篇
 
-<img src="./images/Concept.jpg" width="100%"> 
+<img src="./images/concept.jpg" width="100%"> 
+
 
 - 搜索文献
     - 如何搜 
