@@ -1,5 +1,3 @@
-《大话数据结构》CSDN 比较全的笔记
-https://blog.csdn.net/weixin_44571010/article/details/115677735
 ## 提纲
 #### 数据结构绪论
 1. 数据、数据元素、数据项、数据对象、数据结构

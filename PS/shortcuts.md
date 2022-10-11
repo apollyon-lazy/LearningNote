@@ -62,7 +62,8 @@
 <kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
 <kbd>ctrl</kbd> + <kbd>L</kbd> 选中当前行
 <kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件 安装vscode插件地址 
-<kbd>alt</kbd> + <kbd>MouseL</kbd> 插入多个光标    
+<kbd>alt</kbd> + <kbd>MouseL</kbd> 插入多个光标
+<kbd>alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> 移动整行      
 
 `pwd` 显示当前终端所在目录  （print work directory）
 `ls` 显示当前目录下的所有文件 （list file） 
