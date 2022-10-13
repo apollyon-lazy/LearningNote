@@ -1,7 +1,7 @@
 #### Question and answer
 - [x] juypter文件格式转换
   - 转换为 markdown 安装 nbconvert 和 pandoc 库
-  - 转换为 .html 不支持 latex 语言
+  - 转换为 .html 可能支持 markdown 语言
   - 转换为 pdf 过长的代码块会被文档截断显示不全 
 - [x] vscode 环境的配置    
   - Juypter、Juypter Keymap、Jupyter Notebook Renderers（juypter环境）
