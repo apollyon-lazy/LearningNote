@@ -34,19 +34,20 @@
 
 #### 内置函数
 
-| Function | Description | Return | 
-| :---  | :--- | :--- |
-| abs() |  返回数字的绝对值 |
-| enumerate() | 将可遍历数据合成索引序列<br> for i,(X,y) in enumerate(data)| enumerate object |
-| print() | 用于打印输出 |
-| isinstance() | 判断一个对象是否属于已知类型<br> isinstance(object, classinfo) |  ||
-| iter() |  产生迭代器| list_iterator Object |
-| next() | 返回迭代器的下一个项目 | 
-| range()| 生成序列<br> range(start=0, stop, step=1) |
-| set()  | 创建一个无序不重复的元素集 |
-| sorted()| 对所有可迭代的对象进行排序操作<br> sorted(iterable, reverse=False) |
-| type() | 返回对象的类型 |
-| zip()  | 打包对应元素为元组列表 |list |
+| Function      | Description                              | Return | 
+| :---          | :---                                     | :--- |
+| abs()         |  返回数字的绝对值                         |
+| enumerate()   | 将可遍历数据合成索引序列<br> for i,(X,y) in enumerate(data) | enumerate object |
+| print()       | 用于打印输出                              |
+| input()       | 用于输入一个数据                          |
+| isinstance()  | 判断一个对象是否属于已知类型<br> isinstance(object, classinfo)|  |
+| iter()        |  产生迭代器                              | list_iterator Object |
+| next()        | 返回迭代器的下一个项目                    | 
+| range()       | 生成序列<br> range(start=0, stop, step=1)|
+| set()         | 创建一个无序不重复的元素集                |
+| sorted()      | 对所有可迭代的对象进行排序操作<br> sorted(iterable, reverse=False) |
+| type()        | 返回对象的类型                           |
+| zip()         | 打包对应元素为元组列表                   | list |
 
 - type()不会认为子类是一种父类类型，不考虑继承关系
 - list_iterator Object最后一个元素是StopIteration 

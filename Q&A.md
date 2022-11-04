@@ -1,7 +1,7 @@
 #### Question and answer
 - [x] juypter文件格式转换
   - 转换为 markdown 安装 nbconvert 和 pandoc 库
-  - 转换为 .html 可能支持 markdown 语言
+  - 转换为 .html 会支持 markdown 语言
   - 转换为 pdf 过长的代码块会被文档截断显示不全 
 - [x] vscode 环境的配置    
   - Juypter、Juypter Keymap、Jupyter Notebook Renderers、Jupyter Cell Tags、Jupyter Slide Show（jupyter环境）
@@ -14,7 +14,8 @@
 - [x] 全角和半角的区别
   - 全角：是指一个全角字符占用两个标准字符（或两个半角字符）的位置。  
   - 半角：是指一个字符占用一个标准的字符位置。半角占一个字节。
-- [ ] 思维导图的生成
+- [x] 思维导图的生成
+  - 目前免费的思维导图软件大都对文件数量、导图节点个数、导入形式做了限制，更多功能需要付费 
 
 #### Website
 `CS(Coumputer science):`
@@ -25,10 +26,11 @@ https://www.955code.com/ 胖虎的工具箱 程序员导航网站
 `DL(Deep learning)`
 https://courses.d2l.ai/zh-v2/ 动手学深度学习 李沐大神 课程网站  
 https://www.kaggle.com/ Kaggle比赛网站 深度学习题目交流区  
-https://pytorch.org/docs/stable/index.html Pytorch官方函数查询文档  
+https://pytorch.org/docs/stable/index.html Pytorch官方文档  
 https://www.markdownguide.org/ Markdown官方网站  
 https://numpy.org/doc/stable/index.html# Numpy官方网站  
 https://pandas.pydata.org/docs/index.html Pandas官方网站  
-https://matplotlib.org/stable/index.html# Matplotlib官方网站  
+https://matplotlib.org/stable/index.html# Matplotlib官方网站 
+https://docs.scipy.org/doc/scipy/ Scipy官方网站
 https://seaborn.pydata.org/index.html# Seaborn官方网站  
 https://wandb.ai/site 适合观测深度学习模型的远程服务器  
