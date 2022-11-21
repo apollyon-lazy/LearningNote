@@ -1,11 +1,11 @@
-## Python 语法函数速查
-#### 列表
-###### 列表定义 
+# Python 语法函数速查
+## 列表
+### 列表定义 
 1. Python中用方括号\[ \]来表示列表，并用逗号，来分隔其中的元素
 2. 数据类型为 list **有序可变**序列
 3. listname = [element1 , element2 , element3 , ... ,elementn]
 
-###### 列表内置函数
+### 列表内置函数
 
 | Function | Description | Return | 
 | :---  | :--- | :--- |
@@ -16,23 +16,23 @@
 | listname.remove(obj)        | 删除列表对象                  |
 
 
-#### 元组 
-###### 元组定义
+## 元组 
+### 元组定义
 1. Python中通常是用小括号( )来表示元组(非必须) 只要将各元素用逗号,隔开就会视为元组    
 2. 数据类型为 tuple **有序不可变**序列    
 3. tuplename = (element1, element2, ..., elementn)    
 
-#### 字典
-###### 字典定义
+## 字典
+### 字典定义
 1. Python中键(key)和值(value)用冒号:隔开 相邻元素用逗号,隔开 所有元素放在大括号{ }中    
 2. 数据类型为 dict **无序可变**序列     
 3. dictname = {'key'(键):'value1'(值), 'key2':'value2', ..., 'keyn':valuen}  
-###### 字典内置函数
-    dict.item() 返回可遍历的(键, 值)元组列表
+### 字典内置函数
+dict.item() 返回可遍历的(键, 值)元组列表
 
 
 
-#### 内置函数
+## Python内置函数
 
 | Function      | Description                              | Return | 
 | :---          | :---                                     | :--- |
