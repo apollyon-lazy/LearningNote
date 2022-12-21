@@ -1,5 +1,13 @@
 ### 数据三剑客(Numpy、Pandas、matplotlib)
 #### Numpy
+```
+区别一维和多维数组：
+a = np.array([1, 2, 3])
+b = np.array([1, 2],[3, 4])
+
+# a 的形状是(3,) 是单列表 是一维数组 可以当作 1*3 或者 3*1 的向量
+# b 的形状是(2,2) 是嵌套列表 是多维数组 可以当作 2*2 的矩阵
+```
 | Funcation | Description |
 | :--- | :--- |
 | np.array() | 创建一个ndarry |

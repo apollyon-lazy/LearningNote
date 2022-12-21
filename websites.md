@@ -17,9 +17,11 @@ https://seaborn.pydata.org/index.html# Seaborn官方网站
 https://wandb.ai/site 适合观测深度学习模型的远程服务器  
 
 `Python(Anaconda)`
-https://docs.conda.io/projects/conda/en/latest/index.html Conda 命令官方文档
-https://pypi.org/ PyPI 网站
-https://conda-forge.org/ Conda-Forge 网站
-http://pymotw.com/ Python Module of the Week 学习Python标准库的网站
-https://www.python.org/dev/peps/pep-0008/ PEP8 Python代码风格
-http://gutenberg.org/ 提供了一系列不受版权限制的文学作品
+https://pypi.org/ PyPI —— pip包源网站  
+https://conda-forge.org/ Conda-Forge —— Miniforge包源网站  
+https://docs.conda.io/projects/conda/en/latest/index.html Conda 命令官方文档 
+https://www.djangoproject.com/ Djanjo Python web开发官网 
+http://pymotw.com/ Python Module of the Week 学习Python标准库的网站  
+https://www.python.org/dev/peps/pep-0008/ PEP8 Python代码风格  
+https://docs.python.org/3/library/urllib.html urllib包文档  内置库 爬虫(获取网页)
+http://gutenberg.org/ 提供了一系列不受版权限制的文学作品  

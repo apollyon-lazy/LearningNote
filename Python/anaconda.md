@@ -1,6 +1,5 @@
 # Anaconda保姆级教程
 ## Anaconda的环境配置
-### Anaconda 
 Anaconda 是一个包括python各种包的捆绑软件
 先找一个地方下载anaconda，附上清华镜像站链接
 https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/  
@@ -131,29 +130,43 @@ conda install -n <env_name> xxx 在指定环境安装包
 conda show <package_name> 查看当前环境下包的所有信息
 conda uninstall xxx 使用conda工具卸载包
 ```
+## Anaconda使用前遇到的问题
+### 1. Anaconda, Miniconda, Miniforge —— conda
 
-### conda, anaconda, miniconda, miniforge
+**Conda**
+
 Conda是一个辅助进行包管理和环境管理的工具。目前是Ananconda默认的Python包和环境管理工具，所以安装了Ananconda完整版，就默认安装了Conda。
 
-anaconda 的默认源是 default，而pip的默认源是 PyPI (Python Package Index)，在PyPI 中可以发现和安装由Python社区开发和共享的软件包。pip是专门针对python打包而成的，属于wheels or source distributions，需要compiler来安装；而conda packages are binaries，因此包含例如C语言写的库，同时也不需要compilers。pip的没有严格的依赖冲突检查，而conda是会有严格的依赖冲突检查。
+**Anaconda, Miniconda, Miniforge**
+
+Anaconda 和 Miniconda 是一个公司的产品，商用是付费的，个人暂时免费；而Miniforge是由社区主导，用GitHub托管，完全免费。Miniconda 和 Miniforge 是差不多的产物，代表着轻量化，而Anaconda是完整版，就略显臃肿。
 
 Miniconda = Python + conda (with minimal dependencies, like openssl, ncurses...)。
 
 Anaconda = Python + conda + meta package (about 160 Python pkgs, like curl, numpy, pandas...)。
 
-Miniforge 使用conda-forge 作为默认 channel，而 Miniconda 使用 `anaconda.org` 作为默认channel。
 
-### wheels, source distributions
-`什么是 wheels or source distributions? 源发行版包含源代码，不仅包括python代码，还包含与包绑定的任何扩展模块的源代码(包括python，C++等) ，扩展模块是在用户端需要编译的。如果下载的是一个源发行版，需要先构建成轮子，才能进行安装。如果下载的是轮子，轮子比源发行版更小，能够更快的在网络中传输，也节省了构建过程的时间.`
+
+**Default Source (Anaconda, Miniconda, Miniforge)**
+
+anaconda 的默认源是 `default`，而pip的默认源是 `PyPI (Python Package Index)`，在 PyPI 中可以发现和安装由 Python 社区开发和共享的软件包。pip 是专门针对 Python 打包而成的，属于wheels or source distributions，需要 compiler 来安装；而conda packages are binaries，因此包含例如 C 语言写的库，同时也不需要 compilers。pip的没有严格的依赖冲突检查，而conda是会有严格的依赖冲突检查。
+
+Miniforge 使用 conda-forge 作为默认 channel，而 Miniconda 使用 `anaconda.org` 作为默认channel。
+
+
+
+### 2. wheels, source distributions
+
+源发行版包含源代码，不仅包括python代码，还包含与包绑定的任何扩展模块的源代码(包括python，C++等) ，扩展模块是在用户端需要编译的。如果下载的是一个源发行版，需要先构建成轮子，才能进行安装。如果下载的是轮子，轮子比源发行版更小，能够更快的在网络中传输，也节省了构建过程的时间.`
 
 通常我们安装一个python包，直接用`pip install <pkg-name>`就行，但如果我们想要多个python环境，也就需要用到virtualenv；同时如果这个包没有不是 Python packages，是用C语言写的；这时候就需要Conda登场了，它同时解决了以上所有问题。
 
-### conda/pip install XXX
+### 3. conda/pip install XXX
 conda install xxx 这种方式安装的库会在 `anaconda3/pkgs` 目录下放一份，在`anaconda3/envs/<current_env>/Lib/site-packages`下放一份。在这样的好处就是，当曾经下载过某个库时，就可以直接从 pkgs 目录下将该库复制到新环境而不用重复下载。
 
 pip install xxx 这种方式安装的库会在`anaconda3/envs/<current_env>/Lib/site-packages`文件夹中，如果是单独装的 python，安装路径还要再考虑。
 
-### 常用工具包
+### 4. packages
 anaconda 会自动安装一个基本的 python ,该 python 的版本与 anaconda 的版本有关。该 python 下已经安装好了一大堆工具包，对于科学计算分析是十分便利的。已经包含在 anaconda 中的包有 numpy(数值运算库) pandas(数据处理库) matplotlib(基础可视化库)，scipy(科学计算库) seaborn(高级可视化库) scikit-learn(流行的机器学习库)。
 
    - Numpy是最为流行的机器学习和数据科学包，Numpy包支持在多维数据上的数学运算，提供数字支持以及相应高效的处理函数，很多更高级的扩展库（包括Scipy、Matplotlib、Pandas等库都依赖于Numpy库）；
@@ -172,13 +185,6 @@ anaconda 会自动安装一个基本的 python ,该 python 的版本与 anaconda
 
 # 学习心得
 
-Conda 命令官方文档
-https://docs.conda.io/projects/conda/en/latest/index.html
-PyPI 网站
-https://pypi.org/
-Conda-Forge 网站
-https://conda-forge.org/
-
 
 - [x] 从国内镜像源下载包如果发生下载失败，有可能是网络波动引起，可以重复安装
 - [x] 空的虚拟环境里包括python运行解释的基础包，pip和conda的环境管理包等
@@ -186,7 +192,7 @@ https://conda-forge.org/
 - [x] 虚拟环境安装路径、安装包路径、镜像源配置文件路径、jupyter工作路径都需要配置
 - [x] 基础环境一般不使用，要根据自己具体项目建立自己的环境，否则就失去了环境管理功能的意义！在基础环境的juypter中安装ipykernel包使用新环境的核，不用为新环境再装一个新的jupyter。
 - [ ] 本文涉及的命令的官方参考网址后续会列出来
-- [x] 2022-11-28 19:00
+- [x] 2022-12-21 11:00
 
  
 
