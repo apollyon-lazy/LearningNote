@@ -24,4 +24,15 @@ https://www.djangoproject.com/ Djanjo Python web开发官网
 http://pymotw.com/ Python Module of the Week 学习Python标准库的网站  
 https://www.python.org/dev/peps/pep-0008/ PEP8 Python代码风格  
 https://docs.python.org/3/library/urllib.html urllib包文档  内置库 爬虫(获取网页)
-http://gutenberg.org/ 提供了一系列不受版权限制的文学作品  
+http://gutenberg.org/ 提供了一系列不受版权限制的文学作品
+
+`Python(知识体系)`
+https://blog.csdn.net/zhiguigu/article/details/117924606 来自 CSDN 用户名为 "退休的龙叔" Python 全方向 全路线 知识总结 Python领域优质博主
+https://blog.csdn.net/weixin_47654912/article/details/111362057 来自CSDN用户名为 "柏拉图工作室"整理的 Python 知识体系 
+
+`C++(语法知识)`
+https://blog.csdn.net/chenlong_cxy/article/details/127166206 来自CSDN 用户名为 "2021dragon" C++ 全语法知识总结 数据结构 数据库 Linux Leetcode 都有少量涉及
+
+`OS(操作系统)`
+http://jyywiki.cn/OS/2022/ 南京大学 操作系统 2022 春季课
+https://www.bilibili.com/video/BV1Cm4y1d7Ur/ 南京大学 操作系统：设计与实现 b站课程主页
