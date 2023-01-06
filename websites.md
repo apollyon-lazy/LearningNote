@@ -2,7 +2,9 @@
 `CS(Coumputer science):`
 https://www.csdn.net/ 国内程序员入门级网站 CSDN 环境一般   
 https://www.runoob.com/ RUNOOB.COM 菜鸟教程 新手指引 高手手册
+http://c.biancheng.net/ C语言中文网 linux教程不错
 https://www.955code.com/ 胖虎的工具箱 程序员导航网站
+https://github.com/pkuflyingpig/cs-self-learning/ github收藏多的CS自学仓库
 
 `DL(Deep learning)`
 https://courses.d2l.ai/zh-v2/ 动手学深度学习 李沐大神 课程网站  
