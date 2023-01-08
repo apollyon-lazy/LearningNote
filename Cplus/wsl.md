@@ -1,4 +1,10 @@
-## 安装 wsl (Windows Subsystem for Linux) 
+## 目录
+[安装 wsl (Windows Subsystem for Linux)](#安装-wsl-windows-subsystem-for-linux)
+[Terminal 和 VScode](#terminal-和-vscode)
+[Unix 和 Linux](#unix-和-linux)
+[安装gcc/g++(Ubantu)](#安装-gccgubantu)
+
+## 安装 wsl (Windows Subsystem for Linux)
 https://www.bilibili.com/video/BV1aA411s7PJ/  
 wsl 安装成功视频 —— b站 
 https://learn.microsoft.com/en-us/windows/wsl/  
@@ -121,8 +127,6 @@ Linux gcc/g++ 简明教程 —— C语言中文网
     http://c.biancheng.net/linux_tutorial/40/  
     Vim文本编辑器 —— C语言中文网
 
-- [x] C语言源代码写的HelloWorld可能不是实现对应功能的最小程序，因为其链接了很多库代码，实际上程序只要有能打印HelloWorld的系统调用(system call)就足够了，操作系统课(南大)上告诉我们程序在执行main函数之前其实发生很多事情。
-- [x] 操作系统中常见的应用程序有Core Utilities (coreutils)（命令有cat，ls等）、系统/工具程序（bash,apt,vim,tmux,python等）、其他应用程序（浏览器、播放器等）
 
 ## 进程
 
@@ -178,3 +182,18 @@ Linux /prof目录说明——Wiki
 
 :memo: 输出重定向 `>` `>>` 是指命令的结果不再输出到显示器上，而是输出到其它地方，一般是文件中。这样做的最大好处就是把命令的结果保存起来，当我们需要的时候可以随时查询。
 
+## 操作系统：设计与实现 —— 南京大学
+
+**操作系统上的程序**
+
+:memo:怎么理解C语言程序是一个状态机?
+
+- [x] C语言程序可以理解成一个状态机。程序的全局变量是每条指令可以共同访问的资源，PC(Program Counter,PC)用来存放当前欲执行指令的地址。状态机的初始状态，是全局变量初始化，PC在main的第一条语句上。指令每执行一次，PC和全局变量就会发生变化，就相当于状态机的状态发生一次转移。当遇到函数调用和函数返回就相当于进入和走出一个局部的指令列表。
+
+:memo:怎么理解一个最小的HelloWorld程序?
+
+- [x] 
+- [x] C语言源代码写的HelloWorld可能不是实现对应功能的最小程序，因为其链接了很多库代码，实际上程序只要有能打印HelloWorld的系统调用(system call)就足够了，操作系统课(南大)上告诉我们程序在执行main函数之前其实发生很多事情。
+
+
+- [x] 操作系统中常见的应用程序有Core Utilities (coreutils)（命令有cat，ls等）、系统/工具程序（bash,apt,vim,tmux,python等）、其他应用程序（浏览器、播放器等）
