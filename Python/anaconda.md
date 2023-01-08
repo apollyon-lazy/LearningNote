@@ -149,9 +149,7 @@ Anaconda = Python + conda + meta package (about 160 Python pkgs, like curl, nump
 
 **Default Source (Anaconda, Miniconda, Miniforge)**
 
-anaconda 的默认源是 `default`，而pip的默认源是 `PyPI (Python Package Index)`，在 PyPI 中可以发现和安装由 Python 社区开发和共享的软件包。pip 是专门针对 Python 打包而成的，属于wheels or source distributions，需要 compiler 来安装；而conda packages are binaries，因此包含例如 C 语言写的库，同时也不需要 compilers。pip的没有严格的依赖冲突检查，而conda是会有严格的依赖冲突检查。
-
-Miniforge 使用 conda-forge 作为默认 channel，而 Miniconda 使用 `anaconda.org` 作为默认channel。
+anaconda 的默认源是 `default`，而pip的默认源是 `PyPI (Python Package Index)`，在 PyPI 中可以发现和安装由 Python 社区开发和共享的软件包。pip 是专门针对 Python 打包而成的，属于wheels or source distributions，需要 compiler 来安装；而conda packages are binaries，因此包含例如 C 语言写的库，同时也不需要 compilers。pip的没有严格的依赖冲突检查，而conda是会有严格的依赖冲突检查。Miniforge 使用 `conda-forge` 作为默认 channel，而 Miniconda 使用 `anaconda.org` 作为默认channel。
 
 
 

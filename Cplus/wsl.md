@@ -1,4 +1,4 @@
-## 安装 wsl 
+## 安装 wsl (Windows Subsystem for Linux) 
 https://www.bilibili.com/video/BV1aA411s7PJ/  
 wsl 安装成功视频 —— b站 
 https://learn.microsoft.com/en-us/windows/wsl/  
@@ -7,16 +7,19 @@ wsl 官方安装文档 —— 官网
 ## Terminal 和 VScode
 在Microsoft store中安装Windows terminal，它是适用于**命令提示符**，**Powershell**，**wsl**等的终端应用程序。
 ```
-wsl下的一些简单命令：
+简单命令：
     mkdir <foldername>  新建空目录
     cd                  打开文件目录
     ls                  展示当前目录下所有文件
     pwd                 显示用户当前所在的目录
     cat <xxx>           查看目标文件内容
     code .              链接到vscode并打开
-    ps                  显示当前进程的状态 (process status）
+    ps                  显示当前进程的状态 
+    rm                  删除文件或文件夹
+    file                查看文件类型
+    man                 查看帮助文档
 ```
-- [x] 这样就可以实现在Windows下编辑代码，在Linux下编译运行的效果
+- [x] 这样就可以实现在Windows下编辑代码，在Linux下编译运行的效果；链接到 VScode 后新建终端和外部终端（保持打开）作用一样
 
 ## Unix 和 Linux
 http://c.biancheng.net/view/707.html  
@@ -26,9 +29,11 @@ UNIX 操作系统由肯•汤普森（Ken Thompson）和丹尼斯•里奇（Den
 
 <img src="./images/linux_1.jpg" width="100%">
 
-Linux 发行版说简单点就是将 Linux 内核与应用软件进行一个打包，目前市面上知名的发行版有 Ubantu、CentOS 等等。Linux 下使用最广泛的 C/C++ 编译器是 gcc/g++，大多数的 Linux 发行版本都默认安装。
+Linux 发行版说简单点就是将 Linux 内核与应用软件进行一个打包，目前市面上知名的发行版有 Ubantu、CentOS 等等。
 
 ## 安装 gcc/g++（Ubantu）
+Linux 下使用最广泛的 C/C++ 编译器是 gcc/g++，大多数的 Linux 发行版本都默认安装。
+
 apt（Advanced Packaging Tool）是一个在 Debian 和 Ubuntu 中的 Shell 前端软件包管理器。
 ```
 sudo apt update                     列出所有可更新的软件清单命令
@@ -52,6 +57,7 @@ Linux gcc/g++ 简明教程 —— C语言中文网
 
 - [x] 这样就掌握了在Linux下结合VScode编辑编译链接C/C++代码的技能
 - [x] Linux内核大部分是用C语言编写的，还有部分是用汇编语言写的，因为在对于硬件上，汇编有更好的性能和速度。
+- [x] Linux一个文件是否能被执行，和后缀名没有太大的关系，主要看文件的属性有关
 
 ## 熟悉基础命令行工具
 
@@ -70,9 +76,9 @@ Linux gcc/g++ 简明教程 —— C语言中文网
       sudo apt install git        安装 git
       git --version               查看 git 版本
   ```
-- **GNU make** 是一个项目构建工具，即方便地编译、链接多个源代码文件，自动决定哪些源文件需要重新编译，从而高效地构建自己地项目。
+- **GNU make** 在 Linux（unix ）环境下使用GNU 的make工具能够比较容易的构建一个属于你自己的工程，整个工程的编译只需要一个命令就可以完成编译、连接以至于最后的执行。不过这需要我们投入一些时间去完成一个或者多个称之为Makefile 文件的编写。
 
-- [x] 安装tldr有助于帮助更好的阅读文档；git有助于更好的版本管理；GNU make(怀疑就在bulid-essential包中)有助于高效的项目构建
+- [x] 安装tldr有助于帮助更好的阅读文档；git有助于更好的版本管理；GNU make有助于构建工程；GNU make, bash, gcc, libc 属于是 GNU 免费软件，tldr, tmux 是 github 社区开源软件
 
 ## 配置自己的环境
 
@@ -82,12 +88,16 @@ Linux gcc/g++ 简明教程 —— C语言中文网
 
     Shell中输入的命令，有内置命令(cd,pwd等)，也有其他应用程序（一个程序就是一个命令），叫外部命令。
     
-    ```
+    ```  
      echo $SHELL    查看当前使用的shell
      echo $0        查看当前使用的shell
      sudo apt install fish      安装 fish shell
-     fish/bash      两种shell之间进行切换
+     fish/exit      进入fish/退出fish
+     
+     !!! 考虑bash和fish的不同，不设置fish为默认shell
     ```
+
+    
 
     http://c.biancheng.net/view/706.html   
     什么是Shell —— C语言中文网 
@@ -118,6 +128,8 @@ Linux gcc/g++ 简明教程 —— C语言中文网
 
 **进程**是正在运行的程序的实例（Shell解释器进程中，执行一个命令就会创建一个子进程）。进程是系统资源分配的独立实体，每个进程都拥有独立的地址空间（查看进程linux中用ps命令，windows中用任务管理器）。
 
+每一个进程都有一个**进程号**（PID, Process Identification），进程号是一个正数，用以唯一标识系统中的某个进程。一个进程创建的另一个新进程称为子进程。相反地，创建子进程的进程称为父进程。创建进程会不断递增进程号，全部使用完后会循环回一定值重新递增。Linux中PID分别是0,1(init),2的进程会在OS启动之后一直运行直到关机OS结束运行。
+
 所谓**并发**，就是通过一种算法将 CPU 资源合理地分配给多个任务，当一个任务执行 I/O 操作时（I/O操作是相当耗时的），CPU 可以转而执行其它的任务，等到 I/O 操作完成以后，或者新的任务遇到 I/O 操作时，CPU 再回到原来的任务继续执行。
 
 并发是针对单核 CPU 提出的，而**并行**则是针对多核 CPU 提出的。多核 CPU 的每个核心都可以独立地执行一个任务，而且多个核心之间不会相互干扰。在不同核心上执行的多个任务，是真正地同时运行，这种状态就叫做并行
@@ -126,4 +138,43 @@ http://c.biancheng.net/view/9486.html
 并发与并行的区别 —— C语言中文网
 
 <img src="./images/linux_4.jpg" width="100%">
+
+## 库函数和系统调用
+
+系统调用是为了方便使用操作系统的接口，而库函数则是为了人们编程的方便。库函数调用与系统类型无关，不同的系统，调用库函数，库函数会针对系统调用不同的底层函数实现，因此可移植性好。
+
+glibc是linux下面c标准库的实现，即GNU C Library。  
+printf函数、glibc库和系统调用在系统中关系图如下：
+<img src="./images/linux_5.jpg" width="100%">
+
+## main()函数的参数
+
+C 编译器允许main()函数没有参数，或者有两个参数（有些实现允许更多的参数，但这只是对标准的扩展）。这两个参数，一个是int类型，一个是字符串类型。第一个参数是命令行中的字符串数。按照惯例（但不是必须的），这个int参数被称为argc（argument count）。第二个参数是一个指向字符串的指针数组。命令行中的每个字符串被存储到内存中，并且分配一个指针指向它。按照惯例，这个指针数组被称为argv（argument value）。系统使用空格把各个字符串格开。一般情况下，把程序本身的名字赋值给argv[0]。
+
+## 打印进程树
+```
+git clone https://github.com/NJU-ProjectN/os-workbench-2022 克隆仓库
+git pull origin M1  下载分支
+```
+
+**POSIX**：可移植操作系统接口（Portable Operating System Interface of UNIX，缩写为 POSIX ）。POSIX是IEEE为要在各种 UNIX 操作系统上运行的软件而定义的一系列API标准的总称。这套标准涵盖了很多方面，比如Unix系统调用的C语言接口、shell程序和工具、线程及网络编程。
+
+**KISS原则**是英语 Keep It Simple, Stupid 的首字母缩略字，是一种归纳过的经验原则。KISS 原则是指在设计当中应当注重简约的原则。—— 中文Wiki
+
+**Everything is a file** is an idea that Unix, and its derivatives handle input/output to and from resources such as documents, hard-drives, modems, keyboards, printers and even some inter-process and network communications as simple streams of bytes exposed through the filesystem name space. —— Wiki
+
+assert() 语句（**断言语句**）通常用于检查用户的输入是否符合规定，还经常用作程序初期测试和调试过程中的辅助工具。在程序运行时它计算括号内的表达式，如果表达式为假, 程序将报告错误，并终止执行；如果表达式为真，则继续执行后面的语句。
+
+```
+ctrl+P                  命令行重复上一条命令
+gcc a.c && ./a.out      一键编译运行
+```
+:memo: Linux下 `/proc` 保存了系统信息，其中数字编号的文件夹对应的就是进程  
+
+https://en.wikipedia.org/wiki/Procfs   
+Linux /prof目录说明——Wiki
+
+:memo: Linux 管道使用竖线 `|` 连接多个命令，这被称为管道符。当在两个命令之间设置管道时，管道符 `|` 左边命令的输出就变成了右边命令的输入。
+
+:memo: 输出重定向 `>` `>>` 是指命令的结果不再输出到显示器上，而是输出到其它地方，一般是文件中。这样做的最大好处就是把命令的结果保存起来，当我们需要的时候可以随时查询。
 

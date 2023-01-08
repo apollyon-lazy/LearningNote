@@ -19,22 +19,24 @@ https://seaborn.pydata.org/index.html# Seaborn官方网站
 https://wandb.ai/site 适合观测深度学习模型的远程服务器  
 
 `Python(Anaconda)`
-https://pypi.org/ PyPI —— pip包源网站  
-https://conda-forge.org/ Conda-Forge —— Miniforge包源网站  
-https://docs.conda.io/projects/conda/en/latest/index.html Conda 命令官方文档 
-https://www.djangoproject.com/ Djanjo Python web开发官网 
+https://pypi.org/ PyPI —— pip 包源  
+https://conda-forge.org/ Conda-Forge —— Miniforge 包源  
+https://docs.conda.io/projects/conda/en/latest/commands.html Conda 命令文档 
+https://www.djangoproject.com/ Djanjo Python web后端开发官网 
 http://pymotw.com/ Python Module of the Week 学习Python标准库的网站  
-https://www.python.org/dev/peps/pep-0008/ PEP8 Python代码风格  
-https://docs.python.org/3/library/urllib.html urllib包文档  内置库 爬虫(获取网页)
+https://www.python.org/dev/peps/pep-0008/ PEP8 Python 增强建议书 含代码风格  
+https://docs.python.org/3/ Python 官方文档 含标准库
 http://gutenberg.org/ 提供了一系列不受版权限制的文学作品
 
 `Python(知识体系)`
-https://blog.csdn.net/zhiguigu/article/details/117924606 来自 CSDN 用户名为 "退休的龙叔" Python 全方向 全路线 知识总结 Python领域优质博主
-https://blog.csdn.net/weixin_47654912/article/details/111362057 来自CSDN用户名为 "柏拉图工作室"整理的 Python 知识体系 
+https://blog.csdn.net/zhiguigu/article/details/117924606 CSDN 用户名为 "退休的龙叔" Python 全方向知识总结 Python领域优质博主
+https://blog.csdn.net/weixin_47654912/article/details/111362057 CSDN用户名为 "柏拉图工作室" Python 知识体系总结 
 
 `C++(语法知识)`
-https://blog.csdn.net/chenlong_cxy/article/details/127166206 来自CSDN 用户名为 "2021dragon" C++ 全语法知识总结 数据结构 数据库 Linux Leetcode 都有少量涉及
+https://blog.csdn.net/chenlong_cxy/article/details/127166206 CSDN 用户名为 "2021dragon" C++ 全语法知识总结 (数据结构 数据库 Linux Leetcode 少量涉及)
 
 `OS(操作系统)`
 http://jyywiki.cn/OS/2022/ 南京大学 操作系统 2022 春季课
 https://www.bilibili.com/video/BV1Cm4y1d7Ur/ 南京大学 操作系统：设计与实现 b站课程主页
+https://www.gnu.org/software/software.en.html GNU Software 查询页面
+https://www.gnu.org/software/libc/manual/html_node/index.html glibc 库官方文档
