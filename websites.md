@@ -39,5 +39,6 @@ https://blog.csdn.net/chenlong_cxy/article/details/127166206 CSDN 用户名为 "
 `OS(操作系统)`
 http://jyywiki.cn/OS/2022/ 南京大学 操作系统 2022 春季课  
 https://www.bilibili.com/video/BV1Cm4y1d7Ur/ 南京大学 操作系统：设计与实现 b站课程主页  
+https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html POSIX 标准查询网站
 https://www.gnu.org/software/software.en.html GNU Software 查询页面  
 https://www.gnu.org/software/libc/manual/html_node/index.html glibc 库官方文档  
