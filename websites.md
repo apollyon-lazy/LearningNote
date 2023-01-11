@@ -1,11 +1,11 @@
 # Website
 `CS(Coumputer science):`
-https://www.csdn.net/ 国内程序员入门级网站 CSDN 环境一般   
-https://www.runoob.com/ RUNOOB.COM 菜鸟教程 新手指引 高手手册  
-http://c.biancheng.net/ C语言中文网 linux教程不错  
-https://github.com/pkuflyingpig/cs-self-learning/ github收藏多的CS自学仓库  
-https://stackoverflow-clone.netlify.app/  Stackoverflow IT问答网站  
-https://www.955code.com/ 胖虎的工具箱 程序员导航网站  
+[CSDN 国内程序员入门级网站](https://www.csdn.net/) 环境一般     
+[RUNOOB.COM 菜鸟教程 ](https://www.runoob.com/) 新手指引 高手手册     
+[C语言中文网 ](http://c.biancheng.net/) linux教程不错  
+[github cs-self-learning](https://github.com/pkuflyingpig/cs-self-learning/) star很多    
+[Stackoverflow ](https://stackoverflow-clone.netlify.app/)IT问答网站   
+[胖虎的工具箱](https://www.955code.com/) 程序员导航网站  
 
 `DL(Deep learning)`
 https://courses.d2l.ai/zh-v2/ 动手学深度学习 李沐大神 课程网站   
@@ -30,11 +30,11 @@ https://docs.python.org/3/ Python 官方文档 含标准库
 http://gutenberg.org/ 提供了一系列不受版权限制的文学作品  
 
 `Python(知识体系)`
-https://blog.csdn.net/zhiguigu/article/details/117924606 CSDN 用户名为 "退休的龙叔" Python 全方向知识总结 Python领域优质博主  
-https://blog.csdn.net/weixin_47654912/article/details/111362057 CSDN用户名为 "柏拉图工作室" Python 知识体系总结   
+[CSDN 用户名为 "退休的龙叔"](https://blog.csdn.net/zhiguigu/article/details/117924606) Python 全方向知识总结 Python领域优质博主  
+[CSDN用户名为 "柏拉图工作室"](https://blog.csdn.net/weixin_47654912/article/details/111362057) Python 知识体系总结   
 
 `C++(语法知识)`
-https://blog.csdn.net/chenlong_cxy/article/details/127166206 CSDN 用户名为 "2021dragon" C++ 全语法知识总结 (数据结构 数据库 Linux Leetcode 少量涉及)  
+[CSDN 用户名为 "2021dragon"](https://blog.csdn.net/chenlong_cxy/article/details/127166206) C++ 全语法知识总结 (数据结构 数据库 Linux Leetcode 少量涉及)  
 
 `OS(操作系统)`
 http://jyywiki.cn/OS/2022/ 南京大学 操作系统 2022 春季课  

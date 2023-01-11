@@ -126,13 +126,13 @@
     <img src="./images/cplus_6.jpg" width="80%">
 
 - 可查阅问题
-  Q: 数组初始化规则？（P61-62）
-  Q: C风格字符串的处理方式是什么样的 / :star:: 用数组处理字符串？(P62-68)
-  Q: **共用体**的用法？（P78）**枚举**的用法？(P79-80)
-  Q: 使用 new 和 delete 的规则？（P87）
-  :star:: 指针和数组基本等价的使用小结？（P90-P91）
-  Q: 指针和数组的特殊关系扩展到 C 风格字符串 / :star::用指针处理字符串？(P92-P93)
-  Q: 内存泄漏？(P97)
+  Q: 数组初始化规则？（P61-62）  
+  Q: C风格字符串的处理方式是什么样的 / :star:: 用数组处理字符串？(P62-68)  
+  Q: **共用体**的用法？（P78）**枚举**的用法？(P79-80)  
+  Q: 使用 new 和 delete 的规则？（P87）  
+  :star:: 指针和数组基本等价的使用小结？（P90-P91）  
+  Q: 指针和数组的特殊关系扩展到 C 风格字符串 / :star::用指针处理字符串？(P92-P93)  
+  Q: 内存泄漏？(P97)  
 
 
 ## 第5章 循环和关系表达式
@@ -155,7 +155,7 @@
       <img src="./images/cplus_4.jpg" width="80%">
 
 - 重要问题
-  Q: C++中的四种存储持续性？(P250)  
+  Q: C++中的四种存储持续性？(P250)    
   Q: C++11中 auto (P56) 和 register (P252) 的作用发生什么变化？  
   Q: 引入名称空间前的存储特性/静态持续变量的三种链接性/static关键词在静态持续变量中两种用法/静态变量的初始化方式？(P254)  
   Q: 存储说明符和cv-限定符的作用/<a id="const">:star:</a>const对存储类型的影响？(P260)  
@@ -204,10 +204,21 @@
 
 **:star:考点：** 
 - C风格字符串 `strlen()...`
-- 数组存储字符串 `char a[10] = "Hello!"`
+- 数组存储字符串 `char a[10] = "Hello!"` `cin, cin.getline(), cin.get()`
 - 指针存储字符串 `char *p = "Hello!"`
 - 数组和指针的特殊关系；`*(stacks + 1) <=> stacks[1]` 
 - 创建动态结构 `char *p = new char[strlen(s)+1]`
+
+``` C++
+  ...
+  const int Arsize = 80;      // enough wide to store string
+  char temp[Arsize];          // temporary storage 
+  cin.getline(temp, Arsize);  // get a line input
+  char *pn = new char[strlen(temp)+1];
+  strcpy(pn, temp)            // copy string into smaller space
+  delete [] pn;
+  ...
+```
 
 ## 总结
 - [x] github网页暂不支持`[toc]`语法，故使用网页锚点做页面内链接跳转

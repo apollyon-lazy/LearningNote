@@ -1,6 +1,11 @@
-## 常用快捷键 和 命令
----
-#### 常用快捷键
+## 目录
+
+[常用快捷键](#常用快捷键)  
+[桌面快捷键](#桌面快捷键)  
+[word快捷键](#word-快捷键)
+
+
+## 常用快捷键
 
 <kbd>ctrl</kbd> + <kbd>C</kbd> 复制  
 <kbd>ctrl</kbd> + <kbd>V</kbd> 粘贴  
@@ -8,10 +13,9 @@
 <kbd>ctrl</kbd> + <kbd>X</kbd> 剪切  
 <kbd>ctrl</kbd> + <kbd>A</kbd> 全选  
 <kbd>ctrl</kbd> + <kbd>F</kbd> 查找  
-<kbd>ctrl</kbd> + <kbd>H</kbd> 替换  
-> VScode中查找和替换下的enter意义是不一样的！  
+<kbd>ctrl</kbd> + <kbd>H</kbd> 替换    
 
-#### 桌面快捷键
+## 桌面快捷键
 
 <kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面
 <kbd>Win</kbd> + <kbd>L</kbd> 快速锁定电脑
@@ -23,13 +27,10 @@
 <kbd>Alt</kbd> + <kbd>F4</kbd> 关闭窗口 
 <kbd>F2</kbd> 快捷重命名
 
-> Win10系统下win+space因为快捷键冲突无法切换输入法，可以尝试使用ctrl+shift！
+:memo: Win10系统下win+space因为快捷键冲突无法切换输入法，可以尝试使用ctrl+shift！
+:memo: 设备管理器(管理硬件资源)，任务管理器(管理进程调度)，资源管理器(管理文件系统)
 
-#### 控制命令符(cmd)命令
-`dir /b` 查看当前路径下所有文件和文件夹
-`cd` 打开文件夹(打开盘符直接输入盘符名即可)
-
-#### word 快捷键
+## word 快捷键
 
 <kbd>ctrl</kbd> + <kbd>Home</kbd> 光标回到文档开头  
 <kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾 
@@ -52,21 +53,26 @@
 
 <kbd>ctrl</kbd> + <kbd>P</kbd> 打印
 
-#### excel 快捷键
+## excel 快捷键
 <kbd>shift</kbd> + <kbd>tab</kbd> 向左移动一个单元格
 <kbd>tab</kbd> 向右移动一个单元格
 <kbd>enter</kbd> 向下移动一个单元格
 <kbd>Fn</kbd> + <kbd>F2</kbd> 编辑单元格
 
-#### Vscode 快捷键
+## Vscode 快捷键
 
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端  
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端
+
+<kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件 安装vscode插件地址
 <kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
 <kbd>ctrl</kbd> + <kbd>L</kbd> 选中当前行
-<kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件 安装vscode插件地址 
+<kbd>ctrl</kbd> + <kbd>/</kbd> 单行注释   
+<kbd>ctrl</kbd> + <kbd>`</kbd> 回到终端
+
 <kbd>ctrl</kbd> + <kbd>K</kbd>，<kbd>ctrl</kbd> + <kbd>J</kbd> 展开所有代码
 <kbd>ctrl</kbd> + <kbd>K</kbd>，<kbd>ctrl</kbd> + <kbd>0</kbd> 折叠所有代码 
 
+<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>A</kbd> 多行注释
 <kbd>alt</kbd> + <kbd>MouseL</kbd> 插入多个光标
 <kbd>alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> 移动当前整行      
 <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> 复制当前整行
@@ -81,8 +87,12 @@ cd          路径切换目录 (change dictionary)
   
 > 熟悉快捷键是快速编写文档的重要技巧！  
 > 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！ 
+## VS2019 快捷键
 
-#### Juypter 快捷键
+<kbd>ctrl</kbd> + <kbd>B</kbd> 编译链接  
+<kbd>Fn</kbd> + <kbd>F5</kbd> 开始调试  
+
+## Juypter 快捷键
 
 <kbd>ctrl</kbd> + <kbd>Enter</kbd> 运行并在当前代码块  
 <kbd>shift</kbd> + <kbd>Enter</kbd> 运行并到下一代码块  
@@ -99,12 +109,12 @@ cd          路径切换目录 (change dictionary)
  
 
 
-#### Markdown 快捷键
+## Markdown 快捷键
 <kbd>ctrl</kbd> + <kbd>B</kbd> 字体加粗
 <kbd>ctrl</kbd> + <kbd>I</kbd> 字体倾斜
  
 
-#### 待解决问题
+## 待解决问题
 - [x] vscode 中的 markdown 预览会识别 enter 换行
 - [ ] vscode修改完代码会在左边显示颜色提示，颜色提示的具体内容是？
 - [ ] vscode文件变更会有符号提示，符号提示的具体内容是？
