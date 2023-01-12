@@ -20,8 +20,8 @@ https://seaborn.pydata.org/index.html# Seaborn官方网站
 https://wandb.ai/site 适合观测深度学习模型的远程服务器    
 
 `Python(Anaconda)`
-https://pypi.org/ PyPI —— pip 包源    
-https://conda-forge.org/ Conda-Forge —— Miniforge 包源    
+https://pypi.org/ PyPI pip 默认包源    
+https://conda-forge.org/ Conda-Forge  Miniforge 默认包源    
 https://docs.conda.io/projects/conda/en/latest/commands.html Conda 命令文档  
 https://www.djangoproject.com/ Djanjo Python web后端开发官网  
 http://pymotw.com/ Python Module of the Week 学习Python标准库的网站    
