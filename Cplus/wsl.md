@@ -1,3 +1,5 @@
+# 引言
+
 ## 目录
 
 [安装 wsl (Windows Subsystem for Linux)](#安装-wsl-windows-subsystem-for-linux)  
@@ -10,6 +12,7 @@
 [并发与并行](#并发与并行)     
 [库函数和系统调用](#库函数和系统调用)   
 [main()函数的参数](#main函数的参数)     
+[总结](#总结)
 
 ## 安装 wsl (Windows Subsystem for Linux)
 https://www.bilibili.com/video/BV1aA411s7PJ/  
@@ -19,19 +22,7 @@ wsl 官方安装文档 —— 官网
 
 ## Terminal 和 VScode
 在Microsoft store中安装Windows terminal，它是适用于**命令提示符**，**Powershell**，**wsl**等的终端应用程序。
-```
-简单命令：
-    mkdir <foldername>  新建空目录
-    cd                  打开文件目录
-    ls                  展示当前目录下所有文件
-    pwd                 显示用户当前所在的目录
-    cat <xxx>           查看目标文件内容
-    code .              链接到vscode并打开
-    ps                  显示当前进程的状态 
-    rm                  删除文件或文件夹
-    file                查看文件类型
-    man                 查看帮助文档
-```
+
 - [x] 这样就可以实现在Windows下编辑代码，在Linux下编译运行的效果；链接到 VScode 后新建终端和外部终端（保持打开）作用一样
 
 ## Unix 和 Linux
@@ -52,8 +43,8 @@ apt（Advanced Packaging Tool）是一个在 Debian 和 Ubuntu 中的 Shell 前�
 sudo apt update                     列出所有可更新的软件清单命令
 sudo apt upgrade                    升级软件包
 sudo apt install <package_name>     安装指定软件命令
+sudo apt autoremove                 清理不再使用的依赖和库文件
 !!! 安装失败考虑旧版命令 apt-get
-sudo apt autoremove                清理不再使用的依赖和库文件
 ```
 
 默认的 Ubuntu 软件源仓库中包含了一个软件包组，名称为 `build-essential`，它包含了 GNU 编辑器集合，GNU 调试器，和其他编译软件所必需的开发库和工具。很多开源项目包括 Linux kernel 和 GNU 工具，都是使用 gcc 进行编译的。GNU 编译器集合是一系列用于语言开发的编译器和库的集合，包括: C, C++, Objective-C, Fortran, Ada, Go, and D等编程语言。
@@ -65,8 +56,8 @@ gcc --version                       打印 gcc 版本验证是否安装成功
 https://blog.csdn.net/weixin_44718794/article/details/106751513  
 wsl 链接到 VScode 编写 C/C++代码 检测到 #include 错误解决办法 —— CSDN
 
-http://c.biancheng.net/view/475.html  
-Linux gcc/g++ 简明教程 —— C语言中文网
+https://zhuanlan.zhihu.com/p/404682058  
+Linux gcc/g++ 使用讲解 —— 知乎
 
 - [x] 这样就掌握了在Linux下结合VScode编辑编译链接C/C++代码的技能
 - [x] Linux内核大部分是用C语言编写的，还有部分是用汇编语言写的，因为在对于硬件上，汇编有更好的性能和速度。
@@ -106,7 +97,6 @@ Linux gcc/g++ 简明教程 —— C语言中文网
      echo $0        查看当前使用的shell
      sudo apt install fish      安装 fish shell
      fish/exit      进入fish/退出fish
-     
      !!! 考虑bash和fish的不同，不设置fish为默认shell
     ```
 
@@ -114,17 +104,7 @@ Linux gcc/g++ 简明教程 —— C语言中文网
     什么是Shell —— C语言中文网 
 
 - **Tmux** 是一个终端复用器（terminal multiplexer），非常有用，属于常用的开发工具。命令行的典型使用方式是，打开一个终端窗口（terminal window，以下简称"窗口"），在里面输入命令。用户与计算机的这种临时的交互，称为一次"会话"（session） 。会话的一个重要特点是，窗口与其中启动的进程是连在一起的。打开窗口，会话开始；关闭窗口，会话结束，会话内部的进程也会随之终止，不管有没有运行完。Tmux 就是会话与窗口的"解绑"工具，将它们彻底分离。
-    ```
-        tmux        进入tmux窗口
-        Ctrl+d      退出tmux窗口
-        窗格操作
-        Ctrl+b %    划分左右两个窗格
-        Ctrl+b "    划分上下两个窗格
-        Ctrl+b <arrow key>      光标切换到其他窗格
-        Ctrl+b Ctrl+<arrow key> 按箭头方向调整窗格大小
-        Ctrl+b q    显示窗格编号
-        Ctrl+b x    关闭当前窗格
-    ```
+
 
 - **Vim** 是一个基于文本界面的编辑工具，使用简单且功能强大。更重要的是，Vim 是所有 Linux 发行版本默认的文本编辑器。Linux Vim有三种工作模式（命令模式、输入模式和编辑模式）。
     <img src="./images/linux_3.jpg" width="100%">
@@ -172,7 +152,77 @@ printf函数、glibc库和系统调用在系统中关系图如下：
 
 C 编译器允许main()函数没有参数，或者有两个参数（有些实现允许更多的参数，但这只是对标准的扩展）。这两个参数，一个是int类型，一个是字符串类型。第一个参数是命令行中的字符串数。按照惯例（但不是必须的），这个int参数被称为argc（argument count）。第二个参数是一个指向字符串的指针数组。命令行中的每个字符串被存储到内存中，并且分配一个指针指向它。按照惯例，这个指针数组被称为argv（argument value）。系统使用空格把各个字符串格开。一般情况下，把程序本身的名字赋值给argv[0]。
 
+## 总结
 
+**心路历程 2023-1-13 20:30**
 
+- 想在Linux环境下编程，在命令行环境下编写C、C++、Python，`安装WSL，Terminal`;
+- 想知道 Linux 是什么，为什么要学它， `Unix 和 Linux的关系`;
+- 想配置出适合编程的命令行环境，`gcc,tldr,tmux,vim,make,git的基本使用`;
+- 想知道编写的程序和操作系统是如何联系的，`库函数和系统调用`
+- 想开始学习操作系统的并发 `并发和并行 进程和线程`
 
+---
 
+# 大标题 
+
+## 内存模型
+
+<img src="./images/linux_6.jpg" width="100%">
+
+当程序运行时(进程)，操作系统会在内存上分配一段存储程序运行和产生的数据的区域。地址低位是动态数据结构(`堆 heap`)；地址高位是包含局部变量，函数参数返回值等(`栈 satck`)，递归程序会占用更大的内存空间。全局变量，静态变量和常量等在程序编译时分配固定的内存块，在程序运行时也一直存在。单线程进程只有一个栈，多线程进程有多个栈，栈内变量相互独立，但共享同一个进程中的数据资源。
+
+## 小标题
+
+```
+简单命令：
+    mkdir               新建空目录
+    mv                  重命名或移动文件
+    rename              批量重命名文件
+    cd                  打开文件目录
+    ls                  展示当前目录下所有文件
+    pwd                 显示用户当前所在的目录
+    cat                 查看目标文件内容
+    code .              链接到vscode并打开
+    ps                  显示当前进程的状态 
+    rm                  删除文件或文件夹
+    file                查看文件类型
+    man                 查看帮助文档
+    wget                网页上下载文件
+    objdump             反汇编
+```
+
+``` 
+gcc 使用：
+    gcc hello.c -o hello && ./hello         编译链接运行
+    gcc -E hello.c -o hello.i               C转预处理 (Pre-Processing)
+    gcc -S hello.i -o hello.s               预处理转汇编 (Compiling)
+    gcc -c hello.s -o hello.o               汇编转机器 (Assembling)
+    gcc hello.c -o hello_static --static    编译链接(静态) (Linking)
+    -Wall                                   产生更多警告
+    -Werror                                 所有警告当错误
+    -O1 -O2                                 逐级优化代码
+    -l                                      添加头文件搜索目录
+    -L                                      添加库文件搜索目录
+    -pthread                                链接POSIX线程库
+```
+
+```
+man 使用：
+    /<string>                               查找字符串(支持正则表达式)
+    n                                       移步下一个匹配字符串
+    N                                       移步上一个匹配字符串
+```
+
+```
+tmux 使用：
+    tmux                            进入tmux窗口
+    Ctrl+d                          退出tmux窗口
+    窗格操作：
+    Ctrl+b %                        划分左右两个窗格
+    Ctrl+b "                        划分上下两个窗格
+    Ctrl+b <arrow key>              光标切换到其他窗格
+    Ctrl+b Ctrl+<arrow key>         按箭头方向调整窗格大小
+    Ctrl+b q                        显示窗格编号
+    Ctrl+b x                        关闭当前窗格
+```
