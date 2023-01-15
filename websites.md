@@ -22,12 +22,11 @@ https://wandb.ai/site 适合观测深度学习模型的远程服务器
 `Python(Anaconda)`
 https://pypi.org/ PyPI pip 默认包源    
 https://conda-forge.org/ Conda-Forge  Miniforge 默认包源    
-https://docs.conda.io/projects/conda/en/latest/commands.html Conda 命令文档  
-https://www.djangoproject.com/ Djanjo Python web后端开发官网  
+https://docs.conda.io/projects/conda/en/latest/commands.html Conda 命令文档   
+https://docs.python.org/3/ Python 官方文档 含标准库    
 http://pymotw.com/ Python Module of the Week 学习Python标准库的网站    
 https://www.python.org/dev/peps/pep-0008/ PEP8 Python 增强建议书 含代码风格    
-https://docs.python.org/3/ Python 官方文档 含标准库  
-http://gutenberg.org/ 提供了一系列不受版权限制的文学作品  
+
 
 `Python(知识体系)`
 [CSDN 用户名为 "退休的龙叔"](https://blog.csdn.net/zhiguigu/article/details/117924606) Python 全方向知识总结 Python领域优质博主  
