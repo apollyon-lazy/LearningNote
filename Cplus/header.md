@@ -3,7 +3,6 @@
 - stdlib.h 基本类型标准库
 - string.h C风格字符串库
 - assert.h 断言语句库
-- unistd.h POSIX操作系统API库
 # C++
 - iostream 标准类库
 - fstream 文件输入输出类库

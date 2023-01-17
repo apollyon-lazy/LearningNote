@@ -11,8 +11,9 @@
 [进程与线程](#进程与线程)  
 [并发与并行](#并发与并行)     
 [库函数和系统调用](#库函数和系统调用)   
-[main()函数的参数](#main函数的参数)     
-[总结](#总结)
+[main()函数的参数](#main函数的参数)  
+[POSIX,KISS,Everything](#posixkisseverything-is-file)    
+[总结](#总结)   
 
 ## 安装 wsl (Windows Subsystem for Linux)
 https://www.bilibili.com/video/BV1aA411s7PJ/  
@@ -26,14 +27,15 @@ wsl 官方安装文档 —— 官网
 - [x] 这样就可以实现在Windows下编辑代码，在Linux下编译运行的效果；链接到 VScode 后新建终端和外部终端（保持打开）作用一样
 
 ## Unix 和 Linux
-http://c.biancheng.net/view/707.html  
-Linux和Unix的关系及区别——C语言中文网 
 
 UNIX 操作系统由肯•汤普森（Ken Thompson）和丹尼斯•里奇（Dennis Ritchie）发明。后来由芬兰人林纳斯·托瓦兹（Linus Torvalds）写了新的操作系统 Linux，它与 Unix 在外观和交互上类似，故也称是类 Unix 系统。Linux 开源后与缺少内核的 GNU 打包发布，故也称 GNU/Linux，后来大家省略 GNU 叫的 Linux 其实是类 Uinx 的内核和大量 GNU 开源软件的一个集合体。
 
 <img src="./images/linux_1.jpg" width="100%">
 
 Linux 发行版说简单点就是将 Linux 内核与应用软件进行一个打包，目前市面上知名的发行版有 Ubantu、CentOS 等等。
+
+http://c.biancheng.net/view/707.html  
+Linux和Unix的关系及区别——C语言中文网 
 
 ## 安装 gcc/g++（Ubantu）
 Linux 下使用最广泛的 C/C++ 编译器是 gcc/g++，大多数的 Linux 发行版本都默认安装。
@@ -65,22 +67,30 @@ Linux gcc/g++ 使用讲解 —— 知乎
 
 ## 熟悉基础命令行工具
 
-- **tldr** = Too Long; Didn't Read，它简化了烦琐的man指令帮助文档，仅列出常用的该指令的使用方法。相比较man给出完整的帮助文档而言，大多数情况下，给出几个指令的使用demo可能正是我们想要的。
+### tldr
 
-  https://github.com/tldr-pages/tldr 
-  tldr —— github
+**tldr** = Too Long; Didn't Read，它简化了烦琐的man指令帮助文档，仅列出常用的该指令的使用方法。相比较man给出完整的帮助文档而言，大多数情况下，给出几个指令的使用demo可能正是我们想要的。
 
-  ```
-      sudo apt install nodejs     安装 Node.js（JavaScript的运行环境）
-      sudo apt install npm        安装 npm（Node.js官方提供的包管理工具）
-      npm install -g tldr         安装 tldr
-  ```
-- **Git** 软件包被包含在 Ubuntu 默认的软件源仓库中，并且可以使用 apt 包管理工具安装。
-  ```
-      sudo apt install git        安装 git
-      git --version               查看 git 版本
-  ```
-- **GNU make** 在 Linux（unix ）环境下使用GNU 的make工具能够比较容易的构建一个属于你自己的工程，整个工程的编译只需要一个命令就可以完成编译、连接以至于最后的执行。不过这需要我们投入一些时间去完成一个或者多个称之为Makefile 文件的编写。
+https://github.com/tldr-pages/tldr 
+tldr —— github
+
+```
+    sudo apt install nodejs     安装 Node.js（JavaScript的运行环境）
+    sudo apt install npm        安装 npm（Node.js官方提供的包管理工具）
+    npm install -g tldr         安装 tldr
+```
+
+### Git
+
+**Git** 软件包被包含在 Ubuntu 默认的软件源仓库中，并且可以使用 apt 包管理工具安装。
+
+```
+    sudo apt install git        安装 git
+    git --version               查看 git 版本
+```
+### GNU make
+
+**GNU make** 在 Linux（unix ）环境下使用GNU 的make工具能够比较容易的构建一个属于你自己的工程，整个工程的编译只需要一个命令就可以完成编译、连接以至于最后的执行。不过这需要我们投入一些时间去完成一个或者多个称之为Makefile 文件的编写。
 
 - [x] 安装tldr有助于帮助更好的阅读文档；git有助于更好的版本管理；GNU make有助于构建工程；GNU make, bash, gcc, libc 属于是 GNU 免费软件，tldr, tmux 是 github 社区开源软件
 
@@ -133,7 +143,6 @@ Vim文本编辑器 —— C语言中文网
 <img src="./images/linux_4.jpg" width="100%">
 
 
-
 ## 并发与并行
 
 所谓**并发**，就是通过一种算法将 CPU 资源合理地分配给多个任务，当一个任务执行 I/O 操作时（I/O操作是相当耗时的），CPU 可以转而执行其它的任务，等到 I/O 操作完成以后，或者新的任务遇到 I/O 操作时，CPU 再回到原来的任务继续执行。
@@ -156,6 +165,13 @@ printf函数、glibc库和系统调用在系统中关系图如下：
 
 C 编译器允许main()函数没有参数，或者有两个参数（有些实现允许更多的参数，但这只是对标准的扩展）。这两个参数，一个是int类型，一个是字符串类型。第一个参数是命令行中的字符串数。按照惯例（但不是必须的），这个int参数被称为argc（argument count）。第二个参数是一个指向字符串的指针数组。命令行中的每个字符串被存储到内存中，并且分配一个指针指向它。按照惯例，这个指针数组被称为argv（argument value）。系统使用空格把各个字符串格开。一般情况下，把程序本身的名字赋值给argv[0]。
 
+## POSIX，KISS，Everything is file
+
+**POSIX**：可移植操作系统接口（Portable Operating System Interface of UNIX，缩写为 POSIX ）。POSIX是IEEE为要在各种 UNIX 操作系统上运行的软件而定义的一系列API标准的总称。这套标准涵盖了很多方面，比如Unix系统调用的C语言接口、shell程序和工具、线程及网络编程。
+
+**KISS原则**是英语 Keep It Simple, Stupid 的首字母缩略字，是一种归纳过的经验原则。KISS 原则是指在设计当中应当注重简约的原则。—— 中文Wiki
+
+**Everything is a file** is an idea that Unix, and its derivatives handle input/output to and from resources such as documents, hard-drives, modems, keyboards, printers and even some inter-process and network communications as simple streams of bytes exposed through the filesystem name space. —— Wiki
 ## 总结
 
 **心路历程 2023-1-13 20:30**
@@ -189,7 +205,8 @@ CPU架构是CPU厂商给属于同一系列的CPU产品定的一个规范，主�
 
 
 
-## 命令行指令
+## 附录
+
 ```
 简单命令：
     mkdir               新建空目录

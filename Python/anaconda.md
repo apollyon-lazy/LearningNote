@@ -132,7 +132,7 @@ conda show <package_name> 查看当前环境下包的所有信息
 conda uninstall xxx 使用conda工具卸载包
 ```
 ## Anaconda使用前遇到的问题
-### 1. Anaconda, Miniconda, Miniforge —— conda
+### 1. Conda, Anaconda, Miniconda, Miniforge
 
 **Conda**
 
