@@ -1,9 +1,12 @@
-# 操作系统：设计与实现 —— 南京大学
+# 操作系统：设计与实现 南京大学
 
 ## 目录
 
 [操作系统上的程序](#操作系统上的程序)
 [多核处理器编程](#多核处理器编程)
+[并发控制:互斥](#并发控制互斥)
+[并发控制:同步](#并发控制同步)
+[附录](#附录)
 
 ## 操作系统上的程序
 
@@ -26,13 +29,20 @@
 
 ## 并发控制：互斥
 
-:thinking:多个线程同时进入 **临界区(critical section)** 可能会发生**数据竞争(race condition)**，所以需要保证线程 **互斥(mutual exclusion)** ，即只有一个线程在临界区执行。在硬件没有提供更多原子指令前有很多尝试 (Control Interrupts,Just using Loads/Stores,Peterson) ，后来有了 **自旋锁(spin lock)** 和 **互斥锁(mutux lock)**，通过在临界区加 **锁(lock)** 可以实现互斥。
+:thinking:多个线程同时进入 **临界区(critical section)** 可能会发生**数据竞争(race condition)**，所以需要保证线程 **互斥(mutual exclusion)** ，即只有一个线程在临界区执行。在硬件没有提供更多原子指令前有很多尝试 (Control Interrupts, Just using Loads/Stores, Peterson) ，后来有了 **自旋锁(spin lock)** 和 **互斥锁(mutux lock)**，通过在临界区加 **锁(lock)** 可以实现互斥。
 
 :question:如何理解自旋锁和互斥锁？
 
-:memo:用不同的原子指令(Test-And-Set, Compare-And-Swap, Load-Linked and Store-Conditional, Fetch-And-Add)可以搭建自旋锁，自旋锁可能会出现队列中多个线程争抢一把锁空转，或是操作系统将拿到锁的线程切换出去(处理I/O操作)的情况。用操作系统休眠线程和唤醒线程的系统调用(Syscall)可以搭建互斥锁，互斥锁会使等待上锁的线程在解锁前休眠解锁时唤醒。两种锁结合起来总体性能更好，不同的操作系统都有对这种锁的接口支持。
+:memo:用不同的原子指令(Test-And-Set, Compare-And-Swap, Load-Linked and Store-Conditional, Fetch-And-Add)可以搭建自旋锁。自旋锁带来的性能问题有，处理器间缓存同步延迟增加；队列中多个线程争抢一把锁空转，或是操作系统将拿到锁的线程切换出去(处理I/O操作)锁再也拿不到的情况。在自旋锁的基础上，组合操作系统休眠线程和唤醒线程的系统调用，可以搭建互斥锁。没抢到锁的线程进入休眠，抢到锁的线程解锁时会判断是否有线程等锁，有则唤醒线程直接递交锁无则解锁。不同的操作系统都有对这种系统调用的支持(Linux中为futux)。
 
 ## 并发控制：同步
+
+:thinking:很多情况下，线程要检查满足一定条件后才能继续执行，所以要保证线程间的**同步(synchronization)**，典型的同步问题有**生产者消费者问题(Producer/Consumer Problem)** (one-P/C；mutli-P/C；Covering Conditions)，**哲学家吃饭问题(The Dining Philosophers)** 等；解决同步的方法有 **条件变量(Condition Variables)** (wait, signal, broadcast) 和 **信号量(Semaphores)** (Locks/CVs)。
+
+:memo:怎么理解信号量和条件变量的使用？
+条件变量使用 boardcast 时性能低，但不使用容易出错。信号量当成锁和信号量使用时很简洁，但在管理多种资源时并不好用。提供三种线程，能够分别打印 `< > _` ，对这些线程进行同步，使得打印出的序列总是 `<><` 和 `><>`并中间间隔有 `_` 的 '小鱼'图案组合 [fish.c](#fish)。在这个问题中使用条件变量 Covering Conditions 要比使用信号量更好。
+
+## 操作系统的状态机模型
 
 ## M1: 打印进程树
 
@@ -55,3 +65,86 @@ gcc a.c && ./a.out      一键编译运行
 :memo: Linux 管道使用竖线 `|` 连接多个命令，这被称为管道符。当在两个命令之间设置管道时，管道符 `|` 左边命令的输出就变成了右边命令的输入。
 
 :memo: 输出重定向 `>` `>>` 是指命令的结果不再输出到显示器上，而是输出到其它地方，一般是文件中。这样做的最大好处就是把命令的结果保存起来，当我们需要的时候可以随时查询。
+
+## 附录
+
+<a id=fish>fish.C</a>
+
+``` C
+// fish.c
+#include "thread.h"
+
+#define LENGTH(arr) (sizeof(arr) / sizeof(arr[0]))
+
+enum { A = 1, B, C, D, E, F, };
+
+struct rule {
+  int from, ch, to;
+};
+
+struct rule rules[] = {
+  { A, '<', B },
+  { B, '>', C },
+  { C, '<', D },
+  { A, '>', E },
+  { E, '<', F },
+  { F, '>', D },
+  { D, '_', A },
+};
+// the first {<,>} thread come into fish_before determined the direct of fish
+int current = A, quota = 1;
+
+pthread_mutex_t lk   = PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t  cond = PTHREAD_COND_INITIALIZER;
+
+int next(char ch) {
+  for (int i = 0; i < LENGTH(rules); i++) {
+    struct rule *rule = &rules[i];
+    if (rule->from == current && rule->ch == ch) {
+      return rule->to;
+    }
+  }
+  return 0;
+}
+
+void fish_before(char ch) {
+  pthread_mutex_lock(&lk);
+  while (!(next(ch) && quota)) {
+    // can proceed only if (next(ch) && quota)
+    // next(ch) return 0 if ch is not in {<,>,_}
+    pthread_cond_wait(&cond, &lk);
+  }
+  quota--;
+  pthread_mutex_unlock(&lk);
+}
+
+void fish_after(char ch) {
+  pthread_mutex_lock(&lk);
+  quota++;
+  current = next(ch);
+  assert(current);
+  pthread_cond_broadcast(&cond);
+  pthread_mutex_unlock(&lk);
+}
+
+const char roles[] = ".<<<>>___";
+// all threads may be producers, may be consumers, may neither
+// so we don't know how many producers and consumers are
+// every threads (role in roles) just print one specific char
+
+void fish_thread(int id) {
+  char role = roles[id];
+  while (1) {
+    fish_before(role);
+    putchar(role); // can be long; no lock protection
+    fish_after(role);
+  }
+}
+
+int main() {
+  setbuf(stdout, NULL);
+  for (int i = 0; i < strlen(roles); i++)
+    create(fish_thread);
+}
+
+```

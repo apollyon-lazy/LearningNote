@@ -86,31 +86,35 @@ Linux gcc/g++ 使用讲解 —— 知乎
 
 ## 配置自己的环境
 
-- **Shell** 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。**bash**(**B**ourne **A**gain **Sh**ell)，由GNU开发的Shell，是各种Linux发行版标准配置的Shell。Fish（**F**riendly **I**nteractive **Sh**ell）最大特点就是方便易用，很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。
+### Shell
 
-    <img src="./images/linux_2.jpg" width="60%">
+**Shell** 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。**bash**(**B**ourne **A**gain **Sh**ell)，由GNU开发的Shell，是各种Linux发行版标准配置的Shell。Fish（**F**riendly **I**nteractive **Sh**ell）最大特点就是方便易用，很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。Shell中输入的命令，有内置命令(cd,pwd等)，也有其他应用程序（一个程序就是一个命令），叫外部命令。Shell 中的命令和 Python 都是解释性语言。
 
-    Shell中输入的命令，有内置命令(cd,pwd等)，也有其他应用程序（一个程序就是一个命令），叫外部命令。
-    
-    ```  
-     echo $SHELL    查看当前使用的shell
-     echo $0        查看当前使用的shell
-     sudo apt install fish      安装 fish shell
-     fish/exit      进入fish/退出fish
-     !!! 考虑bash和fish的不同，不设置fish为默认shell
-    ```
+<img src="./images/linux_2.jpg" width="60%">
+ 
+```  
+    echo $SHELL    查看当前使用的shell
+    echo $0        查看当前使用的shell
+    sudo apt install fish      安装 fish shell
+    fish/exit      进入fish/退出fish
+    !!! 考虑bash和fish的不同，不设置fish为默认shell
+```
 
-    http://c.biancheng.net/view/706.html   
-    什么是Shell —— C语言中文网 
+http://c.biancheng.net/view/706.html   
+什么是Shell —— C语言中文网 
 
-- **Tmux** 是一个终端复用器（terminal multiplexer），非常有用，属于常用的开发工具。命令行的典型使用方式是，打开一个终端窗口（terminal window，以下简称"窗口"），在里面输入命令。用户与计算机的这种临时的交互，称为一次"会话"（session） 。会话的一个重要特点是，窗口与其中启动的进程是连在一起的。打开窗口，会话开始；关闭窗口，会话结束，会话内部的进程也会随之终止，不管有没有运行完。Tmux 就是会话与窗口的"解绑"工具，将它们彻底分离。
+### Tmux
 
+**Tmux** 是一个终端复用器（terminal multiplexer），非常有用，属于常用的开发工具。命令行的典型使用方式是，打开一个终端窗口（terminal window，以下简称"窗口"），在里面输入命令。用户与计算机的这种临时的交互，称为一次"会话"（session） 。会话的一个重要特点是，窗口与其中启动的进程是连在一起的。打开窗口，会话开始；关闭窗口，会话结束，会话内部的进程也会随之终止，不管有没有运行完。Tmux 就是会话与窗口的"解绑"工具，将它们彻底分离。
 
-- **Vim** 是一个基于文本界面的编辑工具，使用简单且功能强大。更重要的是，Vim 是所有 Linux 发行版本默认的文本编辑器。Linux Vim有三种工作模式（命令模式、输入模式和编辑模式）。
-    <img src="./images/linux_3.jpg" width="100%">
+### Vim
 
-    http://c.biancheng.net/linux_tutorial/40/  
-    Vim文本编辑器 —— C语言中文网
+**Vim** 是一个基于文本界面的编辑工具，使用简单且功能强大。更重要的是，Vim 是所有 Linux 发行版本默认的文本编辑器。Linux Vim有三种工作模式（命令模式、输入模式和编辑模式）。
+
+<img src="./images/linux_3.jpg" width="100%">
+
+http://c.biancheng.net/linux_tutorial/40/  
+Vim文本编辑器 —— C语言中文网
 
 - [x] 操作系统中常见的应用程序有Core Utilities (coreutils)（命令有cat，ls等）、系统/工具程序（bash,apt,vim,tmux,python等）、其他应用程序（浏览器、播放器等）
 
