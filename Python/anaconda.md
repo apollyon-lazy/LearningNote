@@ -103,9 +103,9 @@ conda remove -n <envname> --all 删除虚拟环境
 如果在 anaconda navigator 中为新环境装jupyter，会给开始菜单新增加一个jupyter 快捷方式
 
 ```
-`jupyter kernelspec list` 查看juypter所有核
-`juypter kernelspec remove <kernelname>` 卸载jupyter内核 
-`python -m ipykernel install --user` 重装系统核
+jupyter kernelspec list 查看juypter所有核
+juypter kernelspec remove <kernelname> 卸载jupyter内核 
+python -m ipykernel install --user 重装系统核
 ```
 1. `conda install ipykernel` `conda install -n <envname> ipykernel` 在 jupyter 环境中增加切换核功能的依赖包
 2. `python -m ipykernel install --user --name <envname> --display-name "<displayname>"` 在juypter中装环境核

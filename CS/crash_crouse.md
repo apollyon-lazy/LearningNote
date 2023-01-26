@@ -3,7 +3,7 @@ https://github.com/1c7/Crash-Course-Computer-Science-Chinese
 Computer Science Github 资源网站
 ## 目录
 [第七课 中央处理器 CPU](#第七课-中央处理器-cpu)
-## 课程
+
 
 | Concept | Translation |
 | :--- | :--- |
@@ -52,7 +52,9 @@ Computer Science Github 资源网站
 - 门锁的作用是用一根线控制数据的输入
 - 寄存器的作用是并排使用门锁，储存多位数字
 - **RAM** 随机存取存储器，由一系列矩阵以及电路组成的器件，可根据地址来写入、读取数据。
+
 ## 第七课 中央处理器 CPU
+
 | Concept | Translation |
 | :--- | :--- |
 | instruction | 指令 |

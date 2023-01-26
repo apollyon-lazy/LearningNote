@@ -1,4 +1,3 @@
-# 引言
 
 ## 目录
 
@@ -12,7 +11,10 @@
 [并发与并行](#并发与并行)     
 [库函数和系统调用](#库函数和系统调用)   
 [main()函数的参数](#main函数的参数)  
-[POSIX,KISS,Everything](#posixkisseverything-is-file)    
+[常见缩略语](#常见缩略语)  
+[内存模型](#内存模型)
+[处理器架构，指令集，RISC-V](#处理器架构指令集risc-v)
+[静态链接与动态链接](#静态链接与动态链接)  
 [总结](#总结)   
 
 ## 安装 wsl (Windows Subsystem for Linux)
@@ -28,11 +30,8 @@ wsl 官方安装文档 —— 官网
 
 ## Unix 和 Linux
 
-UNIX 操作系统由肯•汤普森（Ken Thompson）和丹尼斯•里奇（Dennis Ritchie）发明。后来由芬兰人林纳斯·托瓦兹（Linus Torvalds）写了新的操作系统 Linux，它与 Unix 在外观和交互上类似，故也称是类 Unix 系统。Linux 开源后与缺少内核的 GNU 打包发布，故也称 GNU/Linux，后来大家省略 GNU 叫的 Linux 其实是类 Uinx 的内核和大量 GNU 开源软件的一个集合体。
-
+UNIX 操作系统由肯•汤普森（Ken Thompson）和丹尼斯•里奇（Dennis Ritchie）发明。后来由芬兰人林纳斯·托瓦兹（Linus Torvalds）写了新的操作系统 Linux，它与 Unix 在外观和交互上类似，故也称是类 Unix 系统。Linux 开源后与缺少内核的 GNU 打包发布，故也称 GNU/Linux，后来大家省略 GNU 叫的 Linux 其实是类 Uinx 的内核和大量 GNU 开源软件的一个集合体。Linux 发行版说简单点就是将 Linux 内核与应用软件进行一个打包，目前市面上知名的发行版有 Ubantu、CentOS 等等。
 <img src="./images/linux_1.jpg" width="100%">
-
-Linux 发行版说简单点就是将 Linux 内核与应用软件进行一个打包，目前市面上知名的发行版有 Ubantu、CentOS 等等。
 
 http://c.biancheng.net/view/707.html  
 Linux和Unix的关系及区别——C语言中文网 
@@ -54,9 +53,6 @@ sudo apt autoremove                 清理不再使用的依赖和库文件
 sudo apt install bulid-essential    安装 bulid-essential
 gcc --version                       打印 gcc 版本验证是否安装成功
 ```
-
-https://blog.csdn.net/weixin_44718794/article/details/106751513  
-wsl 链接到 VScode 编写 C/C++代码 检测到 #include 错误解决办法 —— CSDN
 
 https://zhuanlan.zhihu.com/p/404682058  
 Linux gcc/g++ 使用讲解 —— 知乎
@@ -88,11 +84,11 @@ tldr —— github
     sudo apt install git        安装 git
     git --version               查看 git 版本
 ```
-### GNU make
+### make
 
-**GNU make** 在 Linux（unix ）环境下使用GNU 的make工具能够比较容易的构建一个属于你自己的工程，整个工程的编译只需要一个命令就可以完成编译、连接以至于最后的执行。不过这需要我们投入一些时间去完成一个或者多个称之为Makefile 文件的编写。
+**make** 在 Linux（unix ）环境下使用GNU的make工具能够比较容易的构建一个属于你自己的工程，整个工程的编译只需要一个命令就可以完成编译、连接以至于最后的执行。不过这需要我们投入一些时间去完成一个或者多个称之为Makefile 文件的编写。
 
-- [x] 安装tldr有助于帮助更好的阅读文档；git有助于更好的版本管理；GNU make有助于构建工程；GNU make, bash, gcc, libc 属于是 GNU 免费软件，tldr, tmux 是 github 社区开源软件
+- [x] 安装tldr有助于帮助更好的阅读文档；git有助于更好的版本管理；GNU make有助于构建工程；make, bash, gcc, libc 属于是 GNU 免费软件，tldr, tmux 是 github 社区开源软件
 
 ## 配置自己的环境
 
@@ -155,23 +151,24 @@ http://c.biancheng.net/view/9486.html
 
 ## 库函数和系统调用
 
-系统调用是为了方便使用操作系统的接口，而库函数则是为了人们编程的方便。库函数调用与系统类型无关，不同的系统，调用库函数，库函数会针对系统调用不同的底层函数实现，因此可移植性好。
+系统调用是为了方便使用操作系统的接口，而库函数则是为了人们编程的方便。库函数调用与系统类型无关，不同的系统，调用库函数，库函数会针对系统调用不同的底层函数实现，因此可移植性好。glibc是linux下面c标准库的实现，即GNU C Library。printf函数、glibc库和系统调用在系统中关系图如下：
 
-glibc是linux下面c标准库的实现，即GNU C Library。  
-printf函数、glibc库和系统调用在系统中关系图如下：
 <img src="./images/linux_5.jpg" width="100%">
 
 ## main()函数的参数
 
 C 编译器允许main()函数没有参数，或者有两个参数（有些实现允许更多的参数，但这只是对标准的扩展）。这两个参数，一个是int类型，一个是字符串类型。第一个参数是命令行中的字符串数。按照惯例（但不是必须的），这个int参数被称为argc（argument count）。第二个参数是一个指向字符串的指针数组。命令行中的每个字符串被存储到内存中，并且分配一个指针指向它。按照惯例，这个指针数组被称为argv（argument value）。系统使用空格把各个字符串格开。一般情况下，把程序本身的名字赋值给argv[0]。
 
-## POSIX，KISS，Everything is file
+## 常见缩略语
 
 **POSIX**：可移植操作系统接口（Portable Operating System Interface of UNIX，缩写为 POSIX ）。POSIX是IEEE为要在各种 UNIX 操作系统上运行的软件而定义的一系列API标准的总称。这套标准涵盖了很多方面，比如Unix系统调用的C语言接口、shell程序和工具、线程及网络编程。
 
 **KISS原则**是英语 Keep It Simple, Stupid 的首字母缩略字，是一种归纳过的经验原则。KISS 原则是指在设计当中应当注重简约的原则。—— 中文Wiki
 
 **Everything is a file** is an idea that Unix, and its derivatives handle input/output to and from resources such as documents, hard-drives, modems, keyboards, printers and even some inter-process and network communications as simple streams of bytes exposed through the filesystem name space. —— Wiki
+
+**RTFSC** (Read The Fucking Source Code, Linux创始人), 生动形象的体现了阅读源代码的艰难和重要性
+
 ## 总结
 
 **心路历程 2023-1-13 20:30**
@@ -184,8 +181,6 @@ C 编译器允许main()函数没有参数，或者有两个参数（有些实现
 
 ---
 
-# 并发 
-
 ## 内存模型
 
 <img src="./images/linux_6.jpg" width="100%">
@@ -196,37 +191,75 @@ C 编译器允许main()函数没有参数，或者有两个参数（有些实现
 
 **处理器架构**，就是CPU的硬件架构，是一堆硬件电路，去实现指令集所规定的操作运算。**指令集**，对于CPU来说，就是介于软件和底层硬件之间的一套程序指令的合集。指令集存储于CPU内部，处理器执行指令会有相应的硬件电路去实现相应操作。`所以设计的处理器架构不同，指令集也不同。`
 
-RISC(精简指令集计算机，Reduced Instruction Set Computer-RISC)和CISC(复杂指令集计算机，Complex Instruction Set Computer-CISC)是CPU的两种架构，区别在于不同的CPU设计理念和方法。早期计算机都是CISC架构，有约20%指令会被经常使用在80%的程序中。RISC的想法，主张硬件应该专心加速常用的指令，较为复杂的指令则利用常用的指令去组合。`不同的CPU架构导致了机器语言和汇编语言的不同(编译器和处理器也因此不同)，所以高级语言编程无需考虑底层。`
+RISC(精简指令集计算机，Reduced Instruction Set Computer-RISC)和CISC(复杂指令集计算机，Complex Instruction Set Computer-CISC)是CPU的两种架构，区别在于不同的CPU设计理念和方法。早期计算机都是CISC架构，有约20%指令会被经常使用在80%的程序中。RISC的想法，主张硬件应该专心加速常用的指令，较为复杂的指令则利用常用的指令去组合。`不同的CPU架构导致了机器语言和汇编语言的不同(编译器和处理器也因此不同，它们也是影响程序性能的重要因素)。高级语言编程不考虑底层，也是因为底层语言不同会带来麻烦事`
 
-CPU架构是CPU厂商给属于同一系列的CPU产品定的一个规范，主要目的是为了区分不同类型CPU的重要标识。市面上的CPU分类主要分有两大阵营，一个是intel、AMD为首的复杂指令集CPU，另一个是以IBM、ARM为首的精简指令集CPU。两个不同品牌的CPU，其产品的架构也不相同，例如，Intel、AMD的CPU是X86架构的，而IBM公司的CPU是PowerPC架构，ARM公司是ARM架构。`目前我们个人电脑CPU基本上都是x86架构(来自Intel和AMD)。`
+CPU架构是CPU厂商给属于同一系列的CPU产品定的一个规范，主要目的是为了区分不同类型CPU的重要标识。市面上的CPU分类主要分有两大阵营，一个是intel、AMD为首的复杂指令集CPU，另一个是以IBM、ARM为首的精简指令集CPU。两个不同品牌的CPU，其产品的架构也不相同，例如，Intel、AMD的CPU是X86架构的，而IBM公司的CPU是PowerPC架构，ARM公司是ARM架构。`目前我们个人电脑CPU基本上都是x86架构(来自Intel和AMD)，指令集内容公开但商用需要版权。`
 
 **RISC-V** 是 2010 年始于伯克利分校的基于 RISC 原则的 **开源** 指令集架构。`当然处理器公司会不乐意，开源会导致处理器设计的多样化。`
 
+## 静态链接与动态链接
 
+**静态链接**（Static Linking）是由链接器在链接时将库的内容加入到可执行程序中的做法。链接器是一个独立程序，将一个或多个库或目标文件（先前由编译器或汇编器生成）链接到一块生成可执行程序。这里的库指的是静态链接库，`Windows下以.lib为后缀，Linux下以.a为后缀`。
 
+- 代码装载速度快，执行速度略比动态链接库快；只需保证在开发者的计算机中有正确的.lib文件，在以二进制形式发布程序时不需考虑在用户的计算机上.lib文件是否存在及版本问题。
+- 但可执行文件体积大，包含相同的公共代码造成浪费。
 
+**动态链接**（Dynamic Linking），把链接这个过程推迟到了运行时再进行，在可执行文件装载时或运行时，由操作系统的装载程序加载库。这里的库指的是动态链接库，`Windows下以.dll为后缀，Linux下以.so为后缀，是二进制程序文件`。值得一提的是，在Windows下的动态链接也可以用到.lib为后缀的文件，但这里的.lib文件叫做导入库，是由.dll文件生成的。
+
+- 生成的可执行文件较静态链接生成的可执行文件小；适用于大规模的软件开发，使开发过程独立、耦合度小，便于不同开发者和开发组织之间进行开发和测试；不同编程语言编写的程序只要按照函数调用约定就可以调用同一个DLL函数；DLL文件与EXE文件独立，只要输出接口不变（即名称、参数、返回值类型和调用约定不变），更换DLL文件不会对EXE文件造成任何影响，因而极大地提高了可维护性和可扩展性；
+- 使用动态链接库的应用程序不是自完备的，它依赖的DLL模块也要存在，如果使用载入时动态链接，程序启动时发现DLL不存在，系统将终止程序并给出错误信息；速度比静态链接慢；
+
+## ELF文件
+**ELF** 是一类文件类型，而不是特指某一后缀的文件。ELF(Executable and Linkable Format, 可执行与可链接格式)，在Linux中有三种文件，可执行文件(.out)，可重定位文件(.o)，共享目标文件(.so). `LSB 是 Linux Standard Base`
+
+**可执行文件(Executable File)**，包含代码和数据，是可以直接运行的程序。其代码和数据都有固定的地址，系统可根据这些地址星系把程序加载到内存中执行。`文件的移动本质是文件头文件中信息的改变，而非在存储空间中的移动。`
+
+**可重定位文件(Relocatable File)**，包含基础代码和数据，但它的代码及数据都没有指定绝对地址，因此它适合于其他目标文件链接来创建可执行文件或者共享目标文件。
+
+**共享目标文件(Shared Object File)**，也称动态库文件，包含了代码和数据，这些数据是在链接时被链接器(ld)和运行时动态链接器使用的。
+## 汇编语言
+ Intel的格式是 `opcode destination, source`
 ## 附录
 
 ```
-简单命令：
-    mkdir               新建空目录
-    mv                  重命名或移动文件
-    rename              批量重命名文件
-    cd                  打开文件目录
-    ls                  展示当前目录下所有文件
-    pwd                 显示用户当前所在的目录
-    cat                 查看目标文件内容
+文件目录管理：
+    cd              切换目录 
+    ls              查看目录中所有文件 
+    pwd             显示当前工作路径
+    mkdir rmdir     新建目录 删除空目录
+    touch           创建文件及修改文件时间戳 
+    cp rm           复制文件和目录 删除文件或文件夹    
+    mv              移动或重命名文件和目录 
+    file            查看文件类型
+    tree            树状查看目录(需下载)
+文本处理：
+    cat             连接合并文件内容
+    head tail       显示文件开头内容 显示文件结尾内容
+    less            查看文件内容
+    grep            查找文件内容
+    wget            网页上下载文件
+系统管理：
+    ps              显示当前进程的状态   
+    pstree          打印进程树 
+    top             实时监听进程运行状态
+    jobs            查看暂停进程
+    fg bg           放入前台 放入后台
+    pmap            查看进程地址空间
+    which           定位程序位置
+特殊符号和快捷键：
+    ctrl+Z          暂停进程放入后台
+    ctrl+P          重复执行上一条命令
+    ctrl+C          退出当前进程
+    > | &           重定向 管道 后台执行
+代码：
+    objdump readelf     反汇编 读取ELF文件
     code .              链接到vscode并打开
-    ps                  显示当前进程的状态 
-    rm                  删除文件或文件夹
-    file                查看文件类型
-    man                 查看帮助文档
-    wget                网页上下载文件
-    objdump             反汇编
+毫无用处：
+    cmatrix         符号雨(需下载)
 ```
 
 ``` 
-gcc 使用：
+gcc：
     gcc hello.c -o hello && ./hello         编译链接运行
     gcc -E hello.c -o hello.i               C转预处理 (Pre-Processing)
     gcc -S hello.i -o hello.s               预处理转汇编 (Compiling)
@@ -238,24 +271,37 @@ gcc 使用：
     -l                                      添加头文件搜索目录
     -L                                      添加库文件搜索目录
     -pthread                                链接POSIX线程库
+
 ```
 
 ```
-man 使用：
+man：
     /<string>                               查找字符串(支持正则表达式)
     n                                       移步下一个匹配字符串
     N                                       移步上一个匹配字符串
 ```
 
 ```
-tmux 使用：
+tmux：
     tmux                            进入tmux窗口
     Ctrl+d                          退出tmux窗口
-    窗格操作：
+窗格操作：
     Ctrl+b %                        划分左右两个窗格
     Ctrl+b "                        划分上下两个窗格
     Ctrl+b <arrow key>              光标切换到其他窗格
     Ctrl+b Ctrl+<arrow key>         按箭头方向调整窗格大小
     Ctrl+b q                        显示窗格编号
     Ctrl+b x                        关闭当前窗格
+```
+
+```
+vim:
+Command-mode:
+    :wq             保存并退出
+    q!              强制退出不保存
+    set nu          显示行号            
+    set nonu        取消显示行号
+```
+```
+    strace <file> &| vim -  跟踪系统调用并导入vim
 ```
