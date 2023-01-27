@@ -1,7 +1,7 @@
 
 ## 目录
 
-[安装 wsl (Windows Subsystem for Linux)](#安装-wsl-windows-subsystem-for-linux)  
+[安装 wsl](#安装-wsl-windows-subsystem-for-linux)  
 [Terminal 和 VScode](#terminal-和-vscode)  
 [Unix 和 Linux](#unix-和-linux)  
 [安装gcc/g++(Ubantu)](#安装-gccgubantu)  
@@ -15,6 +15,8 @@
 [内存模型](#内存模型)
 [处理器架构，指令集，RISC-V](#处理器架构指令集risc-v)
 [静态链接与动态链接](#静态链接与动态链接)  
+[ELF文件](#elf文件)
+[快速读懂汇编](#快速读懂汇编语言)
 [总结](#总结)   
 
 ## 安装 wsl (Windows Subsystem for Linux)
@@ -151,7 +153,7 @@ http://c.biancheng.net/view/9486.html
 
 ## 库函数和系统调用
 
-系统调用是为了方便使用操作系统的接口，而库函数则是为了人们编程的方便。库函数调用与系统类型无关，不同的系统，调用库函数，库函数会针对系统调用不同的底层函数实现，因此可移植性好。glibc是linux下面c标准库的实现，即GNU C Library。printf函数、glibc库和系统调用在系统中关系图如下：
+系统调用是为了方便使用操作系统的接口，而库函数则是为了人们编程的方便。库函数调用与系统类型无关，不同的系统，调用库函数，库函数会针对系统调用不同的底层函数实现，因此可移植性好。glibc是linux下面c标准库的实现，即GNU C Library。printf函数、glibc库和系统调用在系统中关系图如下：`GNU C运用于Linux上，ANSI C(C89,C99都有可能)就是标准C库函数。GNU包含ANSI(在一些特性上有扩展)，ANSI可以跨平台(最基本的库大家都有)。ANSI和C++库有交集，也有不同(C++与C的区别)`
 
 <img src="./images/linux_5.jpg" width="100%">
 
@@ -168,18 +170,6 @@ C 编译器允许main()函数没有参数，或者有两个参数（有些实现
 **Everything is a file** is an idea that Unix, and its derivatives handle input/output to and from resources such as documents, hard-drives, modems, keyboards, printers and even some inter-process and network communications as simple streams of bytes exposed through the filesystem name space. —— Wiki
 
 **RTFSC** (Read The Fucking Source Code, Linux创始人), 生动形象的体现了阅读源代码的艰难和重要性
-
-## 总结
-
-**心路历程 2023-1-13 20:30**
-
-- 想在Linux环境下编程，在命令行环境下编写C、C++、Python，`安装WSL，Terminal`;
-- 想知道 Linux 是什么，为什么要学它， `Unix 和 Linux的关系`;
-- 想配置出适合编程的命令行环境，`gcc,tldr,tmux,vim,make,git的基本使用`;
-- 想知道编写的程序和操作系统是如何联系的，`库函数和系统调用`
-- 想开始学习操作系统的并发 `并发和并行 进程和线程`
-
----
 
 ## 内存模型
 
@@ -217,91 +207,60 @@ CPU架构是CPU厂商给属于同一系列的CPU产品定的一个规范，主�
 **可重定位文件(Relocatable File)**，包含基础代码和数据，但它的代码及数据都没有指定绝对地址，因此它适合于其他目标文件链接来创建可执行文件或者共享目标文件。
 
 **共享目标文件(Shared Object File)**，也称动态库文件，包含了代码和数据，这些数据是在链接时被链接器(ld)和运行时动态链接器使用的。
-## 汇编语言
- Intel的格式是 `opcode destination, source`
-## 附录
+## 快速读懂汇编语言
 
-```
-文件目录管理：
-    cd              切换目录 
-    ls              查看目录中所有文件 
-    pwd             显示当前工作路径
-    mkdir rmdir     新建目录 删除空目录
-    touch           创建文件及修改文件时间戳 
-    cp rm           复制文件和目录 删除文件或文件夹    
-    mv              移动或重命名文件和目录 
-    file            查看文件类型
-    tree            树状查看目录(需下载)
-文本处理：
-    cat             连接合并文件内容
-    head tail       显示文件开头内容 显示文件结尾内容
-    less            查看文件内容
-    grep            查找文件内容
-    wget            网页上下载文件
-系统管理：
-    ps              显示当前进程的状态   
-    pstree          打印进程树 
-    top             实时监听进程运行状态
-    jobs            查看暂停进程
-    fg bg           放入前台 放入后台
-    pmap            查看进程地址空间
-    which           定位程序位置
-特殊符号和快捷键：
-    ctrl+Z          暂停进程放入后台
-    ctrl+P          重复执行上一条命令
-    ctrl+C          退出当前进程
-    > | &           重定向 管道 后台执行
-代码：
-    objdump readelf     反汇编 读取ELF文件
-    code .              链接到vscode并打开
-毫无用处：
-    cmatrix         符号雨(需下载)
-```
+ x86汇编一直存在两种不同的语法，在intel的官方文档中使用intel语法，Windows也使用intel语法，而UNIX平台的汇编器一直使用AT&T语法。Intel的格式是 `opcode destination, source`，而AT&T的格式是 `opcode source, destination`。环境是x86_64下Linux操作系统gcc编译，C程序 `asm.c` 如下。得到的目标文件 `asm.o` ，用`objdump -d`反汇编函数部分汇编代码如下（A&T格式）。内存分为栈空间（向低位增长）和堆空间（向高位增长），静态区。程序本身是只读的程序数据片段，比如 `int i = 4`，这个4存储于程序本身，在汇编里面又叫立即数(immediate number。
 
-``` 
-gcc：
-    gcc hello.c -o hello && ./hello         编译链接运行
-    gcc -E hello.c -o hello.i               C转预处理 (Pre-Processing)
-    gcc -S hello.i -o hello.s               预处理转汇编 (Compiling)
-    gcc -c hello.s -o hello.o               汇编转机器 (Assembling)
-    gcc hello.c -o hello_static --static    编译链接(静态) (Linking)
-    -Wall                                   产生更多警告
-    -Werror                                 所有警告当错误
-    -O1 -O2                                 逐级优化代码
-    -l                                      添加头文件搜索目录
-    -L                                      添加库文件搜索目录
-    -pthread                                链接POSIX线程库
+ 那么数据的传递就有四种：从内存到寄存器，从寄存器到内存，从立即数到内存，从立即数到内存（数据内存到内存必须经过寄存器）。 `rbp,rsp` 两个寄存器分别是栈底指针和栈顶指针，`rip`是指令序列，每个栈开始和结束的两条语句往往都是函数栈管理的语句；A&T汇编格式中%代表寄存器，$代表立即数，()代表取值。 
 
-```
+ ``` C
+int f(int x)
+{
+    return x + 3;
+}
+int main()
+{
+    return f(8);
+}      
+ ```
 
-```
-man：
-    /<string>                               查找字符串(支持正则表达式)
-    n                                       移步下一个匹配字符串
-    N                                       移步上一个匹配字符串
-```
+ ``` ASM
+Disassembly of section .text:
 
-```
-tmux：
-    tmux                            进入tmux窗口
-    Ctrl+d                          退出tmux窗口
-窗格操作：
-    Ctrl+b %                        划分左右两个窗格
-    Ctrl+b "                        划分上下两个窗格
-    Ctrl+b <arrow key>              光标切换到其他窗格
-    Ctrl+b Ctrl+<arrow key>         按箭头方向调整窗格大小
-    Ctrl+b q                        显示窗格编号
-    Ctrl+b x                        关闭当前窗格
-```
+0000000000000000 <f>:
+   0:   f3 0f 1e fa             endbr64
+   4:   55                      push   %rbp
+   5:   48 89 e5                mov    %rsp,%rbp
+   8:   89 7d fc                mov    %edi,-0x4(%rbp)
+   b:   8b 45 fc                mov    -0x4(%rbp),%eax
+   e:   83 c0 03                add    $0x3,%eax
+  11:   5d                      pop    %rbp
+  12:   c3                      retq
 
-```
-vim:
-Command-mode:
-    :wq             保存并退出
-    q!              强制退出不保存
-    set nu          显示行号            
-    set nonu        取消显示行号
-```
-```
-    strace <file> &| vim -  跟踪系统调用并导入vim
-```
+0000000000000013 <main>:
+  13:   f3 0f 1e fa             endbr64
+  17:   55                      push   %rbp
+  18:   48 89 e5                mov    %rsp,%rbp
+  1b:   bf 08 00 00 00          mov    $0x8,%edi
+  20:   e8 00 00 00 00          callq  25 <main+0x12>
+  25:   5d                      pop    %rbp
+  26:   c3                      retq
+ ```
+
+<img src="./images/linux_7.jpg" width="100%">
+
+---
+
+## 总结
+
+**心路历程 2023-1-27 15:40**
+
+- 想在Linux环境命令行环境下编写程序 `安装WSL，Terminal` 
+- 想知道 Linux 是什么，为什么要学它  `Unix 和 Linux的关系` 
+- 想配置适合的命令行编程环境 `gcc,tldr,tmux,vim,make,git,gdb` 
+- 想知道编写的程序和操作系统是如何联系的，`库函数和系统调用`
+- 想开始学习操作系统的并发 `并发和并行 进程和线程`
+- 想开始做lib `操作系统眼中的C程序：内存、处理器架构、汇编`
+
+---
+
