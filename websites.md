@@ -31,10 +31,9 @@ https://www.python.org/dev/peps/pep-0008/ PEP8 Python 增强建议书 含代码�
 ## OS(Operating System)
 http://jyywiki.cn/OS/2022/ 南京大学 操作系统 2022 春季课  
 https://www.bilibili.com/video/BV1Cm4y1d7Ur/ 南京大学 操作系统：设计与实现 b站课程主页  
-https://nju-projectn.github.io/ics-pa-gitbook/ics2022/ 南京大学 计算机系统基础 讲义主页
 https://knowledgehive.github.io/6.828/ github 上写的不错的6.828lab笔记
 https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html POSIX 标准查询网站
-https://www.gnu.org/software/software.en.html GNU Software 查询页面  
+https://www.gnu.org/software/software.en.html GNU Software 查询页面 
 https://www.gnu.org/software/libc/manual/html_node/index.html GNU glibc 库官方文档  
 https://elixir.bootlin.com/linux/latest/source bootlin公司 Linux内核源码
 

@@ -9,12 +9,14 @@
     cp rm           复制文件和目录 删除文件或文件夹    
     mv              移动或重命名文件和目录 
     file            查看文件类型
+    tty             返回终端名
     tree            树状查看目录(需下载)
 文本处理：
     cat             连接合并文件内容
     head tail       显示文件开头内容 显示文件结尾内容
     less            查看文件内容
     grep            查找文件内容
+    echo            打印参数
     wget            网页上下载文件
 系统管理：
     ps              显示当前进程的状态   
@@ -30,8 +32,9 @@
     ctrl+C          退出当前进程
     > | &           重定向 管道 后台执行
 代码：
-    objdump readelf     反汇编 读取ELF文件
     code .              链接到vscode并打开
+GNU Binutils:
+    ld objdump readelf      链接器 反汇编 读取ELF文件
 毫无用处：
     cmatrix         符号雨(需下载)
 ```
@@ -43,6 +46,7 @@ gcc：
     gcc -S hello.i -o hello.s               预处理转汇编 (Compiling)
     gcc -c hello.s -o hello.o               汇编转机器 (Assembling)
     gcc hello.c -o hello_static --static    编译链接(静态) (Linking)
+    -ffreestanding                          无依赖环境(无标准库)
     -Wall                                   产生更多警告
     -Werror                                 所有警告当错误
     -O1 -O2                                 逐级优化代码
@@ -85,9 +89,11 @@ Command-mode:
 gdb:
     gcc a.c -g          编译时加入调试信息
     gdb -tui a.out      gdb图形界面tui调试程序
+    layout asm          进入汇编
+    layout src          进入源码
     b <line>            在行号处设置断点
     d                   删除断点
-    p                   打印内部变量值
+    p                   打印内部变量值($寄存器)
     r                   运行程序
     start               从main函数开始运行
     starti              从_start函数开始运行

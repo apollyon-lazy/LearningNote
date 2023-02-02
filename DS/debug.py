@@ -86,8 +86,114 @@ def canJump(nums):
             return True
 nums = [2,5,0,0] 
 canJump(nums)    
+# %% 最小路径和
+def minPathSum(grid):
+    m = len(grid)
+    n = len(grid[0])
+
+    for i in range(m):
+        for j in range(n):
+            if i == 0 and j != 0:
+                grid[0][j] = grid[0][j-1] + grid[0][j]
+            if i != 0 and j == 0:
+                grid[i][0] = grid[i-1][0] + grid[i][0]
+            if i != 0 and j != 0:
+                grid[i][j] = min(grid[i-1][j], grid[i][j-1]) + grid[i][j]
+    return grid[-1][-1]
+
+a=[[1,3,1],[1,5,1],[4,2,1]]
+minPathSum(a)
+
+uniquePathsWithObstacles(a)
 # %%
-a = [1,2,3,4]
-b = a[1] + a[1]
-a[1] = a[a[1]] + a[1]
-a 
+def stoneGame(piles):
+    p1 = 0 
+    p2 = len(piles) - 1
+    n1 = 0 # Alice
+    n2 = 0 # Bob
+
+    while p2 - p1 >= 3:
+        left = piles[p1] - max(piles[p1+1], piles[p2]) # 拿走左边的收益
+        right = piles[p2] - max(piles[p2-1], piles[p1]) # 拿走右边的收益
+        if left >= right:
+            n1 = n1 + piles[p1]
+            p1 = p1 + 1
+        else:
+            n1 = n1 + piles[p2]
+            p2 = p2 - 1
+
+        left = piles[p1] - max(piles[p1+1], piles[p2]) # 拿走左边的收益
+        right = piles[p2] - max(piles[p2-1], piles[p1]) # 拿走右边的收益
+        if left >= right:
+            n2 = n2 + piles[p1]
+            p1 = p1 + 1
+        else:
+            n2 = n2 + piles[p2]
+            p2 = p2 - 1
+                
+    n1 = n1 + max(piles[p1], piles[p2])
+    n2 = n2 + min(piles[p1], piles[p2])
+    if n1 > n2:
+        return True
+    else:
+        return False
+a=[6,9,4,3,9,8]
+stoneGame(a)
+# %%
+
+def minimumTotal(triangle):
+    n = len(triangle)
+    for i in range(n):
+        for j in range(i+1):
+            if i != 0 and j == 0:
+                triangle[i][j] = triangle[i-1][j] + triangle[i][j]
+            if i != 0 and j == i:
+                triangle[i][j] = triangle[i-1][j-1] + triangle[i][j]
+            if i != 0 and j != i:
+                triangle[i][j] = min(triangle[i-1][j-1],triangle[i-1][j]) + triangle[i][j]
+    return min(triangle[-1])
+
+a = [[2],[3,4],[6,5,7],[4,1,8,3]]       
+minimumTotal(a)
+# %%
+class Solution:
+    def trap(self, height: List[int]) -> int:
+
+        if len(height) == 1 or len(height) == 2:
+            return 0
+
+        i = 0
+        j = len(height) - 1
+        water = 0
+        while height[i] == 0:
+            i = i + 1
+        while height[j] == 0:
+            j = j - 1        
+        left = height[i]
+        right = height[j]
+
+
+        while j - i >= 2:
+            if left <= right: #左墙低
+                i = i + 1
+                if height[]
+# %%
+def maximalSquare(matrix):
+    m = len(matrix)
+    n = len(matrix[0])
+    for i in range(m):
+        for j in range(n):
+            if matrix[i][j] == '0':
+                matrix[i][j] = 0
+            elif i == 0 or j == 0:
+                matrix[i][j] = 1
+            else:
+                matrix[i][j] = min(matrix[i-1][j-1], matrix[i-1][j], matrix[i][j-1]) + 1
+    return max(max(matrix)) ** 2
+a = [["0","0","0","1"],["1","1","0","1"],["1","1","1","1"],["0","1","1","1"],["0","1","1","1"]]
+maximalSquare(a)
+
+# %%
+
+a = 1
+str(a)

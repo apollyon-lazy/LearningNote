@@ -96,7 +96,7 @@ tldr —— github
 
 ### Shell
 
-**Shell** 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。**bash**(**B**ourne **A**gain **Sh**ell)，由GNU开发的Shell，是各种Linux发行版标准配置的Shell。Fish（**F**riendly **I**nteractive **Sh**ell）最大特点就是方便易用，很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。Shell中输入的命令，有内置命令(cd,pwd等)，也有其他应用程序（一个程序就是一个命令），叫外部命令。Shell 中的命令和 Python 都是解释性语言。
+**Shell** 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。**bash**（Bourne Again Shell），由GNU开发的Shell，是各种Linux发行版标准配置的Shell。Fish（Friendly Interactive Shell）最大特点就是方便易用，很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。Shell中输入的命令，有内置命令(cd,pwd等写在shell程序中)，也有其他应用程序命令，叫外部命令（ls等动态链接的共享文件）。Shell 中的命令和 Python 都是解释性语言。
 
 <img src="./images/linux_2.jpg" width="60%">
  
@@ -209,9 +209,11 @@ CPU架构是CPU厂商给属于同一系列的CPU产品定的一个规范，主�
 **共享目标文件(Shared Object File)**，也称动态库文件，包含了代码和数据，这些数据是在链接时被链接器(ld)和运行时动态链接器使用的。
 ## 快速读懂汇编语言
 
- x86汇编一直存在两种不同的语法，在intel的官方文档中使用intel语法，Windows也使用intel语法，而UNIX平台的汇编器一直使用AT&T语法。Intel的格式是 `opcode destination, source`，而AT&T的格式是 `opcode source, destination`。环境是x86_64下Linux操作系统gcc编译，C程序 `asm.c` 如下。得到的目标文件 `asm.o` ，用`objdump -d`反汇编函数部分汇编代码如下（A&T格式）。内存分为栈空间（向低位增长）和堆空间（向高位增长），静态区。程序本身是只读的程序数据片段，比如 `int i = 4`，这个4存储于程序本身，在汇编里面又叫立即数(immediate number。
+ x86汇编一直存在两种不同的语法，在intel的官方文档中使用intel语法，Windows也使用intel语法，而UNIX平台的汇编器一直使用AT&T语法。Intel的格式是 `opcode destination, source`，而AT&T的格式是 `opcode source, destination`。内存分为栈空间（向低位增长）和堆空间（向高位增长），静态区。程序本身是只读的程序数据片段，比如 `int i = 4`，这个4存储于程序本身，在汇编里面又叫立即数(immediate number。
 
  那么数据的传递就有四种：从内存到寄存器，从寄存器到内存，从立即数到内存，从立即数到内存（数据内存到内存必须经过寄存器）。 `rbp,rsp` 两个寄存器分别是栈底指针和栈顶指针，`rip`是指令序列，每个栈开始和结束的两条语句往往都是函数栈管理的语句；A&T汇编格式中%代表寄存器，$代表立即数，()代表取值。 
+
+ 环境是x86_64下Linux操作系统gcc编译，C程序 `asm.c` 如下。得到的目标文件 `asm.o` ，用`objdump -d`反汇编函数部分汇编代码如下（A&T格式）。
 
  ``` C
 int f(int x)
@@ -224,7 +226,8 @@ int main()
 }      
  ```
 
- ``` ASM
+ ``` console
+
 Disassembly of section .text:
 
 0000000000000000 <f>:
@@ -263,4 +266,3 @@ Disassembly of section .text:
 - 想开始做lib `操作系统眼中的C程序：内存、处理器架构、汇编`
 
 ---
-
