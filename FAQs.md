@@ -4,9 +4,11 @@
   - 转换为 .html 可能会支持 markdown 语言
   - 转换为 pdf 过长的代码块会被文档截断显示不全 
 - [x] vscode 环境的配置    
-  - Juypter、Juypter Keymap、Jupyter Notebook Renderers、Jupyter Cell Tags、Jupyter Slide Show（jupyter环境）
-  - Python、Pylance（python环境）
-  - Markdown all in one、markdown preview enhance（markdown环境）    
+  - Juypter，Juypter Keymap，Jupyter Notebook Renderers，Jupyter Cell Tags，Jupyter Slide Show（jupyter环境）
+  - Python，Pylance（python环境）
+  - Markdown all in one，markdown preview enhance（markdown环境）  
+  - C/C++，C/C++ Themes，WSL（C/C++环境）
+  - Latex Workshop（LAtex环境）  
 - [x] github 图片显示问题
   - DNS污染
 - [x] vscode和 MATLAB 实现代码注释对齐

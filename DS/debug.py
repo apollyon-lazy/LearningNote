@@ -194,6 +194,41 @@ a = [["0","0","0","1"],["1","1","0","1"],["1","1","1","1"],["0","1","1","1"],["0
 maximalSquare(a)
 
 # %%
-
-a = 1
-str(a)
+def largestDivisibleSubset(nums):
+    a = []
+    def AppendNums(n):
+        if dps[n] == -1 :
+            a.append(nums[n])
+        else:
+            AppendNums(dps[n])
+            a.append(nums[n])
+        return a
+    
+    dp = [1 for _  in range(len(nums))]
+    dps = [-1 for _ in range(len(nums))]
+    for i in range(1, len(nums)):
+        for j in range(0, i):
+            if (max(nums[i], nums[j]) % min(nums[i], nums[j])) == 0 :
+                if (dp[j]+1) > dp[i]:  
+                    dp[i] = dp[j]+1
+                    dps[i] = j
+    return AppendNums(dp.index(max(dp)))
+b = [5,9,18,54,108,540,90,180,360,720]
+largestDivisibleSubset(b)
+# %%
+def wiggleMaxLength(nums):
+    dp = [1 for _ in range(len(nums))]
+    ds = [-1 for _ in range(len(nums))] # 首元素无效 减为零 增为一
+    for i in range(1, len(dp)):
+        for j in range(0, i):
+            if (nums[i] > nums[j]) and (ds[j] <= 0):
+                dp[i] = max(dp[j]+1, dp[i])
+                ds[i] = 1
+            elif (nums[i] < nums[j]) and(abs(ds[j]) == 1):
+                dp[i] = max(dp[j]+1, dp[i])
+                ds[i] = 0
+    return max(dp)
+a = [1,7,4,9,2,5]
+wiggleMaxLength(a)
+# %%
+sum(range(26))

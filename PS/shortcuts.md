@@ -19,32 +19,33 @@
 
 ## 桌面快捷键
 
-<kbd>Win</kbd> + <kbd>D</kbd> 最小化所有窗口切换到桌面
-<kbd>Win</kbd> + <kbd>L</kbd> 快速锁定电脑
+<kbd>Win</kbd> + <kbd>Q/S</kbd> 快速打开搜索栏
 <kbd>Win</kbd> + <kbd>E</kbd> 快速打开文件资源管理器 
-<kbd>Win</kbd> + <kbd>space</kbd> 切换输入法
-<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 移动窗口到某一方向   
+<kbd>Win</kbd> + <kbd>T</kbd> 快速切换任务栏 
+<kbd>Win</kbd> + <kbd>R</kbd> 快速运行
+<kbd>Win</kbd> + <kbd>I</kbd> 快速打开设置
+<kbd>Win</kbd> + <kbd>D</kbd> 快速最小化所有窗口切换到桌面
+<kbd>Win</kbd> + <kbd>L</kbd> 快速锁定电脑
+<kbd>Win</kbd> + <kbd>space</kbd> 快速切换输入法
+<kbd>Win</kbd> + <kbd>left/right/up/down</kbd> 快速移动窗口到某一方向   
+<kbd>Win</kbd> + <kbd>num</kbd> 快速切换窗口   
+
 
 <kbd>FN</kbd> + <kbd>Fx</kbd> 使用F1-F12的快捷键功能
-<kbd>Alt</kbd> + <kbd>F4</kbd> 关闭窗口 
-<kbd>F2</kbd> 快捷重命名
+<kbd>FN</kbd> + <kbd>F2</kbd> 快捷重命名
+ 
+<kbd>Ctrl</kbd> + <kbd>W</kbd> 关闭当前窗口 
+
+<kbd>Alt</kbd> + <kbd>F4</kbd> 关闭整个进程 
 
 :memo: Win10系统下win+space因为快捷键冲突无法切换输入法，可以尝试使用ctrl+shift！
 :memo: 设备管理器(管理硬件资源)，任务管理器(管理进程调度)，资源管理器(管理文件系统)
 
 ## word 快捷键
 
-<kbd>ctrl</kbd> + <kbd>Home</kbd> 光标回到文档开头  
-<kbd>ctrl</kbd> + <kbd>End</kbd> 光标回到文档末尾 
-<kbd>ctrl</kbd> + <kbd>Left</kbd> 光标回到本行开头  
-<kbd>ctrl</kbd> + <kbd>Right</kbd> 光标回到本行末尾 
+<kbd>ctrl</kbd> + <kbd>P</kbd> 打印
+<kbd>ctrl</kbd> + <kbd>Y</kbd> 重复
 
-<kbd>shift</kbd> + <kbd>left</kbd> 向左选中一个光标单位
-<kbd>shift</kbd> + <kbd>right</kbd> 向右选中一个光标单位   
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>Home</kbd> 选中光标以前所有单位  
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>End</kbd> 选中光标以后所有单位  
-
-  
 <kbd>ctrl</kbd> + <kbd>B</kbd> 字体加粗  
 <kbd>ctrl</kbd> + <kbd>I</kbd> 字体倾斜  
 <kbd>ctrl</kbd> + <kbd>U</kbd> 字体下划线  
@@ -53,19 +54,27 @@
 <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>D</kbd> 添加字符底纹(需设置)
 <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>C/V</kbd> 格式刷  
 
-<kbd>ctrl</kbd> + <kbd>P</kbd> 打印
+<kbd>shift</kbd> + <kbd>left</kbd> 向左选中一个光标单位
+<kbd>shift</kbd> + <kbd>right</kbd> 向右选中一个光标单位
+<kbd>ctrl</kbd> + <kbd>Left</kbd> 光标移到上一个词汇  
+<kbd>ctrl</kbd> + <kbd>Right</kbd> 光标移到到下一个词汇    
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>Home</kbd> 选中光标以前所有单位 
+
+<kbd>alt</kbd> + <kbd>=</kbd> 插入公式  
+
 
 ## excel 快捷键
-<kbd>shift</kbd> + <kbd>tab</kbd> 向左移动一个单元格
 <kbd>tab</kbd> 向右移动一个单元格
+<kbd>shift</kbd> + <kbd>tab</kbd> 向左移动一个单元格
 <kbd>enter</kbd> 向下移动一个单元格
 <kbd>Fn</kbd> + <kbd>F2</kbd> 编辑单元格
 
 ## Vscode 快捷键
 
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>`</kbd> 创建终端
+<kbd>ctrl</kbd> + <kbd>`</kbd> 回到终端
 
-<kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件 安装vscode插件地址
+<kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件 
+<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>P</kbd> 命令行工具 
 <kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
 <kbd>ctrl</kbd> + <kbd>L</kbd> 选中当前行
 <kbd>ctrl</kbd> + <kbd>/</kbd> 单行注释   

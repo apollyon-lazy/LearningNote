@@ -1,12 +1,9 @@
 
 ## 目录
 
-[安装 wsl](#安装-wsl-windows-subsystem-for-linux)  
-[Terminal 和 VScode](#terminal-和-vscode)  
-[Unix 和 Linux](#unix-和-linux)  
-[安装gcc/g++(Ubantu)](#安装-gccgubantu)  
-[熟悉基础命令行工具](#熟悉基础命令行工具)  
-[配置自己的环境](#配置自己的环境)  
+[WSL, Terminal, VScode](#wsl-terminal-vscode)  
+[Unix, Linux, POSIX, LSB](#unix-linux-posix-lsb)  
+[配置自己的环境](#配置自己的环境)
 [进程与线程](#进程与线程)  
 [并发与并行](#并发与并行)     
 [库函数和系统调用](#库函数和系统调用)   
@@ -19,95 +16,72 @@
 [快速读懂汇编](#快速读懂汇编语言)
 [总结](#总结)   
 
-## 安装 wsl (Windows Subsystem for Linux)
+## WSL, Terminal, VScode 
+
+在Microsoft store中安装Windows terminal，它是适用于命令提示符，Powershell，wsl等的终端应用程序。这样就可以实现在Windows下编辑代码，在Linux下编译运行的效果；链接到 VScode 后新建终端和外部终端（保持打开）作用一样。
+
 https://www.bilibili.com/video/BV1aA411s7PJ/  
 wsl 安装成功视频 —— b站   
 https://learn.microsoft.com/en-us/windows/wsl/  
 wsl 官方安装文档 —— 官网
 
-## Terminal 和 VScode
-在Microsoft store中安装Windows terminal，它是适用于**命令提示符**，**Powershell**，**wsl**等的终端应用程序。
-
-- [x] 这样就可以实现在Windows下编辑代码，在Linux下编译运行的效果；链接到 VScode 后新建终端和外部终端（保持打开）作用一样
-
-## Unix 和 Linux
+## Unix, Linux, POSIX, LSB
 
 UNIX 操作系统由肯•汤普森（Ken Thompson）和丹尼斯•里奇（Dennis Ritchie）发明。后来由芬兰人林纳斯·托瓦兹（Linus Torvalds）写了新的操作系统 Linux，它与 Unix 在外观和交互上类似，故也称是类 Unix 系统。Linux 开源后与缺少内核的 GNU 打包发布，故也称 GNU/Linux，后来大家省略 GNU 叫的 Linux 其实是类 Uinx 的内核和大量 GNU 开源软件的一个集合体。Linux 发行版说简单点就是将 Linux 内核与应用软件进行一个打包，目前市面上知名的发行版有 Ubantu、CentOS 等等。
-<img src="./images/linux_1.jpg" width="100%">
+
+Unix 1969 年诞生于 AT&T 贝尔实验室，并在 1973 年使用 C 语言进行了重写，从此就具有了很好的可移植性。但是当 AT&T 在 1984 年由于分拆而得以进入计算机领域的市场之后，却引发了 Unix 业界的一场大战。当时最为主要的两个版本是 AT&T 的 System V 和伯克利的 BSD。二者在技术方面（例如终端）和文化方面都存在很多分歧，导致应用程序很难在不同的系统上平滑地进行移植，为了解决这个问题，IEEE（Institute of Electrical and Electronic Engineers）的 1003 委员会着手开发了一系列标准，这就是后来的 POSIX（Portable Operating System Interface for UNIX）标准。其目的是为那些兼容各种 UNIX 变种的应用程序制定应用程序编程接口（API）规范，从而确保这些应用程序的兼容性。这些标准后来被 ISO/IEC 采纳，成为 ISO/IEC/IEEE 9945:2009 标准。LSB 是 Linux 标准化领域中实际上的标准。
+
+ISO，国际标准化组织的英语简称，全称是International Organization for Standardization。IEC，是国际电工委员会International Electro Technical Commission的缩写，它是非政府性国际组织。IEEE，Institute of Electrical and Electronics Engineers美国电气和电子工程师协会，是一个国际性的电子技术与信息科学工程师的协会。
 
 http://c.biancheng.net/view/707.html  
 Linux和Unix的关系及区别——C语言中文网 
+https://blog.csdn.net/Rong_Toa/article/details/109065264   
+Linux标准化历史——CSDN
 
-## 安装 gcc/g++（Ubantu）
-Linux 下使用最广泛的 C/C++ 编译器是 gcc/g++，大多数的 Linux 发行版本都默认安装。
+## 配置自己的环境
+
+### apt/apt-get
 
 apt（Advanced Packaging Tool）是一个在 Debian 和 Ubuntu 中的 Shell 前端软件包管理器。
+
 ```
-sudo apt update                     列出所有可更新的软件清单命令
-sudo apt upgrade                    升级软件包
-sudo apt install <package_name>     安装指定软件命令
-sudo apt autoremove                 清理不再使用的依赖和库文件
-!!! 安装失败考虑旧版命令 apt-get
+    sudo apt install bulid-essential    安装 bulid-essential 
+    sudo apt install git                安装 git
+    sudo apt install fish               安装 fish
+    sudo apt install nodejs             安装 Node.js（JavaScript的运行环境）
+    sudo apt install npm                安装 npm（Node.js官方提供的包管理工具）
+    npm install -g tldr                 安装 tldr  
+    echo $SHELL                         查看当前使用的shell
+    echo $0                             查看当前使用的shell
+    fish/exit                           进入fish/退出fish
 ```
 
-默认的 Ubuntu 软件源仓库中包含了一个软件包组，名称为 `build-essential`，它包含了 GNU 编辑器集合，GNU 调试器，和其他编译软件所必需的开发库和工具。很多开源项目包括 Linux kernel 和 GNU 工具，都是使用 gcc 进行编译的。GNU 编译器集合是一系列用于语言开发的编译器和库的集合，包括: C, C++, Objective-C, Fortran, Ada, Go, and D等编程语言。
-```
-sudo apt install bulid-essential    安装 bulid-essential
-gcc --version                       打印 gcc 版本验证是否安装成功
-```
+### gcc/g++
+Linux 下使用最广泛的 C/C++ 编译器是 gcc/g++，大多数的 Linux 发行版本都默认安装。默认的 Ubuntu 软件源仓库中包含了一个软件包组，名称为 `build-essential`，它包含了 GNU 编辑器集合，GNU 调试器，和其他编译软件所必需的开发库和工具。很多开源项目包括 Linux kernel 和 GNU 工具，都是使用 gcc 进行编译的。GNU 编译器集合是一系列用于语言开发的编译器和库的集合，包括: C, C++, Objective-C, Fortran, Ada, Go, and D等编程语言。
+
+这样就掌握了在Linux下结合VScode编辑编译链接C/C++代码的技能；Linux内核大部分是用C语言编写的，还有部分是用汇编语言写的，因为在对于硬件上，汇编有更好的性能和速度。Linux一个文件是否能被执行，和后缀名没有太大的关系，主要看文件的属性有关
 
 https://zhuanlan.zhihu.com/p/404682058  
 Linux gcc/g++ 使用讲解 —— 知乎
 
-- [x] 这样就掌握了在Linux下结合VScode编辑编译链接C/C++代码的技能
-- [x] Linux内核大部分是用C语言编写的，还有部分是用汇编语言写的，因为在对于硬件上，汇编有更好的性能和速度。
-- [x] Linux一个文件是否能被执行，和后缀名没有太大的关系，主要看文件的属性有关
-
-## 熟悉基础命令行工具
-
 ### tldr
 
-**tldr** = Too Long; Didn't Read，它简化了烦琐的man指令帮助文档，仅列出常用的该指令的使用方法。相比较man给出完整的帮助文档而言，大多数情况下，给出几个指令的使用demo可能正是我们想要的。
-
-https://github.com/tldr-pages/tldr 
-tldr —— github
-
-```
-    sudo apt install nodejs     安装 Node.js（JavaScript的运行环境）
-    sudo apt install npm        安装 npm（Node.js官方提供的包管理工具）
-    npm install -g tldr         安装 tldr
-```
+tldr = Too Long; Didn't Read，它简化了烦琐的man指令帮助文档，仅列出常用的该指令的使用方法。相比较man给出完整的帮助文档而言，大多数情况下，给出几个指令的使用demo可能正是我们想要的。
 
 ### Git
 
-**Git** 软件包被包含在 Ubuntu 默认的软件源仓库中，并且可以使用 apt 包管理工具安装。
+Git 软件包被包含在 Ubuntu 默认的软件源仓库中，并且可以使用 apt 包管理工具安装。
 
-```
-    sudo apt install git        安装 git
-    git --version               查看 git 版本
-```
 ### make
 
-**make** 在 Linux（unix ）环境下使用GNU的make工具能够比较容易的构建一个属于你自己的工程，整个工程的编译只需要一个命令就可以完成编译、连接以至于最后的执行。不过这需要我们投入一些时间去完成一个或者多个称之为Makefile 文件的编写。
-
-- [x] 安装tldr有助于帮助更好的阅读文档；git有助于更好的版本管理；GNU make有助于构建工程；make, bash, gcc, libc 属于是 GNU 免费软件，tldr, tmux 是 github 社区开源软件
-
-## 配置自己的环境
+make 在 Linux（unix ）环境下使用GNU的make工具能够比较容易的构建一个属于你自己的工程，整个工程的编译只需要一个命令就可以完成编译、连接以至于最后的执行。不过这需要我们投入一些时间去完成一个或者多个称之为Makefile 文件的编写。
 
 ### Shell
 
-**Shell** 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。**bash**（Bourne Again Shell），由GNU开发的Shell，是各种Linux发行版标准配置的Shell。Fish（Friendly Interactive Shell）最大特点就是方便易用，很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。Shell中输入的命令，有内置命令(cd,pwd等写在shell程序中)，也有其他应用程序命令，叫外部命令（ls等动态链接的共享文件）。Shell 中的命令和 Python 都是解释性语言。
+Shell 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。bash（Bourne Again Shell），由GNU开发的Shell，是各种Linux发行版标准配置的Shell。Fish（Friendly Interactive Shell）最大特点就是方便易用，很多其他 Shell 需要配置才有的功能，Fish 默认提供，不需要任何配置。Shell中输入的命令，有内置命令(cd,pwd等写在shell程序中)，也有其他应用程序命令，叫外部命令（ls等动态链接的共享文件）。Shell 中的命令和 Python 都是解释性语言。
 
 <img src="./images/linux_2.jpg" width="60%">
  
-```  
-    echo $SHELL    查看当前使用的shell
-    echo $0        查看当前使用的shell
-    sudo apt install fish      安装 fish shell
-    fish/exit      进入fish/退出fish
-    !!! 考虑bash和fish的不同，不设置fish为默认shell
-```
-
 http://c.biancheng.net/view/706.html   
 什么是Shell —— C语言中文网 
 
@@ -124,6 +98,8 @@ http://c.biancheng.net/view/706.html
 http://c.biancheng.net/linux_tutorial/40/  
 Vim文本编辑器 —— C语言中文网
 
+### 小节
+- [x] 安装tldr有助于帮助更好的阅读文档；git有助于更好的版本管理；GNU make有助于构建工程；make, bash, gcc, libc 属于是 GNU 免费软件，tldr, tmux 是 github 社区开源软件
 - [x] 操作系统中常见的应用程序有Core Utilities (coreutils)（命令有cat，ls等）、系统/工具程序（bash,apt,vim,tmux,python等）、其他应用程序（浏览器、播放器等）
 
 ## 进程与线程
@@ -163,7 +139,7 @@ C 编译器允许main()函数没有参数，或者有两个参数（有些实现
 
 ## 常见缩略语
 
-**POSIX**：可移植操作系统接口（Portable Operating System Interface of UNIX，缩写为 POSIX ）。POSIX是IEEE为要在各种 UNIX 操作系统上运行的软件而定义的一系列API标准的总称。这套标准涵盖了很多方面，比如Unix系统调用的C语言接口、shell程序和工具、线程及网络编程。
+
 
 **KISS原则**是英语 Keep It Simple, Stupid 的首字母缩略字，是一种归纳过的经验原则。KISS 原则是指在设计当中应当注重简约的原则。—— 中文Wiki
 
@@ -213,7 +189,7 @@ CPU架构是CPU厂商给属于同一系列的CPU产品定的一个规范，主�
 
  那么数据的传递就有四种：从内存到寄存器，从寄存器到内存，从立即数到内存，从立即数到内存（数据内存到内存必须经过寄存器）。 `rbp,rsp` 两个寄存器分别是栈底指针和栈顶指针，`rip`是指令序列，每个栈开始和结束的两条语句往往都是函数栈管理的语句；A&T汇编格式中%代表寄存器，$代表立即数，()代表取值。 
 
- 环境是x86_64下Linux操作系统gcc编译，C程序 `asm.c` 如下。得到的目标文件 `asm.o` ，用`objdump -d`反汇编函数部分汇编代码如下（A&T格式）。
+ 环境是x86_64下Linux操作系统gcc编译，C程序 `asm.c` 如下。得到的目标文件 `asm.o` ，用`objdump -d`反汇编函数部分汇编代码如下（A&T格式）。每行信息前半部分是指令的机器码；后半部分是指令汇编码，包括操作码和操作数。
 
  ``` C
 int f(int x)
@@ -252,17 +228,23 @@ Disassembly of section .text:
 
 <img src="./images/linux_7.jpg" width="100%">
 
+### 硬中断和软中端
+
+软中断是执行中断指令产生的，而硬中断是由外设引发的。硬中断是可屏蔽的，软中断不可屏蔽。
+
 ---
 
 ## 总结
 
 **心路历程 2023-1-27 15:40**
 
-- 想在Linux环境命令行环境下编写程序 `安装WSL，Terminal` 
-- 想知道 Linux 是什么，为什么要学它  `Unix 和 Linux的关系` 
+- 想在Linux环境命令行环境下编写程序 `WSL,Terminal,Vscode` 
+- 想知道 Linux 是什么，为什么要学它  `Unix,Linux,POSIX,LSB` 
 - 想配置适合的命令行编程环境 `gcc,tldr,tmux,vim,make,git,gdb` 
 - 想知道编写的程序和操作系统是如何联系的，`库函数和系统调用`
 - 想开始学习操作系统的并发 `并发和并行 进程和线程`
-- 想开始做lib `操作系统眼中的C程序：内存、处理器架构、汇编`
+- 想知道操作系统上的C程序如何运行的 `处理器、汇编、内存`
 
 ---
+
+-  OSTEP阅读？QEMU和Make的学习？XV6的使用？

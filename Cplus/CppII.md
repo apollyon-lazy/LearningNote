@@ -1,30 +1,30 @@
 # 知识点提纲
-定义数字变量 `a = 2`
-定义字符字符串 `a = 's'` `a = "s"`
-字符串拼接 `'He' + "llo"`
-创建列表 `a = [1,1]` `a = list()` 
-列表的索引切片  `a[:-1]`
-列表的增删改查组织 
-列表解析 `a = [0 for _ in range(5)]`
-创建元组 `a = (1,1)` `a = tuple()`
-创建字典 `a = {1:1}` `a = dict()` 
-创建集合 `a = {1,2}` `a = set()`
-导入模块 `import xxx as xxx` `from xxx import xxx as xxx`
-编写函数 `def func(a, b=0):`
-位置实参和关键字实参 `func(3)` `func(b=2, a=3)`
-不定长实参 `def func(a, *b):` `deffunc(a, **c)`
-编写类 `class Stack:` `__init__(self, a):`
-类的继承 `class Stack(Money,Person):` `super()` 
-文件打开关闭 `fp = open(xxx)` `fp.close()` `with`
-类型转换 `int()` `str()`
-读取文件 `fp.read()` `fp.readline()` `fp.rstrip()`
-异常捕获 `try-expert-else` `pass`
-断言语句 `assert(type(a) == list)`
-标准库 `json` `unittest` `...`
+编译指令 `#include <iostream>` `#include "iostream"`        
+名称空间 `using namespace std;` `using std::cout;` `std::cout << endl;`     
+函数(函数定义，函数声明，函数调用)      
+表示字符字符串 `'s'` `"s"`      
+转义序列 `'\n'` `'\0'`      
+列表初始化 `int a{7}` `int a = {7}` `int a ={}`     
+处理字符串(C风格字符串，string类)       
+存储字符串(字符数组，字符串常量，字符指针)      
+读取输入 `cin` `cin.getline(str, Arsize)` `cin.get(str, Arsize)`        
+取地址与解引用 `&` `*`      
+数组与指针 `*(p+1)` = `a[1]`        
+数组的地址  `&a[0]` = `a` ≠ `&a`        
+动态分配内存 `int *p = new int [5]` `delete [] p`       
+箭头运算符与句点运算符 `p->price` `(*p).price`      
+创建别名 `#define int p;` `typedef p int;`      
+读取字符 `ch = cin.get()` `cin.get(ch)`     
+函数传参(字符串，结构，函数指针)        
+指针与const `const int *p = &age` `const p = &age`      
+存储持续性(自动，静态，动态，线程)      
+静态变量static链接性        
+全局变量链接性 `extern`外部 `const`内部         
+流与缓冲区      
+输入输出重定向      
 
 ---
-内置函数 `range()` `type()` `input()` `print()` `...`
-变量作用域 `global`
+
 
 
 

@@ -39,6 +39,23 @@ GNU Binutils:
     cmatrix         符号雨(需下载)
 ```
 
+
+
+```
+man：
+    /<string>                               查找字符串(支持正则表达式)
+    n                                       移步下一个匹配字符串
+    N                                       移步上一个匹配字符串
+```
+
+```
+apt/apt-get:
+    sudo apt update                     列出所有可更新的软件清单命令
+    sudo apt upgrade                    升级软件包
+    sudo apt install <package_name>     安装指定软件命令
+    sudo apt autoremove                 清理不再使用的依赖和库文件
+```
+
 ``` 
 gcc：
     gcc hello.c -o hello && ./hello         编译链接运行
@@ -54,13 +71,6 @@ gcc：
     -L                                      添加库文件搜索目录
     -pthread                                链接POSIX线程库
 
-```
-
-```
-man：
-    /<string>                               查找字符串(支持正则表达式)
-    n                                       移步下一个匹配字符串
-    N                                       移步上一个匹配字符串
 ```
 
 ```
@@ -99,6 +109,7 @@ gdb:
     starti              从_start函数开始运行
     s                   单步执行进入函数调用
     n                   单步执行不进入函数调用
+    info registers      查看寄存器
 ```
 
 ```

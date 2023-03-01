@@ -1,9 +1,6 @@
 # Crash Crouse   
 https://github.com/1c7/Crash-Course-Computer-Science-Chinese    
 Computer Science Github 资源网站
-## 目录
-[第七课 中央处理器 CPU](#第七课-中央处理器-cpu)
-
 
 | Concept | Translation |
 | :--- | :--- |
@@ -53,7 +50,6 @@ Computer Science Github 资源网站
 - 寄存器的作用是并排使用门锁，储存多位数字
 - **RAM** 随机存取存储器，由一系列矩阵以及电路组成的器件，可根据地址来写入、读取数据。
 
-## 第七课 中央处理器 CPU
 
 | Concept | Translation |
 | :--- | :--- |
@@ -65,8 +61,6 @@ Computer Science Github 资源网站
 | clock | 时钟 |
 | clock speed | 时钟速度 |
 | overlocking/underclocking | 超频/降频 |
-
-<img src="./images/cs.jpg" width="80%">
 
 - **CPU** 中央处理单元，负责执行程序。通常由寄存器/控制单元/ALU/时钟组成。与 RAM 配合，执行计算机程序。CPU 和 RAM 之间用“地址线”、“数据线”和“允许读/写线”进行通信。
 
