@@ -1,12 +1,13 @@
-# Crash Crouse   
-https://github.com/1c7/Crash-Course-Computer-Science-Chinese    
+# Crash Crouse
+
+<https://github.com/1c7/Crash-Course-Computer-Science-Chinese>
 Computer Science Github 资源网站
 
 | Concept | Translation |
 | :--- | :--- |
 | relay  | 继电器 |
 | vacuum tube | 真空管 |
-| transistor | 晶体管 | 
+| transistor | 晶体管 |
 
 | Concept | Translation |
 | :--- | :--- |
@@ -19,7 +20,7 @@ Computer Science Github 资源网站
 | Concept | Translation |
 | :--- | :--- |
 | integer |整数|
-| floating point numbers| 浮点数(IEEE754) | 
+| floating point numbers| 浮点数(IEEE754) |
 | ASCII | 美国信息交换标准代码 |
 | Unicode | 统一码 |
 
@@ -32,7 +33,7 @@ Computer Science Github 资源网站
 | carry-load-ahead adder | 超前进位加法器 |
 | Arithmetic & Logic Unit | 算术逻辑单元(ALU) |
 
-- 目前计算机中使用的加法器是超前进位加法器 
+- 目前计算机中使用的加法器是超前进位加法器
 - **ALU** 计算逻辑单元，计算机中负责运算的组件，处理数字/逻辑运算的最基本单元
 
 |Concept | Translation |
@@ -45,11 +46,10 @@ Computer Science Github 资源网站
 | Random Access Memory | 随机存取存储器(RAM) |
 | Central Processing Unit | 中央处理单元(CPU) |
 
-- 锁存器的作用是存储一位数字 
+- 锁存器的作用是存储一位数字
 - 门锁的作用是用一根线控制数据的输入
 - 寄存器的作用是并排使用门锁，储存多位数字
 - **RAM** 随机存取存储器，由一系列矩阵以及电路组成的器件，可根据地址来写入、读取数据。
-
 
 | Concept | Translation |
 | :--- | :--- |
@@ -155,7 +155,7 @@ Computer Science Github 资源网站
 | multitasking/virtual/protested memory | 多任务处理 虚拟内存 内存保护 |
 | kernal | 内核 |
 
-- **操作系统** 是电脑运行的第一个软件，是软件和硬件之间的媒介 
+- **操作系统** 是电脑运行的第一个软件，是软件和硬件之间的媒介
 - UNIX 把操作系统分成两个部分，一个是操作系统的核心部分，如内存管理，多任务和输入/输出处理，这叫做**内核**，第二部分是一堆有用的工具，比如程序和运行库。
 
 |Concept | Translation |
@@ -165,8 +165,8 @@ Computer Science Github 资源网站
 
 | Abbr. | Capacity | Price | Velocity | Principle | Noise/Vibration/Recovery |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SSD | small | high | fast | IC | small good hard | 
-| HHD | big | low | slow | electromagnetism | big bad easy | 
+| SSD | small | high | fast | IC | small good hard |
+| HHD | big | low | slow | electromagnetism | big bad easy |
 
 | Concept | Translation |
 | :--- | :--- |
@@ -297,14 +297,14 @@ Computer Science Github 资源网站
 | the Open System Interconnection | 开放式系统互联通信参考模型（OSI） |
 
 - **传输控制协议 TCP**
-    - 控制发送的文件按顺序到达
-    - 要求接收方确认无误后发送确认码（ACK），确认码的成功率和来回时间可以用来推测网络的拥堵程度，TCP可以根据这个调整传输率。由于这个特点，TCP对时间要求高的程序不适用。
+  - 控制发送的文件按顺序到达
+  - 要求接收方确认无误后发送确认码（ACK），确认码的成功率和来回时间可以用来推测网络的拥堵程度，TCP可以根据这个调整传输率。由于这个特点，TCP对时间要求高的程序不适用。
 - **开放式系统互联通信参考模型（OSI）**
-    - **物理层** 线路里的电信号，以及无线网络里的无线信号
-    - **数据链路层** MAC,碰撞检测，指数退避和其他底层协议
-    - **网络层** 各种报文转换和路由
-    - **传输层** UDP,TCP等协议
-    - **会话层** 用UDP,TCP创造连接，传递信息，然后关闭连接
+  - **物理层** 线路里的电信号，以及无线网络里的无线信号
+  - **数据链路层** MAC,碰撞检测，指数退避和其他底层协议
+  - **网络层** 各种报文转换和路由
+  - **传输层** UDP,TCP等协议
+  - **会话层** 用UDP,TCP创造连接，传递信息，然后关闭连接
 
 |Concept | Translation |
 | :--- | :--- |

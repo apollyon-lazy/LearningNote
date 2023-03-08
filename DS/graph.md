@@ -1,11 +1,14 @@
-#### 无向图的邻接表
+# 图
+
+## 无向图的邻接表
 
 <img src="./images/Adjacencty_List_1.png" width="80%">
 
-#### 有向图的邻接表
+## 有向图的邻接表
+
 <img src="./images/Adjacencty_List_2.png" width="80%">
 
-#### 图的建立（邻接表）
+## 图的建立（邻接表）
 
 ``` Python
 class VertexNode(object):   #顶点表节点  
@@ -14,6 +17,7 @@ class VertexNode(object):   #顶点表节点
         self.Visited=visited        #此节点是否被访问过
         self.firstNode = p          #指向所连接的边表节点的指针（EdgeNode）
 ```
+
 ``` Python
 class EdgeNode(object):     #边表节点
     def __init__(self,index,weight,p=None):
@@ -57,9 +61,12 @@ class Adgraph(object):
                 temp.Next = EdgeNode(j, weight)
 ```
 
-#### 图的遍历（深度优先）
+## 图的遍历（深度优先）
+
 从起点顶点沿着边表出发，发现有没访问的顶点，就沿着这个顶点的边表往前走，把走过的顶点设为已访问，走不了就退回上一个访问的顶点继续走。
-#### 图的遍历（广度优先）
+
+## 图的遍历（广度优先）
+
 图的广度优先遍历类似于二叉树的层序遍历，从根节点开始，先把这一个节点加入一个先进先出的队列，然后沿着此节点的边表访问其链接的没被访问的节点并加入队列，然后此节点退队,再取队首元素边表逐一访问，如果发现队列为空，则演算终止。
 
 ``` Python
@@ -104,7 +111,7 @@ def BFStravel(self,start):  #广度优先搜索
     return BFSresult
 ```
 
-#### 最小生成树(Prim算法、Kruskal算法)
+## 最小生成树(Prim算法、Kruskal算法)
 
 **Prim算法思路**：所有结点分成两个group，一个为已经选取的Select，一个为未选的Candidate。
 首先将已给的一个结点加入到Select，然后遍历头结点在Select、尾结点在Candidate的边，选取符合这个条件的边里面权重最小的边，加入到最小生成树，选出的边的尾节点加入到Select，并从Candidate删除。重复此操作直到Candidate中没有节点。需要注意的是，循环开始前要保证所有节点都有边连接，否则可能会有节点一直在Candidate中，导致死循环。
@@ -196,8 +203,9 @@ def MiniSpanTree_kruskal(self):   #最小生成树-kruskal
     return spanstr
 ```
 
-#### 最短路径：Dijkstra算法、Floyd算法
-**Dijkstra算法** Dijkstra是一种贪心算法，是以图中一个点作为源点，该源点到其他各个点的最短路径的算法。源点是固定不动的，代码中用dst一维数组记录源点到第k个顶点的最短路径。每次找到离源点最近的一个顶点u，然后拿这个顶点u进行更新dst数组(即dst[k] = min(dst[k] , dst[u] + edge[u][k]))，直至所有顶点被遍历。
+## 最短路径：Dijkstra算法、Floyd算法
+
+**Dijkstra算法** Dijkstra是一种贪心算法，是以图中一个点作为源点，该源点到其他各个点的最短路径的算法。源点是固定不动的，代码中用dst一维数组记录源点到第k个顶点的最短路径。每次找到离源点最近的一个顶点u，然后拿这个顶点u进行更新dst数组(即 $dst[k]=min(dst[k],dst[u]+edge[u][k])$ ，直至所有顶点被遍历。
 
 **Floyd算法** Floyd算法是经典的动态规划算法，基本思想是递推产生一个邻接矩阵序列$A_1,A_2,.....,A_k,...,A_n$（图有n个节点），$A_k=(a_k(i,j))_{nxn}$。其中矩阵Ak第i行第j列表示从顶点vi到顶点vj的路径上经过的顶点序号不大于k的最短路径长度。$a_k(i,j)=min \{a_{k-1}(i,j),a_{k-1}(i,k)+a_{k-1}(k,j)\}$。如果需要记录路径，那么需要引入路由矩阵。路由矩阵$R_k=(r_k(i,j))_{nxn}$,用来记录两点之间路径的前驱后继的关系，其中$r_k(i,j)$表示从顶点vi到顶点vj的路径经过编号为$r_k(i,j)$的顶点。
 

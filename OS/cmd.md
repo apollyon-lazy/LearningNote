@@ -1,5 +1,8 @@
+# Command
 
-```
+## Shell
+
+``` shell
 文件目录管理：
     cd              切换目录 
     ls              查看目录中所有文件 
@@ -11,6 +14,7 @@
     file            查看文件类型
     tty             返回终端名
     tree            树状查看目录(需下载)
+
 文本处理：
     cat             连接合并文件内容
     head tail       显示文件开头内容 显示文件结尾内容
@@ -18,6 +22,7 @@
     grep            查找文件内容
     echo            打印参数
     wget            网页上下载文件
+
 系统管理：
     ps              显示当前进程的状态   
     pstree          打印进程树 
@@ -26,29 +31,35 @@
     fg bg           放入前台 放入后台
     pmap            查看进程地址空间
     which           定位程序位置
+
 特殊符号和快捷键：
     ctrl+Z          暂停进程放入后台
     ctrl+P          重复执行上一条命令
     ctrl+C          退出当前进程
     > | &           重定向 管道 后台执行
+
 代码：
     code .              链接到vscode并打开
+
 GNU Binutils:
     ld objdump readelf      链接器 反汇编 读取ELF文件
+
 毫无用处：
     cmatrix         符号雨(需下载)
 ```
 
+## Man
 
-
-```
+``` shell
 man：
-    /<string>                               查找字符串(支持正则表达式)
-    n                                       移步下一个匹配字符串
-    N                                       移步上一个匹配字符串
+    /<string>               查找字符串(支持正则表达式)
+    n                       移步下一个匹配字符串
+    N                       移步上一个匹配字符串
 ```
 
-```
+## Apt
+
+``` shell
 apt/apt-get:
     sudo apt update                     列出所有可更新的软件清单命令
     sudo apt upgrade                    升级软件包
@@ -56,7 +67,9 @@ apt/apt-get:
     sudo apt autoremove                 清理不再使用的依赖和库文件
 ```
 
-``` 
+## GCC
+
+``` shell
 gcc：
     gcc hello.c -o hello && ./hello         编译链接运行
     gcc -E hello.c -o hello.i               C转预处理 (Pre-Processing)
@@ -70,13 +83,15 @@ gcc：
     -l                                      添加头文件搜索目录
     -L                                      添加库文件搜索目录
     -pthread                                链接POSIX线程库
-
 ```
 
-```
+## Tmux
+
+``` shell
 tmux：
     tmux                            进入tmux窗口
     Ctrl+d                          退出tmux窗口
+
 窗格操作：
     Ctrl+b %                        划分左右两个窗格
     Ctrl+b "                        划分上下两个窗格
@@ -86,16 +101,24 @@ tmux：
     Ctrl+b x                        关闭当前窗格
 ```
 
-```
+## Vim
+
+``` shell
 vim:
 Command-mode:
     :wq             保存并退出
     q!              强制退出不保存
     set nu          显示行号            
     set nonu        取消显示行号
+
+    [range]s/{pattern}/{string}/[option]  替换字符串
+    在[range]的每一行中搜索{pattern}并替换为[string]设置为[option]
+    %s/:/\r/cg      搜索所有行(%)把(:)替换成(\r)(c)所有替换都询问(g)不止替换第一个
 ```
 
-``` 
+## GDB
+
+``` shell
 gdb:
     gcc a.c -g          编译时加入调试信息
     gdb -tui a.out      gdb图形界面tui调试程序
@@ -112,6 +135,10 @@ gdb:
     info registers      查看寄存器
 ```
 
-```
-    strace <file> &| vim -  跟踪系统调用并导入vim
+## Combo
+
+``` shell
+    strace <file> &| vim -  后台跟踪系统调用并导入vim
+    env | grep PATH | vim - 抓取PATH环境变量并导入vim
+    echo $PATH              查看环境变量
 ```

@@ -1,8 +1,19 @@
 {
 	"folders": [
 		{
+			"name": "learningnate",
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+
+		//插件markdownlint配置
+		"markdownlint.config": 
+		{
+			"MD024": false,		//标题起名重复
+			"MD025": false,		//多个一级标题
+			"MD033": false,		//内嵌HTML
+			"MD052": false		//锚点定义缺失(公式误判)
+		}
+	}
 }
