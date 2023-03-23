@@ -1,25 +1,32 @@
-#### 1、seaborn
+# 1、seaborn
+
 | Function | Syntax | Description | Return |
 | :--- | :--- | :--- | :--- |
 | sns.set_theme() | | 设置matplotlib和seaborn绘图风格 |
 | sns.countplot() | sns.countplot(x,y,order,orient) |用条形图展示每个分类的观察值数 返回Axes对象 |
-#### 2、Pillow
+
+# 2、Pillow
+
 | Function | Syntax | Description | Return |
 | :--- | :--- | :--- | :--- |
 |Image.open()| | 打开并识别文件类型 | Image对象 |
-#### 3、torchvision
-- torchvision 支持 PIL image 和 Tensor image 这里使用PIL库处理图片    
-A Tensor Image is a tensor with (C, H, W) shape, where C is a number of channels, H and W are image height and width.    
+
+# 3、torchvision
+
+- torchvision 支持 PIL image 和 Tensor image 这里使用PIL库处理图片
+A Tensor Image is a tensor with (C, H, W) shape, where C is a number of channels, H and W are image height and width.
 A batch of Tensor Images is a tensor of (B, C, H, W) shape, where B is a number of images in the batch.
 
 | Function | Syntax | Description | Return |
 | :--- | :--- | :--- | :--- |
-| transforms.Compose(transforms) || 组合一系列图像变换但不支持torchscript    
-#### 4、wandb
+| transforms.Compose(transforms) || 组合一系列图像变换但不支持torchscript
+
+# 4、wandb
+
 - wandb login 登录wandb<br>
 - wandb login --relogin 重新登录wandb<br>
 
-| Function | Description | 
+| Function | Description |
 | :--- | :--- |
 | wandb.init(project,name,config) | 初始化远端返回一个Run对象,在本地目录保存记录和文件<br>project:工程名 name:试验名 config:配置字典 |
 | wandb.config() | 保存超参数组成的字典,例如学习率和模型类型,以方便管理排序结果 |

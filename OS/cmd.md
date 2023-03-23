@@ -1,4 +1,16 @@
-# Command
+# cmd
+
+命令行 是具体的一行命令；命令行工具 是有具体功能的一个命令集合；命令提示符是Windows系统下 cmd.exe 程序的中文名，也是Linux系统中命令前的符号表示。
+
+## Linux
+
+``` shell
+Everying is a file:
+    /root   管理员的主目录
+    /home   存放用户主目录的文件夹
+    
+    /proc   系统内存的映射(虚拟目录即不在硬盘上)
+```
 
 ## Shell
 
@@ -71,7 +83,7 @@ apt/apt-get:
 
 ``` shell
 gcc：
-    gcc hello.c -o hello && ./hello         编译链接运行
+    gcc hello.c -o hello && ./hello         编译链接重命名并运行
     gcc -E hello.c -o hello.i               C转预处理 (Pre-Processing)
     gcc -S hello.i -o hello.s               预处理转汇编 (Compiling)
     gcc -c hello.s -o hello.o               汇编转机器 (Assembling)
@@ -83,6 +95,8 @@ gcc：
     -l                                      添加头文件搜索目录
     -L                                      添加库文件搜索目录
     -pthread                                链接POSIX线程库
+# gcc hello.c / gcc -E / gcc -S / gcc -c 
+# 对应生成的默认文件是 a.out / hello.i / hello.s / hello.o
 ```
 
 ## Tmux
@@ -122,6 +136,7 @@ Command-mode:
 gdb:
     gcc a.c -g          编译时加入调试信息
     gdb -tui a.out      gdb图形界面tui调试程序
+
     layout asm          进入汇编
     layout src          进入源码
     b <line>            在行号处设置断点
@@ -133,6 +148,15 @@ gdb:
     s                   单步执行进入函数调用
     n                   单步执行不进入函数调用
     info registers      查看寄存器
+```
+
+## Qemu
+
+``` shell
+    ctrl A + X             退出虚拟机
+    ctrl A + C             控制台与监控器切换
+monitor mode:
+    info mem                显示虚拟内存映射
 ```
 
 ## Combo

@@ -1,4 +1,4 @@
-# Demo
+# Demos
 
 ## 问题一
 
@@ -9,7 +9,7 @@
 - 处理字符串(C风格字符串) `strlen(),strcpy(),strcat()`
 - 数组存储字符串 `char a[10] = "Hello!";`
 - 指针存储字符串 `char *p = "Hello!";`
-- 读取字符串 `cin` `cin.getline(name, Arsize)`  `cin.get(name, Arsize)`  `cin.get()`
+- 读取终端字符或字符串 `cin` `cin.getline(name, Arsize)`  `cin.get(name, Arsize)`  `cin.get()`
 - 数组和指针的特殊关系；`*(p + 1) <=> stacks[1]`
 - 动态分配内存 `char *p = new char[strlen(s)+1];` `delete [] p;`
 
@@ -17,7 +17,7 @@
 
 ``` C++
   /* save storage */
-  const int Arsize = 80;              // enough wide to store string
+  const int Arsize = 80;              // enough width to store string
   char temp[Arsize];                  // temporary storage 
   cin.getline(temp, Arsize);          // get a line input
   char *pn = new char[strlen(temp)+1];// new
@@ -45,8 +45,8 @@ Rich Raptor
 **:star:要点：**
 
 - 文件打开 `open(), is_open()`
-- 输入对象的基本使用(cin) `inFile >> num; inFile.get()`
-- 文件读取(读取字符串) `inFile.getline(name, Arsize);` `inFile.get(name, Arsize);` `inFile.get();`
+- 异常退出 `exit()`
+- 读取文件字符或字符串 `inFile` `inFile.getline(name, Arsize);` `inFile.get(name, Arsize);` `inFile.get();`
 
 **:memo:程序：**
 
@@ -70,3 +70,61 @@ Rich Raptor
     inFile.get();
   }
 ```
+
+## 问题三
+
+编写一个简单的 Makefile 文件适用于三个文件的工程。
+
+``` Shell
+$ tree ./ 
+./
+├── incl.h
+├── main.cpp
+└── sum.cpp
+
+$ cat main.cpp
+#include <iostream>
+#include "incl.h"
+using namespace std;
+int main()
+{
+    cout << sum(2, 3) << endl;
+    return 0;
+}
+
+$ cat sum.cpp
+int sum(int a, int b)
+{
+        return a+b;
+}
+
+$ cat incl.h
+#ifndef INCL_H_
+#define INCL_H_
+int sum(int a, int b);
+#endif
+```
+
+**:star:要点：**
+
+- 多文件编程 `.h` `.cpp`
+- Makefile规则
+
+**:memo:程序：**
+
+```shell
+# makefile的规则
+# target ... : prerequisites ...
+# <Tab> commmand
+#       ...
+#       ...
+main : main.o sum.o
+        g++ main.o sum.o -o main
+        rm main.o sum.o
+main.o : main.cpp incl.h  # thinking too many .h files ?
+        g++ -c main.cpp
+sum.o : sum.cpp
+        g++ -c sum.cpp
+```
+
+如果是一个很大的项目文件之间层层依赖，试着编写一个不那么复杂的Makefile文件。

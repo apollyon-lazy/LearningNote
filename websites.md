@@ -11,16 +11,16 @@
 
 ## DL(Deep learning)
 
-<https://courses.d2l.ai/zh-v2/> 动手学深度学习 李沐大神 课程网站
-<https://www.kaggle.com/> Kaggle比赛网站 深度学习题目交流区
-<https://pytorch.org/docs/stable/index.html> Pytorch官方文档
-<https://www.markdownguide.org/> Markdown官方网站
-<https://numpy.org/doc/stable/index.html#> Numpy官方网站
-<https://pandas.pydata.org/docs/index.html> Pandas官方网站
-<https://matplotlib.org/stable/index.html#> Matplotlib官方网站
-<https://docs.scipy.org/doc/scipy/> Scipy官方网站  
-<https://seaborn.pydata.org/index.html#> Seaborn官方网站
-<https://wandb.ai/site> 适合观测深度学习模型的远程服务器
+[动手学深度学习 李沐大神 课程网站](https://courses.d2l.ai/zh-v2/)  
+[Kaggle比赛网站 深度学习题目交流区](https://www.kaggle.com/)  
+[Pytorch官方文档](https://pytorch.org/docs/stable/index.html)  
+[Markdown官方网站](https://www.markdownguide.org/)  
+[Numpy官方网站](https://numpy.org/doc/stable/index.html)  
+[Pandas官方网站](https://pandas.pydata.org/docs/index.html)  
+[Matplotlib官方网站](https://matplotlib.org/stable/index.html)  
+[Scipy官方网站](https://docs.scipy.org/doc/scipy/)  
+[Seaborn官方网站](https://seaborn.pydata.org/index.html)  
+[Weight&Bias 适合观测深度学习模型的远程服务器](https://wandb.ai/site)  
 
 ## Python(Anaconda)
 
@@ -36,22 +36,26 @@
 
 <http://jyywiki.cn/OS/2022/> 南京大学 操作系统 2022 春季课
 <https://www.bilibili.com/video/BV1Cm4y1d7Ur/> 南京大学 操作系统 b站课程主页
-<https://pdos.csail.mit.edu/6.828/2021/schedule.html> MIT 6.S081 课程网站
+<https://pdos.csail.mit.edu/6.1810/2022/index.html> MIT 6.S081  2022 课程网站
 <https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf> xv6 操作系统 手册
-<https://knowledgehive.github.io/6.828/> github 上写的不错的6.S081 lab笔记
+<https://mit-public-courses-cn-translatio.gitbook.io/mit6-s081/> 6.S081 2020 全中文版翻译版 Lab配套笔记方案
 
 ## Linux(Unix)
 
-<https://refspecs.linuxbase.org/> Linux基础参考标准  
-<https://www.gnu.org/software/software.en.html> GNU Software
-<https://www.gnu.org/software/libc/manual/html_node/index.html> GNU glibc
-<https://www.gnu.org/software/binutils/> GNU binutils
-<https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html> POSIX 标准查询网站
-<https://elixir.bootlin.com/linux/latest/source> bootlin公司 Linux内核源码
+[Linux内核源码 bootlin公司](ttps://elixir.bootlin.com/linux/latest/source)  
+[Linux LSB 标准](https://refspecs.linuxbase.org/)  
+[POSIX 可移植操作系统 标准](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html)  
+[GNU Software](https://www.gnu.org/software/software.en.html)  
+[GNU glibc](https://www.gnu.org/software/libc/manual/html_node/index.html)  
+[GNU binutils](https://www.gnu.org/software/binutils/)  
 
 ## C++/C(VS2019)
 
 <http://zh.cppreference.com/w/Main_Page> 中文 Cppreference 社区地址
+
+## Database
+
+<https://15445.courses.cs.cmu.edu/fall2022/schedule.html> CMU15-445/645 数据库课程
 
 ## Others
 

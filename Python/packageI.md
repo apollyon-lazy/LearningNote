@@ -1,6 +1,8 @@
-### 数据三剑客(Numpy、Pandas、matplotlib)
-#### Numpy
-```
+# 数据三剑客(Numpy、Pandas、matplotlib)
+
+## Numpy
+
+``` shell
 区别一维和多维数组：
 a = np.array([1, 2, 3])
 b = np.array([1, 2],[3, 4])
@@ -8,6 +10,7 @@ b = np.array([1, 2],[3, 4])
 # a 的形状是(3,) 是单列表 是一维数组 可以当作 1*3 或者 3*1 的向量
 # b 的形状是(2,2) 是嵌套列表 是多维数组 可以当作 2*2 的矩阵
 ```
+
 | Funcation | Description |
 | :--- | :--- |
 | np.array() | 创建一个ndarry |
@@ -19,8 +22,8 @@ b = np.array([1, 2],[3, 4])
 | np.inner() | 两个向量的内积 |
 | np.matual() | 两个向量的矩阵积 |
 
+## Pandas
 
-#### Pandas
 <img src="./images/dataframe.jpg" width="80%" align="left"><br>
 
 | Funcation | Description |
@@ -43,5 +46,6 @@ b = np.array([1, 2],[3, 4])
 | pd.to_datatime(values,format='...') | 把values按照format处理成Timestamp类 |
 | pd.get_dummies(dummy_na=True) | 对非数字类型(可设置包含NaN)进行独热编码 |
 
-#### Matplotlib
+## Matplotlib
+
 <img src="./images/matplotlib.png" width="80%" align="left"><br>

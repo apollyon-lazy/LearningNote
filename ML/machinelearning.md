@@ -29,9 +29,9 @@
 3. 性能度量
    - 均方误差(mean squared measure)、查准率(precision)、查全率(recall)、F1度量
    - 混淆矩阵(confusion matrix)、P-R曲线(precision-recall curve)、平衡点(Break-Event Point BEP)、F1度量、宏查准率/宏查全率/宏F1(macro-P/macro-R/macro-F1)、微查准率/微查全率/微F1(micro-P/micro-R/micro-F1)
-     - 二分类问题分类结果的混淆矩阵：  
-     真正例/假正例/真反例/假反例(true positive TP /false positive FP/true negetive TN/false negetive FN)  
-      <img src="./images/ML2_1.jpg" width="80%">
+   - 二分类问题分类结果的混淆矩阵：  
+   真正例/假正例/真反例/假反例(true positive TP /false positive FP/true negetive TN/false negetive FN)  
+    <img src="./images/ML2_1.jpg" width="80%">
    - 受试者工作特征(Receiver Operating Characteristic ROC)、ROC曲线下面积(Area Under ROC curve AUC)
    - 非均等代价(unequal cost)、代价矩阵(cost matrix)、总体代价(total cost)、代价敏感错误率(cost-sensitive error rate)、代价曲线(cost curve)、规范化/归一化(normalization)
 4. 比较检验
@@ -47,8 +47,8 @@
    - 线性回归(linear regression)、多元线性回归(multivariate linear regression)、正则化(regularization)、对数线性回归(log-linear regression)、广义线性模型(generalized linear model)、联系函数(link function)
 2. 对数几率回归
    - 单位阶跃函数(unit-step function)、对数几率函数(logistic function)、Sigmoid函数
-   `概率论与数理统计：最小二乘法(least square method)、参数估计(parameter estimation)、极大似然估计(maximum likeihood method)`
-   `线性代数：满秩矩阵(full-rank matrix)、正定矩阵(positive definite matrix)`
+   `概率论与数理统计+应用统计学：最小二乘法(least square method)、参数估计(parameter estimation)、极大似然估计(maximum likeihood method)`
+   `线性代数+矩阵论：满秩矩阵(full-rank matrix)、正定矩阵(positive definite matrix)`
    `数值优化、凸优化、最优化理论：梯度下降法(gradient descent method)、牛顿法(Newton method)`
 3. 线性判别分析
    - 线性判别分析(linear discriminant analysis LDA)、类内散度矩阵(within-class scatter matrix)、类间散度矩阵(between-class scatter matrix)、广义瑞利商(generalized Rayleigh quotient)

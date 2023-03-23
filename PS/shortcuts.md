@@ -88,7 +88,7 @@
 <kbd>alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> 移动当前整行
 <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> 复制当前整行
 
-```
+``` shell
 pwd         显示当前终端所在目录（print work directory）
 ls          显示当前目录下的所有文件（list file） 
 cd          路径切换目录 (change dictionary)
@@ -98,7 +98,7 @@ cd          路径切换目录 (change dictionary)
   
 > 熟悉快捷键是快速编写文档的重要技巧！  
 > 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！
->
+
 ## VS2019 快捷键
 
 <kbd>ctrl</kbd> + <kbd>B</kbd> 编译链接  

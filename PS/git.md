@@ -30,7 +30,7 @@ git merge 分支名 &emsp; 合并分支到当前分支
 git branch -m 分支名 &emsp;  修改当前分支名  
 git branch -d 分支名 &emsp;  删除本地分支  
 
-```
+``` markdown
 如果是想把最终敲定版本上传到远端，使用 git push 提交到远端分支！  
 如果是想保存代码书写到了某个节点，使用 git add 和 git commit 提交版本！  
 如果是想回退到曾经的某个代码版本，使用 git reset --hard 命令！  

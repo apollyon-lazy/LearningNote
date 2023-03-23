@@ -1,10 +1,10 @@
-## 毕业设计心路历程
+# 毕业设计心路历程
 
 ---
 
-### 一
+## 一
 
-#### Brainstorming
+### Brainstorming
 
 - 寻找区间分析编程工具
   - C++ BIAS PROTEL / MATLAB INTLABv_6
@@ -22,7 +22,7 @@
 
 ---
 
-#### Task
+### Task
 
 - 重新熟悉VS2019
   - 已完成
@@ -33,24 +33,24 @@
 
 ---
 
-#### Summary
+### Summary
 >
 > **工具** 选用支持MATLAB的INTLABv_6  
 > **方向** 搭建一个运动平台简易模型求解工作空间  
 > **问题** 改进文献代码方法 提升学习效率！  
 
-### 二
+## 二
 
-#### Brainstorming
+### Brainstorming
 
 - 进一步学习并联机器人知识
   - 正向运动学 Newton-Repson 动力学 欧拉法 拉格朗日法
 - 多体动力学建模
   - Simscope Simmechinics 多体动力学
 
-### 三
+## 三
 
-#### Brainstorming
+### Brainstorming
 
 - 区间分析求解工作空间代码的解析
   - 寻找并编写传统方法代码
@@ -61,13 +61,13 @@
 
 ---
 
-#### Summary
+### Summary
 >
 > **汇报**   汇报进度要分条列点 事实 + 看法(思路) + 问题(解决方案) + 进展(猜测)
 
-### 四
+## 四
 
-#### Brainstorming
+### Brainstorming
 
 - 典型飞行训练任务
   - 明确剩余工作空间
@@ -77,23 +77,23 @@
 - 论文撰写
 - 文献阅读效率提升
 
-### 五
+## 五
 
-#### Brainstorming
+### Brainstorming
 
 - 完成论文初稿
 - 文献阅读效率提升
 
-### 六
+## 六
 
-#### Brainstorming
+### Brainstorming
 
 - 椭球体 六维表示
   - 高维工作空间如何利用
 - 完成工作空间分析报告的配图
   - 绘制论文配图的软件
 
-#### Summary
+### Summary
 
 > **知识体系**
 如果把文献领域比作一座山 越新的文献越位于高处  
@@ -105,9 +105,9 @@
 即便是安排多任务同时进行 也要给每个任务留出获得进展的时间(不要中途放弃)  
 > **论文排版**  
 
-### 七
+## 七
 
-#### Brainstorming
+### Brainstorming
 
 | Library | Version | Data | Websites | Influences |
 | :--- | :--- | :--- | :--- |:--- |
