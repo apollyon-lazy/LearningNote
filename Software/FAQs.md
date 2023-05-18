@@ -10,11 +10,13 @@
 
 - Juypter，Juypter Keymap，Jupyter Notebook Renderers，Jupyter Cell Tags，Jupyter Slide Show（jupyter环境）
 - Python，Pylance（python环境）
-- Markdown all in one，markdown preview enhance，markdownlint（markdown环境）  
-  - 建议隐藏报错：MD024_重复标题；MD033_内嵌HTML；
-  - 建议修改报错：MD036_粗体做标题；MD040_代码块无声明
+- Markdown all in one，markdown preview enhance（markdown环境）
 - C/C++，C/C++ Themes，WSL（C/C++环境）
-- Latex Workshop（LAtex环境）  
+- markdownlint（markdown格式）
+  - 建议修改报错：MD036_粗体做标题；MD040_代码块无声明
+  - 建议隐藏报错：MD024_重复标题；MD033_内嵌HTML；
+- vscode-icons （Vscode图标主题）
+ 
 
 `github 图片显示问题`
 
@@ -28,4 +30,3 @@
 
 - 全角：是指一个全角字符占用两个标准字符（或两个半角字符）的位置。  
 - 半角：是指一个字符占用一个标准的字符位置。半角占一个字节。
-

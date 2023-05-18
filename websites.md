@@ -8,6 +8,7 @@
 [github cs-self-learning](https://github.com/pkuflyingpig/cs-self-learning/) star很多
 [Stackoverflow](https://stackoverflow-clone.netlify.app/) IT问答网站
 [胖虎的工具箱](https://www.955code.com/) 程序员导航网站  
+[CSAPP 自学网站](https://fengmuzi2003.gitbook.io/csapp3e/) B站
 
 ## DL(Deep learning)
 
@@ -24,21 +25,21 @@
 
 ## Python(Anaconda)
 
-<https://www.python.org/> Python官网
-<https://pypi.org/> PyPI pip 默认包源
-<https://docs.python.org/3/> Python3官方文档 含标准库
-<http://pymotw.com/> Python Module of the Week 学习Python标准库的网站
-<https://www.python.org/dev/peps/pep-0008/> PEP8 Python 增强建议书 含代码风格
-<https://conda-forge.org/> Conda-Forge  Miniforge 默认包源
-<https://docs.conda.io/projects/conda/en/latest/commands.html> Conda 命令文档  
+[Python官网](https://www.python.org/)
+[PyPI pip 默认包源](https://pypi.org/)
+[Python3官方文档 含标准库](https://docs.python.org/3/)
+[Python Module of the Week](http://pymotw.com/) 学习Python标准库的网站
+[PEP8 Python 增强建议书](https://www.python.org/dev/peps/pep-0008/) 含代码风格
+[Conda-Forge  Miniforge](https://conda-forge.org/) 默认包源
+[Conda 命令文档](https://docs.conda.io/projects/conda/en/latest/commands.html)  
 
 ## OS(Operating System)
 
-<http://jyywiki.cn/OS/2022/> 南京大学 操作系统 2022 春季课
-<https://www.bilibili.com/video/BV1Cm4y1d7Ur/> 南京大学 操作系统 b站课程主页
-<https://pdos.csail.mit.edu/6.1810/2022/index.html> MIT 6.S081  2022 课程网站
-<https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf> xv6 操作系统 手册
-<https://mit-public-courses-cn-translatio.gitbook.io/mit6-s081/> 6.S081 2020 全中文版翻译版 Lab配套笔记方案
+[南京大学 操作系统](http://jyywiki.cn/OS/2022/) 2022 春季课
+[南京大学 操作系统](https://www.bilibili.com/video/BV1Cm4y1d7Ur/) b站课程主页
+[MIT 6.S081](https://pdos.csail.mit.edu/6.1810/2022/index.html)  2022 课程网站
+[xv6 操作系统 手册](https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf)
+[6.S081 ](https://juejin.cn/column/7006016367988047909) 2020 全中文版翻译版 Lab配套笔记方案
 
 ## Linux(Unix)
 
@@ -51,11 +52,16 @@
 
 ## C++/C(VS2019)
 
-<http://zh.cppreference.com/w/Main_Page> 中文 Cppreference 社区地址
+[中文 Cppreference](http://zh.cppreference.com/w/Main_Page) 社区地址
+
+## Control(MPC)
+
+[知乎神贴 自动控制的故事](https://zhuanlan.zhihu.com/p/65339164) 一篇很长很长的故事
+[bilibili DR_CAN 控制](https://space.bilibili.com/230105574/channel/series) 讲的非常细致
 
 ## Database
 
-<https://15445.courses.cs.cmu.edu/fall2022/schedule.html> CMU15-445/645 数据库课程
+ [CMU15-445/645](<https://15445.courses.cs.cmu.edu/fall2022/schedule.html>) 数据库课程
 
 ## Others
 

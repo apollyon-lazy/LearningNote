@@ -127,7 +127,6 @@ C 编译器允许main()函数没有参数，或者有两个参数（有些实现
 
 **Everything is a file** is an idea that Unix, and its derivatives handle input/output to and from resources such as documents, hard-drives, modems, keyboards, printers and even some inter-process and network communications as simple streams of bytes exposed through the filesystem name space. —— Wiki
 
-**RTFSC** (Read The Fucking Source Code, Linux创始人), 生动形象的体现了阅读源代码的艰难和重要性
 
 ## PartI Virtualization
 

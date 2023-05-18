@@ -1,12 +1,6 @@
 # 快捷键
 
-## 目录
-
-[常用快捷键](#常用快捷键)
-[桌面快捷键](#桌面快捷键)
-[word快捷键](#word-快捷键)
-[excel快捷键](#excel-快捷键)
-[Vscode快捷键](#vscode-快捷键)
+熟悉快捷键能够大大提升工作效率！  
 
 ## 常用快捷键
 
@@ -68,36 +62,8 @@
 <kbd>shift</kbd> + <kbd>tab</kbd> 向左移动一个单元格
 <kbd>enter</kbd> 向下移动一个单元格
 <kbd>Fn</kbd> + <kbd>F2</kbd> 编辑单元格
-
-## Vscode 快捷键
-
-<kbd>ctrl</kbd> + <kbd>`</kbd> 回到终端
-
-<kbd>ctrl</kbd> + <kbd>P</kbd> 查找文件
-<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>P</kbd> 命令行工具
-<kbd>ctrl</kbd> + <kbd>K</kbd> <kbd>V</kbd> 打开预览窗口
-<kbd>ctrl</kbd> + <kbd>L</kbd> 选中当前行
-<kbd>ctrl</kbd> + <kbd>/</kbd> 单行注释
-<kbd>ctrl</kbd> + <kbd>`</kbd> 回到终端
-
-<kbd>ctrl</kbd> + <kbd>K</kbd>，<kbd>ctrl</kbd> + <kbd>J</kbd> 展开所有代码
-<kbd>ctrl</kbd> + <kbd>K</kbd>，<kbd>ctrl</kbd> + <kbd>0</kbd> 折叠所有代码
-
-<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>A</kbd> 多行注释
-<kbd>alt</kbd> + <kbd>MouseL</kbd> 插入多个光标
-<kbd>alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> 移动当前整行
-<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> 复制当前整行
-
-``` shell
-pwd         显示当前终端所在目录（print work directory）
-ls          显示当前目录下的所有文件（list file） 
-cd          路径切换目录 (change dictionary)
-..          表示上一级目录 
-.           表示当前目录。  
-```
   
-> 熟悉快捷键是快速编写文档的重要技巧！  
-> 终端（命令式界面）是图形交互界面出来前人与计算机交互的方式！
+
 
 ## VS2019 快捷键
 

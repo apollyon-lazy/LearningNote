@@ -73,7 +73,7 @@ Rich Raptor
 
 ## 问题三
 
-编写一个简单的 Makefile 文件适用于三个文件的工程。
+Linux环境下编写一个简单的 Makefile 文件适用于三个文件的工程。
 
 ``` Shell
 $ tree ./ 
@@ -108,12 +108,12 @@ int sum(int a, int b);
 **:star:要点：**
 
 - 多文件编程 `.h` `.cpp`
-- Makefile规则
+- Makefile基本语法
 
 **:memo:程序：**
 
 ```shell
-# makefile的规则
+# makefile基本语法
 # target ... : prerequisites ...
 # <Tab> commmand
 #       ...
@@ -127,4 +127,4 @@ sum.o : sum.cpp
         g++ -c sum.cpp
 ```
 
-如果是一个很大的项目文件之间层层依赖，试着编写一个不那么复杂的Makefile文件。
+:thinking:如果是一个很大的项目文件之间层层依赖(.d文件？)Makefile怎么编写？
