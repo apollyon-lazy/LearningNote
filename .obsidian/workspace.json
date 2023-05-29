@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "ed400cad32bca2e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d17a33b0c4faac97",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3fee12a3d2a9cbf1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "WorkFlow/efficiency.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "adda1febf4c13d0e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d96f591fd27ac6e9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "WorkFlow/efficiency.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8e34b0638703d694",
+    "type": "split",
+    "children": [
+      {
+        "id": "42b307750a80fb88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c03999d37ed3686",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8b882dba739bf677",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5f11d5574f3bf86e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "195a46a6b26ab9ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "4d1dd209bfcf904b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4904afebf6888239",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "WorkFlow/efficiency.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8c7d06ad317c96f4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "WorkFlow/efficiency.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b5ed5c5a01be12ca",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "dacbb6c35d0a83da",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "WorkFlow/efficiency.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "d96f591fd27ac6e9",
+  "lastOpenFiles": [
+    "Math/statics.md",
+    "websites.md",
+    "Math/predict.md",
+    "README.md",
+    "Obsidian.md",
+    "OperateSystem/OS.md",
+    "OperateSystem/xv6.md",
+    "OperateSystem/OSI.md",
+    "OperateSystem/Linux.md",
+    "OperateSystem/cmd.md",
+    "Optimize/GA.md",
+    "Optimize/ACO.md",
+    "OperateSystem/images/linux_1.jpg",
+    "未命名.canvas",
+    "ComputerScience/CSAPP.md",
+    "ComputerScience/CrashCrouse.md",
+    "DataStructure/leetcode.md",
+    "DataStructure/data_structure.md",
+    "DataStructure/graph.md",
+    "DataStructure/algorithm.md",
+    "DataStructure/images/Adjacencty_List_2.png",
+    "DataStructure/images/Adjacencty_List_1.png",
+    "Cpp/Cpp_summary.md",
+    "Cpp/Cpp_demos.md",
+    "Cpp/Cpp.md",
+    "Cpp/C.md",
+    "Control/control.md"
+  ]
+}

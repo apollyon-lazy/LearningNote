@@ -68,6 +68,5 @@
 [CSDN 用户名为 "退休的龙叔"](https://blog.csdn.net/zhiguigu/article/details/117924606) Python 全方向知识总结 Python领域优质博主  
 [CSDN用户名为 "柏拉图工作室"](https://blog.csdn.net/weixin_47654912/article/details/111362057) Python 知识体系总结
 [CSDN 用户名为 "2021dragon"](https://blog.csdn.net/chenlong_cxy/article/details/127166206) C++ 全语法知识总结 (数据结构 数据库 Linux Leetcode 少量涉及)  
-[北航硕士Python博客 还不错](https://www.52txr.cn/)
 
 - [ ] 网站后面可以具体到查特定的东西

@@ -11,6 +11,8 @@
 [可执行文件的加载](#可执行文件的加载)
 [虚拟化内存](#虚拟化内存)
 [虚拟化CPU](#虚拟化cpu)
+[存储1bit的数据](#存储1bit的数据)
+[输入输出设备](#输入输出设备)
 [附录](#附录)
 
 ## 操作系统上的程序
@@ -79,9 +81,27 @@ Linux的**加载器**在操作系统内，它解析ELF文件数据结构，并�
 
 ## 虚拟化CPU
 
-:thinking:虚拟化CPU用到的机制是**受限直接执行(limited direct execution，LDE)**。如果进程执行受限制的操作怎么办？在系统引导时(at boot time)，内核初始化 **陷阱表(trap table)**，CPU会记住位置以供后续使用。在进程运行时(when running a process)，使用 **陷阱(trap)** 指令陷入内核，执行完系统调用后通过 **陷阱返回(return-from-trap)** 指令，将控制权返还进程。如果是进程要进行切换怎么办？协作方式是等待系统调用，非协作方式是操作系统通过 **时钟终端(time interrupt)** 重新获取控制权。进程的切换由操作系统的 **调度器(scheduler)** 决定，切换时存在**上下文切换(context switch)**。 —— **OSTEP 6**
+:thinking:虚拟化CPU用到的机制是**受限直接执行(limited direct execution，LDE)**。如果进程执行受限制的操作怎么办？在系统引导时(at boot time)，内核初始化 **陷阱表(trap table)**，CPU会记住位置以供后续使用。在进程运行时(when running a process)，使用 **陷阱(trap)** 指令陷入内核，执行完系统调用后通过 **陷阱返回(return-from-trap)** 指令，将控制权返还进程。如果是进程要进行切换怎么办？协作方式是等待系统调用，非协作方式是操作系统通过 **时钟中断(time interrupt)** 重新获取控制权。进程的切换由操作系统的 **调度器(scheduler)** 决定，切换时存在**上下文切换(context switch)**。 —— **OSTEP 6**
 
 :thinking:确定调度策略考虑的指标有 **周转时间(turnaround time)**(FIFO，SJF，STCF) 和 **响应时间(response time)**(RR)。为同时优化两种指标有**多级反馈队列(Multi-level Feedback Queue, MLFQ)** 调度策略，已被广泛用于多种操作系统当中。除此之外还有 **比例份额(proportional-share)** 调度策略，代表例子是**彩票调度(lottery scheduling)**。 —— **OSTEP 8 9**
+
+## 存储1bit的数据
+
+:thinking:持久保存数据需要容量大，速度快，可靠性好，价格便宜的持久存储介质。磁带(Magenetic Tape)，磁鼓(Magnetic Drum)，**机械硬盘(HDD，Hard Disk Drive)** 利用磁的原理存储数据，存在机械部件，损伤会导致数据损坏。读写磁道(track)上的一个扇区(sector)，先要把读写头(disk head)移动到对应的磁道(seek)，再将盘片(platter)绕轴(spindle)旋转到读写头的位置(rotation)，最后读写数据(transfer)。磁盘还能在缓存/调度(SSTF, Elevator, SPTF)等地方调优性能。**软盘(Floppy Disk)** 把读写头和盘片分开以实现数据移动，现在软件上保存按钮的图标就是当时软盘的形状，早先电脑的A，B盘符也是为软盘而预留，后来被 U 盘取代。—— **OSTEP 37**
+
+:thinking:CD(Compact Disk)通过在反射平面上挖坑来存储数据，在实用方面被网络淘汰。基于闪存的 **固态硬盘(SSD，Solid State Drive)** 和U盘(USB Flash Disk)利用电的原理存储数据。不建议U盘上存储重要数据，是因为擦除次数有限存在**耗尽(wear out)** 问题。SSD上藏着各自厂商的小的计算机系统，有类似CPU，缓存甚至操作系统的部件在内，而SD卡因为没有严格的标准市面上不尽相同。
+
+:memo: 如何建立一个基于闪存的SSD?
+
+闪存芯片(falsh chip)支持三种底层操作，读取(read，以page为单位)，擦除(erase，以block为单位)，编程(program，以page为单位)。SSD能表现出以block为单位的读/写性能，是通过闪存翻译层(flash translation layer, FTL)把读/擦除/编程操作隐藏起来。大多FTLs是日志结构(log-structured)的，通过减少擦除/编程循环来减少写的开销，它的一个重要问题是无用单元回收(garbage collection)，这可能导致写入放大(write amplification，实际写入的数据比要写数据大)；另一个重要问题是映射表(mapping table)的大小，使用混合映射(hybrid mapping)或者缓存(caching)可能修补；最后一个问题是耗损均衡(wear leveling)，要迁移数据保证block有尽可能相同的擦除/编程负载。—— **OSTEP 44**
+
+## 输入输出设备
+
+:thinking: 如今**输入输出设备(I/O Device)** 的系统架构是物理限制和成本的迭代折中结果。I/O设备通常包括两部分，硬件接口(interface)和内部结构(internal stucture)。接口可以抽象为 Status，Command，Data 三种类型寄存器的集合；内部结构可以是实现功能的芯片，也可以是一个小的计算机系统(CPU, Memory等)。CPU连接 Memory 有 Memory Bus，连接一般的I/O设备有 I/O bus (像是GPU或其他高性能的设备上会用PCI或它的衍生)，连接外部设备(磁盘，鼠标，键盘等)有 peripheral bus (SATA，USB等)。设备可以发送中断(interrupt)信号使CPU切换到OS执行中断程序，使用 **DMA(Dierct Memory Access)** 专门执行设备和内存间的数据传输以解放CPU的工作。图形显示器也是类似单独分离出来(打比方CPU负责生成怎么绘图的指令，那么GPU就负责按照指令执行绘图)。从NES的PPU要靠把马里奥中板栗的左右脚来回翻转实现运动，滚动卷轴式的截取背景图像等这些小技巧做游戏，到今天的GPU能够进行大量图形学中的矩阵运算(NVDIA CUDA)，GPU已经看成是计算密集型任务的另一台计算机(Pytorch和炼丹炉)。
+
+:memo: 举几个例子来说明硬件是如何抽象被OS管理的？
+比如串口(Universal Asynchronous Receiver/Transmitter, UART)芯片中围绕RX和TX的编程；键盘在CapsLock，NumLock按键按下后指示灯会受到控制亮起(可以由程序控制)；磁盘控制器的接口(ATA，SATA，eSATA存储接口的进化)；打印机(另一个带有CPU的设备)还有属于自己的编程指令 PostScript (PDF是这套指令的超集)。
+
 
 ## 总结
 
@@ -95,6 +115,8 @@ Linux的**加载器**在操作系统内，它解析ELF文件数据结构，并�
 :memo:如何理解裸机(bare-metal)上的C程序(操作系统)运行?
 
 裸机上的C程序是从CPU Reset后开始的，Firmware 先读取 MBR 中的 Boot loader，然后执行操作系统程序的_start函数(操作系统也是一个C程序)。操作系统运行起来，会创建第一个进程init，在此进程上创建出更多进程。综上，只要知道main函数之前(操作系统也是如此)初始化好了C程序环境并能够使用一些库函数足矣。
+
+
 
 ## 附录
 

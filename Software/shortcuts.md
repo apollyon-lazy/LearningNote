@@ -17,6 +17,7 @@
 <kbd>Win</kbd> + <kbd>Q/S</kbd> 快速打开搜索栏
 <kbd>Win</kbd> + <kbd>E</kbd> 快速打开文件资源管理器
 <kbd>Win</kbd> + <kbd>R</kbd> 快速运行
+<kbd>Win</kbd> + <kbd>P</kbd> 快速显示设置
 <kbd>Win</kbd> + <kbd>I</kbd> 快速打开设置n
 <kbd>Win</kbd> + <kbd>D</kbd> 快速最小化所有窗口切换到桌面
 <kbd>Win</kbd> + <kbd>L</kbd> 快速锁定电脑
