@@ -1,7 +1,7 @@
 # Crash Crouse
 
-<https://github.com/1c7/Crash-Course-Computer-Science-Chinese>
-Computer Science Github 资源网站
+
+[Crash Course Computer Science Github Chinese](https://github.com/1c7/Crash-Course-Computer-Science-Chinese)
 
 | Concept | Translation |
 | :--- | :--- |

@@ -26,20 +26,19 @@
 ## Python(Anaconda)
 
 [Python官网](https://www.python.org/)
-[PyPI pip 默认包源](https://pypi.org/)
-[Python3官方文档 含标准库](https://docs.python.org/3/)
+[PyPI](https://pypi.org/) pip 默认包源
+[Python3官方文档](https://docs.python.org/3/) 含标准库
 [Python Module of the Week](http://pymotw.com/) 学习Python标准库的网站
 [PEP8 Python 增强建议书](https://www.python.org/dev/peps/pep-0008/) 含代码风格
-[Conda-Forge  Miniforge](https://conda-forge.org/) 默认包源
+[Conda-Forge](https://conda-forge.org/) Miniforge 默认包源
 [Conda 命令文档](https://docs.conda.io/projects/conda/en/latest/commands.html)  
 
 ## OS(Operating System)
 
-[南京大学 操作系统](http://jyywiki.cn/OS/2022/) 2022 春季课
-[南京大学 操作系统](https://www.bilibili.com/video/BV1Cm4y1d7Ur/) b站课程主页
-[MIT 6.S081](https://pdos.csail.mit.edu/6.1810/2022/index.html)  2022 课程网站
-[xv6 操作系统 手册](https://pdos.csail.mit.edu/6.828/2021/xv6/book-riscv-rev2.pdf)
-[6.S081 ](https://juejin.cn/column/7006016367988047909) 2020 全中文版翻译版 Lab配套笔记方案
+[南京大学 操作系统 文档](http://jyywiki.cn/OS/2022/) 2022 春季课
+[南京大学 操作系统 视频](https://www.bilibili.com/video/BV1Cm4y1d7Ur/) 2022 春季课
+[MIT 6.S081](https://pdos.csail.mit.edu/6.1810/2022/index.html)  2022 春季课
+[MIT 6.S081](https://juejin.cn/column/7006016367988047909) 2020 全中文版翻译版 配套Lab笔记方案
 
 ## Linux(Unix)
 
@@ -52,21 +51,18 @@
 
 ## C++/C(VS2019)
 
-[中文 Cppreference](http://zh.cppreference.com/w/Main_Page) 社区地址
+[中文 Cppreference 社区地址](http://zh.cppreference.com/w/Main_Page)
 
-## Control(MPC)
+## Control
 
-[知乎神贴 自动控制的故事](https://zhuanlan.zhihu.com/p/65339164) 一篇很长很长的故事
-[bilibili DR_CAN 控制](https://space.bilibili.com/230105574/channel/series) 讲的非常细致
-
-## Database
-
- [CMU15-445/645](<https://15445.courses.cs.cmu.edu/fall2022/schedule.html>) 数据库课程
+[知乎神贴 自动控制的故事](https://zhuanlan.zhihu.com/p/65339164) 
+[bilibili DR_CAN 控制](https://space.bilibili.com/230105574/channel/series)
 
 ## Others
 
-[CSDN 用户名为 "退休的龙叔"](https://blog.csdn.net/zhiguigu/article/details/117924606) Python 全方向知识总结 Python领域优质博主  
-[CSDN用户名为 "柏拉图工作室"](https://blog.csdn.net/weixin_47654912/article/details/111362057) Python 知识体系总结
-[CSDN 用户名为 "2021dragon"](https://blog.csdn.net/chenlong_cxy/article/details/127166206) C++ 全语法知识总结 (数据结构 数据库 Linux Leetcode 少量涉及)  
+[Python 全方向知识总结](https://blog.csdn.net/zhiguigu/article/details/117924606)CSDN 用户名为 "退休的龙叔" Python领域优质博主  
+[Python 知识体系总结](https://blog.csdn.net/weixin_47654912/article/details/111362057) CSDN 用户名为 "柏拉图工作室" 
+[C++ 全语法知识总结 ](https://blog.csdn.net/chenlong_cxy/article/details/127166206)CSDN 用户名为 "2021dragon"
+[大话数据结构 笔记](https://blog.csdn.net/weixin_44571010/article/details/115677735) CSDN   
+[数据结构课件加资料](https://xiaochen1024.com/courseware/60b4f11ab1aa91002eb53b18)个人建站 全栈潇晨
 
-- [ ] 网站后面可以具体到查特定的东西

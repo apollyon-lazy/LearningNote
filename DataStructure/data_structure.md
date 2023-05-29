@@ -1,4 +1,4 @@
-# 《大话数据结构》
+# 大话数据结构
 
 ## 目录
 
@@ -199,7 +199,4 @@ endADT
 
 - [x] 排序和查找知识点多，后续有时间再展开
 
-《大话数据结构》CSDN 上比较全的笔记  
-<https://blog.csdn.net/weixin_44571010/article/details/115677735>  
-全栈潇晨 大佬自建站 数据结构课件加资料  
-<https://xiaochen1024.com/courseware/60b4f11ab1aa91002eb53b18>
+

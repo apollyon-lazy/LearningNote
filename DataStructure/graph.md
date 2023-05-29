@@ -2,7 +2,7 @@
 
 ## 无向图的邻接表
 
-[[Adjacencty_List_1.png]]
+<img src="./images/Adjacencty_List_1.png" width="80%">
 
 ## 有向图的邻接表
 

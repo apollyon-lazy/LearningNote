@@ -299,6 +299,4 @@ C++
 - cstdio, cstdlib, cstring, cctype C语言库
 ```
 
-## 修改意见
 
-- [x] github网页暂不支持`[toc]`语法，故使用网页锚点做页面内链接跳转

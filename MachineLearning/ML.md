@@ -1,6 +1,6 @@
 # 周志华 西瓜书 学习笔记
 
-<https://github.com/Vay-keen/Machine-learning-learning-notes.git>
+[西瓜书 Github笔记](https://github.com/Vay-keen/Machine-learning-learning-notes.git)
 
 ## 绪论
 
