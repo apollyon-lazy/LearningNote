@@ -51,7 +51,7 @@ EI 百度百科词条
 
 ## JCR分区、中科院分区
 
-<img src="./images/paper_1.jpg" width="100%">
+![[paper_1.jpg]]
 
 EI 是没有自己的影响因子
 SCI 引出 JCR（journal citation report 期刊引用报告）  
@@ -70,4 +70,4 @@ LetPub 可以查询期刊JCR分区和中科院分区的网址
 ## 出版商、会议组织者、科研工作者、第三方数据库
 
 下图只代表一般情况
-<img src="./images/paper.png" width="80%">
+![[paper.png]]

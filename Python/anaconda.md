@@ -1,5 +1,7 @@
 # Anaconda保姆级教程
+
 ## Anaconda的环境配置
+
 Anaconda 是一个包括python各种包的捆绑软件。anaconda 会自动安装一个基本的 python ，该 python 的版本与 anaconda 的版本有关。该 python 下已经安装好了一大堆工具包，对于科学计算分析是十分便利的。
 
 先找一个地方下载anaconda，附上清华镜像站链接
@@ -31,7 +33,7 @@ conda --version 查看 conda 版本
 python -- version 查看 anaconda 中基础 python 版本
 conda/conda list/conda info 查看conda命令/conda环境中的包/查看conda配置
 ```
-<img src="./images/anaconda_1.jpg" width="80%"> 
+![[anaconda_1.jpg]]
 
 ### 3. 源配置(使用命令添加源或者直接修改)  
 
@@ -49,7 +51,7 @@ conda config -- remove-key channels 删除所有镜像源恢复默认
 输入 `conda info` 可以找到该文件位置(我这里在 C 盘)
 (2) 用记事本打开后编辑输入（以下源为清华大学开源软件镜像站）：
 
-```
+``` Markdown
 channels:
   - defaults
 show_channel_urls: true
@@ -77,7 +79,7 @@ custom_channels:
   `c.NotebookApp.notebook_dir = 'X:\XXX...`
 3. 然后打开 jupyter 快捷方式的属性
   删掉目标中的 %USERPROFILE% 并在后面添加上刚才设置好的默认工作路径
-  <img src="./images/anaconda_2.jpg" width="80%"> 
+  ![[anaconda_2.jpg]] 
 
 ### 5. 修改虚拟环境保存路径
 ```
@@ -88,7 +90,7 @@ custom_channels:
 `conda config --remove envs_dirs <./Anaconda3:/envs>` 删除虚拟环境默认安装路径
 ```
 如果环境仍然安装到C盘，可能是envs文件夹被设置为只读，此时勾掉只读，User权限全部设置为允许
-<img src="./images/anaconda_3.jpg" width="80%"> 
+![[anaconda_3.jpg]] 
 
 ### 6. 创建并管理虚拟环境
 ```
@@ -122,23 +124,28 @@ Togg all line numbers 代码行号
 ```
 
 
-### 9. 创建、使用和管理多个不同的 python 版本管理
+### 9. 包管理
 
 ```   
-conda list <package_name> 查看是否有安装指定包
+查找包：
+cond search <package_name> 在源内查找包
+conda list <package_name> 获取环境中已安装包信息
+安装包：
 conda install xxx 使用conda工具安装包
 conda install -n <env_name> xxx 在指定环境安装包
-conda show <package_name> 查看当前环境下包的所有信息
+更新包：
+conda update --all 更新所有包
+conda update <package_name> 更新指定包
+卸载包：
 conda uninstall xxx 使用conda工具卸载包
 ```
-## Anaconda使用前遇到的问题
+## Anaconda使用遇到的其它问题
+
 ### 1. Conda, Anaconda, Miniconda, Miniforge
-
-**Conda**
-
+#### Conda
 Conda是一个辅助进行包管理和环境管理的工具。目前是Ananconda默认的Python包和环境管理工具，所以安装了Ananconda完整版，就默认安装了Conda。
 
-**Anaconda, Miniconda, Miniforge**
+#### Anaconda, Miniconda, Miniforge
 
 Anaconda 和 Miniconda 是一个公司的产品，商用是付费的，个人暂时免费；而Miniforge是由社区主导，用GitHub托管，完全免费。Miniconda 和 Miniforge 是差不多的产物，代表着轻量化，而Anaconda是完整版，就略显臃肿。
 
@@ -146,12 +153,14 @@ Miniconda = Python + conda (with minimal dependencies, like openssl, ncurses...)
 
 Anaconda = Python + conda + meta package (about 160 Python pkgs, like curl, numpy, pandas...)。
 
+#### Default Source (Anaconda, Miniconda, Miniforge)
 
+Anaconda 的默认源是 `default`，pip 的默认源是 `PyPI (Python Package Index)`。
+Miniforge 使用 `conda-forge` 作为默认 channel，Miniconda 使用 `anaconda.org` 作为默认channel。
 
-**Default Source (Anaconda, Miniconda, Miniforge)**
+在 PyPI 中可以发现和安装由 Python 社区开发和共享的软件包。pip 是专门针对 Python 打包而成的，属于wheels or source distributions，需要 compilers 来安装；而conda packages are binaries，包含不是Python写的代码，同时也不需要 compilers。
 
-anaconda 的默认源是 `default`，而pip的默认源是 `PyPI (Python Package Index)`，在 PyPI 中可以发现和安装由 Python 社区开发和共享的软件包。pip 是专门针对 Python 打包而成的，属于wheels or source distributions，需要 compiler 来安装；而conda packages are binaries，因此包含例如 C 语言写的库，同时也不需要 compilers。pip的没有严格的依赖冲突检查，而conda是会有严格的依赖冲突检查。Miniforge 使用 `conda-forge` 作为默认 channel，而 Miniconda 使用 `anaconda.org` 作为默认channel。
-
+pip的没有严格的依赖冲突检查，而conda是会有严格的依赖冲突检查。
 
 
 ### 2. wheels, source distributions
@@ -161,13 +170,10 @@ anaconda 的默认源是 `default`，而pip的默认源是 `PyPI (Python Package
 通常我们安装一个python包，直接用`pip install <pkg-name>`就行，但如果我们想要多个python环境，也就需要用到virtualenv；同时如果这个包没有不是 Python packages，是用C语言写的；这时候就需要Conda登场了，它同时解决了以上所有问题。
 
 ### 3. conda/pip install XXX
-conda install xxx 这种方式安装的库会在 `anaconda3/pkgs` 目录下放一份，在`anaconda3/envs/<current_env>/Lib/site-packages`下放一份。在这样的好处就是，当曾经下载过某个库时，就可以直接从 pkgs 目录下将该库复制到新环境而不用重复下载。
+
+`conda install xxx` 这种方式安装的库会在 `anaconda3/pkgs` 目录下放一份，在`anaconda3/envs/<current_env>/Lib/site-packages`下放一份。这样做的好处就是，当曾经下载过某个库时，就可以直接从 `pkgs` 目录下将该库复制到新环境而不用重复下载。
 
 pip install xxx 这种方式安装的库会在`anaconda3/envs/<current_env>/Lib/site-packages`文件夹中，如果是单独装的 python，安装路径还要再考虑。
-
-
-
-
 
 # 学习心得
 

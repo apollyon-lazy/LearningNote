@@ -1,40 +1,33 @@
 # 毕业设计心路历程
-
 ---
-
 ## 一
 
 ### Brainstorming
 
 - 寻找区间分析编程工具
-  - C++ BIAS PROTEL / MATLAB INTLABv_6
+	  - C++ BIAS PROTEL / MATLAB INTLABv_6
 - 进一步寻找区间分析的文献
-  - Interval Analysis workspace
-    - 寻找论文的代码
-    - 寻找论文切入点 明确什么是可行的
-  - Stewart workspace analysis
-  - Merlet.
-    - 近几年文献集中在CDPM上 涉及区间不多
-  - 国内文献
-  - 其他国际研究者
-  - 图书馆借阅
-  - SCI
-
+	- Interval Analysis workspace
+		- 寻找论文的代码
+		- 寻找论文切入点 明确什么是可行的
+- Stewart workspace analysis
+- Merlet.
+	    - 近几年文献集中在CDPM上 涉及区间不多
+- 国内文献
+- 其他国际研究者
+- 图书馆借阅
+- SCI
 ---
-
 ### Task
 
 - 重新熟悉VS2019
-  - 已完成
+	- 已完成
 - 评估BIAS PROTEL的可行性
-  - 不可行
+	- 不可行
 - 在github上寻找源代码并分析
-  - 已找到所有易读MATLAB代码
-
+	- 已找到所有易读MATLAB代码
 ---
-
 ### Summary
->
 > **工具** 选用支持MATLAB的INTLABv_6  
 > **方向** 搭建一个运动平台简易模型求解工作空间  
 > **问题** 改进文献代码方法 提升学习效率！  
@@ -44,20 +37,20 @@
 ### Brainstorming
 
 - 进一步学习并联机器人知识
-  - 正向运动学 Newton-Repson 动力学 欧拉法 拉格朗日法
+	- 正向运动学 Newton-Repson 动力学 欧拉法 拉格朗日法
 - 多体动力学建模
-  - Simscope Simmechinics 多体动力学
+	- Simscope Simmechinics 多体动力学
 
 ## 三
 
 ### Brainstorming
 
 - 区间分析求解工作空间代码的解析
-  - 寻找并编写传统方法代码
-  - 明确区间分析的结合点
-  - 明确工作空间评价指标
+	- 寻找并编写传统方法代码
+	- 明确区间分析的结合点
+	- 明确工作空间评价指标
 - 中期答辩PPT的制作
-  - 组织语言表达观点
+	- 组织语言表达观点
 
 ---
 
@@ -70,10 +63,10 @@
 ### Brainstorming
 
 - 典型飞行训练任务
-  - 明确剩余工作空间
-  - 工作空间实际应用思路
+	- 明确剩余工作空间
+	- 工作空间实际应用思路
 - 工作空间优化模型
-  - 粒子群 遗传 退火
+	- 粒子群 遗传 退火
 - 论文撰写
 - 文献阅读效率提升
 
@@ -89,9 +82,9 @@
 ### Brainstorming
 
 - 椭球体 六维表示
-  - 高维工作空间如何利用
+	- 高维工作空间如何利用
 - 完成工作空间分析报告的配图
-  - 绘制论文配图的软件
+	- 绘制论文配图的软件
 
 ### Summary
 

@@ -2,11 +2,10 @@
 
 ## 无向图的邻接表
 
-<img src="./images/Adjacencty_List_1.png" width="80%">
-
+![[graph1.png]]
 ## 有向图的邻接表
 
-<img src="./images/Adjacencty_List_2.png" width="80%">
+![[graph2.png]]
 
 ## 图的建立（邻接表）
 

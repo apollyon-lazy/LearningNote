@@ -60,7 +60,7 @@
 
 ## Others
 
-[Python 全方向知识总结](https://blog.csdn.net/zhiguigu/article/details/117924606)CSDN 用户名为 "退休的龙叔" Python领域优质博主  
+[Python 全方向知识总结](https://blog.csdn.net/zhiguigu/article/details/117924606)CSDN 用户名为 "退休的龙叔" 
 [Python 知识体系总结](https://blog.csdn.net/weixin_47654912/article/details/111362057) CSDN 用户名为 "柏拉图工作室" 
 [C++ 全语法知识总结 ](https://blog.csdn.net/chenlong_cxy/article/details/127166206)CSDN 用户名为 "2021dragon"
 [大话数据结构 笔记](https://blog.csdn.net/weixin_44571010/article/details/115677735) CSDN   
