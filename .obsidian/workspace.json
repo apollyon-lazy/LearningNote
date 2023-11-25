@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "ed400cad32bca2e2",
+    "id": "b5c85fe337ec0fe3",
     "type": "split",
     "children": [
       {
-        "id": "f16919ae9bfcaf38",
+        "id": "23bd47659143be36",
         "type": "tabs",
         "children": [
           {
-            "id": "12e4ca79876a654f",
+            "id": "27cf0f3df6c235aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OperateSystem/OSI.md",
+                "file": "Control/control.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "8e34b0638703d694",
+    "id": "1e7259422e3a0b25",
     "type": "split",
     "children": [
       {
-        "id": "42b307750a80fb88",
+        "id": "bc9ed8ace26145a7",
         "type": "tabs",
         "children": [
           {
-            "id": "9c03999d37ed3686",
+            "id": "ac4dc322f0f86d3f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "8b882dba739bf677",
+            "id": "e74d762753baa66b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "5f11d5574f3bf86e",
+            "id": "a618fb7bae190b7f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,44 +72,44 @@
     "width": 200
   },
   "right": {
-    "id": "195a46a6b26ab9ea",
+    "id": "100c8e0258c756ac",
     "type": "split",
     "children": [
       {
-        "id": "4d1dd209bfcf904b",
+        "id": "3a80affb41d461f6",
         "type": "tabs",
         "children": [
           {
-            "id": "4904afebf6888239",
+            "id": "0feaf0422e3cca0e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OperateSystem/OSI.md",
+                "file": "Control/control.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "8c7d06ad317c96f4",
+            "id": "e2f6215c8773fe6e",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OperateSystem/OSI.md",
+                "file": "Control/control.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "b5ed5c5a01be12ca",
+            "id": "8ed6fa6b6cd425fc",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +120,12 @@
             }
           },
           {
-            "id": "dacbb6c35d0a83da",
+            "id": "048e8ec09a22934c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "OperateSystem/OSI.md"
+                "file": "Control/control.md"
               }
             }
           }
@@ -134,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5,
+    "width": 248.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -147,46 +147,45 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "12e4ca79876a654f",
+  "active": "27cf0f3df6c235aa",
   "lastOpenFiles": [
-    "OperateSystem/xv6.md",
-    "OperateSystem/OSI.md",
-    "OperateSystem/OS.md",
-    "OperateSystem/Linux.md",
-    "OperateSystem/cmd.md",
-    "Network/net.md",
-    "ComputerScience/CrashCrouse.md",
-    "ComputerScience/CSAPP.md",
-    "img/net2.jpg",
-    "img/Pasted image 20230604152917.png",
-    "WorkFlow/efficiency.md",
+    "AI/ML.md",
+    "AI/RL.md",
+    "GUIDE.md",
+    "README.md",
+    "CoinFlip.canvas",
     "WorkFlow/StewartIA.md",
     "WorkFlow/paper.md",
-    "Cpp/Cpp.md",
-    "Math/matrix.md",
-    "DHC_Beaver/README.md",
+    "WorkFlow/efficiency.md",
+    "img/concept_2.jpg",
+    "img/concept_1.jpg",
+    "Pasted image 20231117151906.png",
+    "VisualStudio/导航页.md",
+    "VisualStudio/打包动态库.md",
+    "VisualStudio/编码格式.md",
+    "VisualStudio/创建新项目.md",
     "Software/vscode.md",
-    "Software/VS2019.md",
-    "Software/obsidian.md",
     "Software/shortcuts.md",
+    "Software/obsidian.md",
+    "Software/Meld.md",
     "Software/git.md",
     "Software/FAQs.md",
-    "Cpp/Cpp_summary.md",
-    "Cpp/Cpp_demos.md",
-    "Python/python_book_1.md",
-    "img/net1.jpg",
-    "img/Pasted image 20230603180607.png",
-    "Optimize/ACO.md",
-    "DHC_Beaver/dhc2_dynamics.md",
-    "DHC_Beaver/dhc2_trim.md",
-    "img/concept_2.jpg",
-    "img/p5.jpg",
-    "img/p4.jpg",
-    "img/p3.jpg",
-    "img/p2.jpg",
-    "img/p1.jpg",
-    "DHC_Beaver",
-    "img",
-    "未命名.canvas"
+    "Software/Endnote.md",
+    "Qt/下载安装&环境配置.md",
+    "Qt/位置&事件&对象树.md",
+    "Qt/路径.md",
+    "Qt/类型转换.md",
+    "Qt/架构&细节.md",
+    "Qt/工程管理.md",
+    "Qt/导航页.md",
+    "Qt/布局&样式表&QSS.md",
+    "img/anaconda_1.jpg",
+    "img/ACO1.jpg",
+    "1029_1033.zip",
+    "img/ACO2.jpg",
+    "未命名",
+    "img/net5.jpg",
+    "img/net4.jpg",
+    "img/net3.jpg"
   ]
 }

@@ -1,5 +1,6 @@
 # Pycharm工程的创建
-<img src="./images/pycharm_1.jpg" width="60%"> 
+![[pycharm_1.jpg]]
+
 # 分块执行
 shift+alt+E
 科学模式下输入#%%

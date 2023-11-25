@@ -1,16 +1,41 @@
-# 数据三剑客(Numpy、Pandas、matplotlib)
 
-## Numpy
+数据三剑客：
+Numpy Pandas Matplotlib
 
-``` shell
-区别一维和多维数组：
-a = np.array([1, 2, 3])
-b = np.array([1, 2],[3, 4])
+# Numpy
 
-# a 的形状是(3,) 是单列表 是一维数组 可以当作 1*3 或者 3*1 的向量
-# b 的形状是(2,2) 是嵌套列表 是多维数组 可以当作 2*2 的矩阵
+ 区分一维数组和多维数组：
+
+```Shell
+>>> import numpy as np
+>>> a = np.array([1,2,3])
+>>> a.shape
+(3,)
+>>> len(a.shape)
+1
+>>> a.ndim
+1
+>>> len(a)
+3
 ```
 
+```Shell
+>>> b = np.array([1,2,3]).reshape(1,3)
+>>> b.shape
+(1, 3)
+>>> len(b.shape)
+2
+>>> b.ndim
+2
+>>> c = np.array(([1,2],[3,4]))
+>>> len(c)
+2
+```
+
+`a` 的形状是 `(3,) ` 是单列表 是一维数组 可以当作 1\*3 或者 3\*1 的向量
+`b` 的形状是 `(1,3) ` 是嵌套列表 是多维数组 可以当作 2\*2 的矩阵
+ 数组形状 不要与 二维矩阵 中的 行列向量 概念混淆！
+ 
 | Funcation | Description |
 | :--- | :--- |
 | np.array() | 创建一个ndarry |
@@ -22,9 +47,9 @@ b = np.array([1, 2],[3, 4])
 | np.inner() | 两个向量的内积 |
 | np.matual() | 两个向量的矩阵积 |
 
-## Pandas
+# Pandas
 
-<img src="./images/dataframe.jpg" width="80%" align="left"><br>
+![[dataframe.jpg]]
 
 | Funcation | Description |
 | :--- | :--- |
@@ -48,4 +73,4 @@ b = np.array([1, 2],[3, 4])
 
 ## Matplotlib
 
-<img src="./images/matplotlib.png" width="80%" align="left"><br>
+![[matplotlib.png]]

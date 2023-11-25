@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"type":"text","text":"ChooseLevelScene构造逻辑：\n```markdown\n...\n窗口基本设置\n...\n创建退出按钮\n\t创建 MyPushButton 对象 quitBtn\n循环创建按钮矩阵 \n\t创建 MyPushButton 对象 menuBtn\n\t当 menuBtn 按钮 点击后 - 隐藏选择关卡界面 显示游玩界面\n\tPlayScene 继承 QMainWindow\n\t创建 PlayScene 对象 play\n\t重写 PlayScene 构造函数 \n```","id":"3c0ae05f90732038","x":240,"y":150,"width":580,"height":350},
+		{"type":"text","text":"","id":"fd0f438391eb27ad","x":1000,"y":150,"width":580,"height":340},
+		{"type":"text","text":"解析 main 函数：\n```C++\n...\nMainScene w;\nw.show();\nreturn a.exec()\n```\n\n```markdown\nMainScene 是什么？\n\tMainScene 继承 MainWindow \nMainScene 是什么时候创建的？\n\t在用 Qt creater 创建初始工程类时创建\n```\n\n","id":"95bb4bd7bf853fec","x":-1320,"y":150,"width":600,"height":350},
+		{"type":"text","text":"MainScene构造逻辑：\n```markdown\n...\n窗口基本配置\n...\n创建开始按钮\n\tMyPushBotton 继承 QPushButton\n\t创建 MyPushButton 对象 startBtn\n\t重写 MyPushButton 构造函数可传递 normalImg 和 pressImg 两个参数\n...\n选择关卡场景基本配置\n\tChooseLevelScene 继承 QMainWindow\n\t创建 ChooseLevelScene 对象 chooseScene\n\t当 startBtn 按钮 点击后 - 隐藏主界面 显示选择关卡界面\n\t当 选择关卡 返回信号发送后 - 隐藏选择关卡界面 显示主界面   \n```","id":"4ecef190da33cfab","x":-580,"y":120,"width":680,"height":400}
+	],
+	"edges":[
+		{"id":"79b43fb1be32efd4","fromNode":"3c0ae05f90732038","fromSide":"top","toNode":"fd0f438391eb27ad","toSide":"top"},
+		{"id":"592322a337725a81","fromNode":"fd0f438391eb27ad","fromSide":"bottom","toNode":"3c0ae05f90732038","toSide":"bottom"},
+		{"id":"77254cb019ab5cb6","fromNode":"4ecef190da33cfab","fromSide":"top","toNode":"3c0ae05f90732038","toSide":"top"},
+		{"id":"d093b13779c50833","fromNode":"3c0ae05f90732038","fromSide":"bottom","toNode":"4ecef190da33cfab","toSide":"bottom"},
+		{"id":"642033bb4a442cd5","fromNode":"95bb4bd7bf853fec","fromSide":"top","toNode":"4ecef190da33cfab","toSide":"top"},
+		{"id":"df12eed8d3aa65dc","fromNode":"4ecef190da33cfab","fromSide":"bottom","toNode":"95bb4bd7bf853fec","toSide":"bottom"}
+	]
+}

@@ -8,7 +8,8 @@
 [github cs-self-learning](https://github.com/pkuflyingpig/cs-self-learning/) star很多
 [Stackoverflow](https://stackoverflow-clone.netlify.app/) IT问答网站
 [胖虎的工具箱](https://www.955code.com/) 程序员导航网站  
-[CSAPP 自学网站](https://fengmuzi2003.gitbook.io/csapp3e/) B站
+[【CSAPP-深入理解计算机系统】1-1.计算机系统漫游_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1cD4y1D7uR/) CSAPP导读
+
 
 ## DL(Deep learning)
 
@@ -66,3 +67,7 @@
 [大话数据结构 笔记](https://blog.csdn.net/weixin_44571010/article/details/115677735) CSDN   
 [数据结构课件加资料](https://xiaochen1024.com/courseware/60b4f11ab1aa91002eb53b18)个人建站 全栈潇晨
 
+## ChatGPT
+
+[Forefront Chat](https://chat.forefront.ai/) 套壳GhatGPT  3.5无限次 4.0有限次
+[http://Poe.com](https://link.zhihu.com/?target=http%3A//Poe.com)套壳ChatGPT

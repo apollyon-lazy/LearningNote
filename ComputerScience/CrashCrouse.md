@@ -1,5 +1,3 @@
-# Crash Crouse
-
 
 [Crash Course Computer Science Github Chinese](https://github.com/1c7/Crash-Course-Computer-Science-Chinese)
 

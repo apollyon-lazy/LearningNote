@@ -1,7 +1,5 @@
 # 快捷键
 
-熟悉快捷键能够大大提升工作效率！  
-
 ## 常用快捷键
 
 <kbd>ctrl</kbd> + <kbd>C</kbd> 复制  
@@ -64,13 +62,6 @@
 <kbd>enter</kbd> 向下移动一个单元格
 <kbd>Fn</kbd> + <kbd>F2</kbd> 编辑单元格
   
-
-
-## VS2019 快捷键
-
-<kbd>ctrl</kbd> + <kbd>B</kbd> 编译链接  
-<kbd>Fn</kbd> + <kbd>F5</kbd> 开始调试  
-
 ## Juypter 快捷键
 
 <kbd>ctrl</kbd> + <kbd>Enter</kbd> 运行并在当前代码块  
